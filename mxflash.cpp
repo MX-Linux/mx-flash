@@ -82,13 +82,23 @@ void mxflash::removeFlash() {
 }
 
 void mxflash::updateFlash() {
+  //check if installed
+  QString cmd = "dpkg -s flashplugin-nonfree | grep Status | cut -f 3 -d \" \"";
+  QString out = getCmdOut(cmd);
+  if (out != "ok") {
+    QMessageBox::critical(0, tr("Error"),
+                          tr("Flash is not installed"));
+    ui->stackedWidget->setCurrentIndex(0);
+    return;
+  }
+
   setCursor(QCursor(Qt::WaitCursor));
   qApp->processEvents();
 
   // manual update
   if (ui->manualRadioButton->isChecked()) {
     setConnections(timer, proc);
-    QString cmd = QString("update-flashplugin-nonfree -i");
+    cmd = QString("update-flashplugin-nonfree -i");
     proc->start(cmd);
 
   //automatic update
