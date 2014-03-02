@@ -42,7 +42,6 @@ protected:
   QProcess *proc;
   QTimer *timer;
 
-
 public:
   explicit mxflash(QWidget *parent = 0);
   ~mxflash();
@@ -53,12 +52,17 @@ public:
   void removeFlash();
   void updateFlash();
   void installFlash();
+<<<<<<< HEAD
   void oldFlash();
+=======
+  bool checkDebInstalled();
+>>>>>>> upstream/master
 
 public slots:
   void procStart();
   void procTime();
   void procDone(int exitCode, QProcess::ExitStatus exitStatus);
+  void procUpdateDone(int exitCode, QProcess::ExitStatus exitStatus);
   void setConnections(QTimer* timer, QProcess* proc);
 
   virtual void on_buttonOk_clicked();
