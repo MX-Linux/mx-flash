@@ -53,6 +53,7 @@ public:
   void removeFlash();
   void updateFlash();
   void installFlash();
+  void oldFlash();
 
 public slots:
   void procStart();

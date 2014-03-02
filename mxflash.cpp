@@ -137,6 +137,11 @@ void mxflash::installFlash() {
   proc->start(cmd);
 }
 
+void mxflash::oldFlash() {
+  setConnections(timer, proc);
+  QString cmd = QString("tar --directory=/usr/lib/flashplugin-nonfree --extract --file=/var/cache/flashplugin-nonfree/flashplayer_SSE_11.2.202.235.so.tar.gz libflashplayer.so");
+  proc->start(cmd);
+}
 /////////////////////////////////////////////////////////////////////////
 // sync process events
 
@@ -199,6 +204,10 @@ void mxflash::on_buttonOk_clicked() {
       ui->stackedWidget->setCurrentWidget(ui->pageInstall);
       setCursor(QCursor(Qt::WaitCursor));
       installFlash();
+     } else if (ui->oldRadioButton->isChecked()) {
+      ui->stackedWidget->setCurrentWidget(ui->pageInstall);
+      setCursor(QCursor(Qt::WaitCursor));
+      oldFlash();
     }
   } else if (ui->stackedWidget->currentWidget() == ui->pageUpdate) {
     updateFlash();
