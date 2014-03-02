@@ -166,7 +166,7 @@ p, li { white-space: pre-wrap; }
             </sizepolicy>
            </property>
            <property name="toolTip">
-            <string>Select to copy/sync entire home</string>
+            <string>Select to update manually</string>
            </property>
            <property name="text">
             <string>Update just one time</string>
@@ -185,7 +185,7 @@ p, li { white-space: pre-wrap; }
             </sizepolicy>
            </property>
            <property name="toolTip">
-            <string>Select to copy/sync default browser</string>
+            <string>Select to set a daily scheduled update</string>
            </property>
            <property name="text">
             <string>Update on an automatic schedule</string>
@@ -313,7 +313,7 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../../../../../../usr/share/mx-user/icons/dialog-ok.png</normaloff>../../../../../../../../../usr/share/mx-user/icons/dialog-ok.png</iconset>
+         <normaloff>../../../usr/share/icons/dialog-ok.png</normaloff>../../../usr/share/icons/dialog-ok.png</iconset>
        </property>
        <property name="shortcut">
         <string/>
