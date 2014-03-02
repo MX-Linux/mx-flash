@@ -92,10 +92,11 @@ void mxflash::refresh() {
 
 
 void mxflash::removeFlash() {
-  setCursor(QCursor(Qt::WaitCursor));
   ui->stackedWidget->setCurrentWidget(ui->pageRemove);
-  QString cmd;
+  setCursor(QCursor(Qt::WaitCursor));
   setConnections(timer, proc);
+  QString cmd;
+
   QString fname = "/usr/lib/flashplugin-nonfree/libflashplayer.so";
   QFile file(fname);
   // checks if Flash is present
@@ -180,15 +181,24 @@ void mxflash::installFlash() {
   ui->stackedWidget->setCurrentWidget(ui->pageInstall);
   setCursor(QCursor(Qt::WaitCursor));
   QString cmd;
-  setConnections(timer, proc);
 
   //if non sse2
   if (system("grep -q \"^flags.*\\<sse2\\>\" /proc/cpuinfo") != 0) {
+    setConnections(timer, proc);
     cmd = QString("tar --directory=/usr/lib/flashplugin-nonfree --extract --file=/var/cache/flashplugin-nonfree/flashplayer_SSE_11.2.202.235.so.tar.gz libflashplayer.so");
+    proc->start(cmd);
   } else {
-    cmd = QString("apt-get install flashplugin-nonfree");
+    ui->progressBar->show();
+    disconnect(timer, SIGNAL(timeout()), 0, 0);
+    connect(timer, SIGNAL(timeout()), this, SLOT(procTime()));
+    disconnect(proc, SIGNAL(started()), 0, 0);
+    connect(proc, SIGNAL(started()), this, SLOT(procStart()));
+    disconnect(proc, SIGNAL(finished(int, QProcess::ExitStatus)), 0, 0);
+    connect(proc, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(procUpdateDone(int, QProcess::ExitStatus)));
+    cmd = QString("apt-get update");
+    ui->labelInstall->setText("Running apt-get update...");
+    proc->start(cmd);
   }
-  proc->start(cmd);
 }
 
 /////////////////////////////////////////////////////////////////////////
@@ -223,6 +233,23 @@ void mxflash::procDone(int exitCode, QProcess::ExitStatus exitStatus) {
                           tr("Process finished. Errors have occurred."));
     qApp->exit(1);
 
+  }
+}
+
+// install flashplugin-nonfree when done with apt-get update
+void mxflash::procUpdateDone(int exitCode, QProcess::ExitStatus exitStatus) {
+  timer->stop();
+  //ui->progressBar->setValue(100);
+  setCursor(QCursor(Qt::ArrowCursor));
+  if (exitStatus == QProcess::NormalExit) {
+    setConnections(timer, proc);
+    QString cmd = QString("apt-get install flashplugin-nonfree");
+    ui->labelInstall->setText("Installing...");
+    proc->start(cmd);
+  } else {
+    QMessageBox::critical(0, tr("Error"),
+                          tr("\"apt-get update\" command did not run successfully."));
+    qApp->exit(1);
   }
 }
 
