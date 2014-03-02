@@ -92,6 +92,8 @@ void mxflash::refresh() {
 
 
 void mxflash::removeFlash() {
+  setCursor(QCursor(Qt::WaitCursor));
+  ui->stackedWidget->setCurrentWidget(ui->pageRemove);
   QString cmd;
   setConnections(timer, proc);
   QString fname = "/usr/lib/flashplugin-nonfree/libflashplayer.so";
@@ -124,10 +126,16 @@ void mxflash::updateFlash() {
   QFile file(fname);
   // checks if Flash present
   if (!file.exists()) {
-    QMessageBox::critical(0, tr("Error"),
-                          tr("Flash is not installed"));
-    refresh();
-    return;
+    int ans = QMessageBox::critical(0, tr("Error"),
+                          tr("Flash is not installed. Would you like to install it?"),
+                          tr("Yes"), tr("No"));
+    if (ans == 0) {
+      installFlash();
+      return;
+    } else {
+      refresh();
+      return;
+    }
   // if file is present but not installed with a deb
   } else if (!checkDebInstalled()) {
     QMessageBox::critical(0, tr("Error"),
@@ -169,6 +177,8 @@ void mxflash::updateFlash() {
 }
 
 void mxflash::installFlash() {
+  ui->stackedWidget->setCurrentWidget(ui->pageInstall);
+  setCursor(QCursor(Qt::WaitCursor));
   QString cmd;
   setConnections(timer, proc);
 
@@ -233,15 +243,10 @@ void mxflash::setConnections(QTimer* timer, QProcess* proc) {
 void mxflash::on_buttonOk_clicked() {
   if (ui->stackedWidget->currentIndex() == 0) {
     if (ui->removeRadioButton->isChecked()) {
-      setCursor(QCursor(Qt::WaitCursor));
-      ui->stackedWidget->setCurrentWidget(ui->pageRemove);
-      qApp->processEvents();
       removeFlash();
     } else if (ui->updateRadioButton->isChecked()) {
       ui->stackedWidget->setCurrentWidget(ui->pageUpdate);
     } else if (ui->installRadioButton->isChecked()) {
-      ui->stackedWidget->setCurrentWidget(ui->pageInstall);
-      setCursor(QCursor(Qt::WaitCursor));
       installFlash();
     }
   } else if (ui->stackedWidget->currentWidget() == ui->pageUpdate) {
