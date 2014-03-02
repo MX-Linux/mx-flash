@@ -39,8 +39,7 @@ mxflash::mxflash(QWidget *parent) :
   ui(new Ui::mxflash)
 {
   ui->setupUi(this);
-  ui->stackedWidget->setCurrentIndex(0);
-  ui->progressBar->hide();
+  refresh();
   proc = new QProcess(this);
   timer = new QTimer(this);
 }
@@ -75,6 +74,13 @@ QString mxflash::getCmdOut(QString cmd) {
 /////////////////////////////////////////////////////////////////////////
 // general
 
+void mxflash::refresh() {
+  ui->stackedWidget->setCurrentIndex(0);
+  ui->progressBar->hide();
+  ui->progressBar->setValue(0);
+}
+
+
 void mxflash::removeFlash() {
   setConnections(timer, proc);
   QString cmd = QString("dpkg -P flashplugin-nonfree");
@@ -88,7 +94,7 @@ void mxflash::updateFlash() {
   if (out != "ok") {
     QMessageBox::critical(0, tr("Error"),
                           tr("Flash is not installed"));
-    ui->stackedWidget->setCurrentIndex(0);
+    refresh();
     return;
   }
 
@@ -115,9 +121,13 @@ void mxflash::updateFlash() {
     system(cmd.toAscii());
 
     setCursor(QCursor(Qt::ArrowCursor));
-    QMessageBox::information(0, tr("Finished"),
-                             tr("Flash update will run daily."));
-    qApp->exit(0);
+    if (QMessageBox::information(0, tr("Success"),
+                             tr("Flash update will run daily.\n\nDo you want to exit MX Flash Manager?"),
+                             QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok){
+      qApp->exit(0);
+    } else {
+      refresh();
+    }
   }
 }
 
@@ -147,9 +157,13 @@ void mxflash::procDone(int exitCode, QProcess::ExitStatus exitStatus) {
   ui->progressBar->setValue(100);
   setCursor(QCursor(Qt::ArrowCursor));
   if (exitStatus == QProcess::NormalExit) {
-    QMessageBox::information(0, tr("Finished"),
-                             tr("Process finished. Success."));
-    qApp->exit(0);
+    if (QMessageBox::information(0, tr("Success"),
+                             tr("Process finished. Success.\n\nDo you want to exit MX Flash Manager?"),
+                             QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok){
+      qApp->exit(0);
+    } else {
+      refresh();
+    }
   } else {
     QMessageBox::critical(0, tr("Error"),
                           tr("Process finished. Errors have occurred."));

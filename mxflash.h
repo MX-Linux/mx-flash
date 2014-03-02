@@ -48,6 +48,7 @@ public:
   ~mxflash();
   // helpers
   static QString getCmdOut(QString cmd);
+  void refresh();
 
   void removeFlash();
   void updateFlash();
