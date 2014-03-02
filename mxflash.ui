@@ -17,7 +17,7 @@
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="pageAction">
       <widget class="QLabel" name="labelAction">
@@ -70,6 +70,9 @@ p, li { white-space: pre-wrap; }
         </property>
         <item row="4" column="0">
          <widget class="QRadioButton" name="installRadioButton">
+          <property name="toolTip">
+           <string>This option (re)installs Flash, if needed will install non-sse2 Flash</string>
+          </property>
           <property name="text">
            <string>Reinstall Flash</string>
           </property>
@@ -77,9 +80,6 @@ p, li { white-space: pre-wrap; }
         </item>
         <item row="2" column="0">
          <widget class="QRadioButton" name="updateRadioButton">
-          <property name="toolTip">
-           <string>Select to copy/sync default browser</string>
-          </property>
           <property name="text">
            <string>Update Flash</string>
           </property>
@@ -87,9 +87,6 @@ p, li { white-space: pre-wrap; }
         </item>
         <item row="1" column="0">
          <widget class="QRadioButton" name="removeRadioButton">
-          <property name="toolTip">
-           <string>Select to copy/sync entire home</string>
-          </property>
           <property name="text">
            <string>Remove Flash</string>
           </property>
