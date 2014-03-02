@@ -33,7 +33,7 @@
 int main(int argc, char *argv[])
 {
   QApplication a(argc, argv);
-  a.setWindowIcon(QIcon("/usr/local/icons/32-Flash-manager.png"));
+  a.setWindowIcon(QIcon("/usr/share/icons/mx-flash.png"));
 
   QTranslator qtTran;
   qtTran.load(QString("qt_") + QLocale::system().name());
