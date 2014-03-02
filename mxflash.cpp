@@ -127,7 +127,7 @@ void mxflash::updateFlash() {
   // checks if Flash present
   if (!file.exists()) {
     int ans = QMessageBox::critical(0, tr("Error"),
-                          tr("Flash is not installed. Would you like to install it?"),
+                          tr("<b>Flash is not installed. Would you like to install it?</b>"),
                           tr("Yes"), tr("No"));
     if (ans == 0) {
       installFlash();
@@ -167,7 +167,7 @@ void mxflash::updateFlash() {
 
     setCursor(QCursor(Qt::ArrowCursor));
     if (QMessageBox::information(0, tr("Success"),
-                             tr("Flash update will run daily.\n\nDo you want to exit MX Flash Manager?"),
+                             tr("Flash update will run daily.<p><b>Do you want to exit MX Flash Manager?</b>"),
                              QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok){
       qApp->exit(0);
     } else {
@@ -212,7 +212,7 @@ void mxflash::procDone(int exitCode, QProcess::ExitStatus exitStatus) {
   setCursor(QCursor(Qt::ArrowCursor));
   if (exitStatus == QProcess::NormalExit) {
     if (QMessageBox::information(0, tr("Success"),
-                             tr("Process finished with success.\n\nDo you want to exit MX Flash Manager?"),
+                             tr("Process finished with success.<p><b>Do you want to exit MX Flash Manager?</b>"),
                              QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok){
       qApp->exit(0);
     } else {
