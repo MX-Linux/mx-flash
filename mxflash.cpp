@@ -74,26 +74,64 @@ QString mxflash::getCmdOut(QString cmd) {
 /////////////////////////////////////////////////////////////////////////
 // general
 
+bool mxflash::checkDebInstalled() {
+  QString out = getCmdOut("dpkg -s flashplugin-nonfree | grep Status | cut -f 3 -d \" \"");
+  if (out == "ok") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 void mxflash::refresh() {
   ui->stackedWidget->setCurrentIndex(0);
   ui->progressBar->hide();
   ui->progressBar->setValue(0);
+  setCursor(QCursor(Qt::ArrowCursor));
 }
 
 
 void mxflash::removeFlash() {
+  QString cmd;
   setConnections(timer, proc);
-  QString cmd = QString("dpkg -P flashplugin-nonfree");
-  proc->start(cmd);
+  QString fname = "/usr/lib/flashplugin-nonfree/libflashplayer.so";
+  QFile file(fname);
+  // checks if Flash is present
+  if (file.exists()) {
+    // if deb installed
+    if (checkDebInstalled()) {
+      cmd = QString("dpkg -P flashplugin-nonfree");
+      proc->start(cmd);
+    } else {
+      if (QFile::remove(fname)) {
+        proc->start("true");
+      } else {
+        QMessageBox::critical(0, tr("Error"),
+                              tr("Count not remove ") + fname + tr(" file."));
+        refresh();
+      }
+    }
+  // Flash is not installed
+  } else {
+    QMessageBox::critical(0, tr("Error"),
+                          tr("Flash is not installed"));
+    refresh();
+  }
 }
 
 void mxflash::updateFlash() {
-  //check if installed
-  QString cmd = "dpkg -s flashplugin-nonfree | grep Status | cut -f 3 -d \" \"";
-  QString out = getCmdOut(cmd);
-  if (out != "ok") {
+  QString fname = "/usr/lib/flashplugin-nonfree/libflashplayer.so";
+  QFile file(fname);
+  // checks if Flash present
+  if (!file.exists()) {
     QMessageBox::critical(0, tr("Error"),
                           tr("Flash is not installed"));
+    refresh();
+    return;
+  // if file is present but not installed with a deb
+  } else if (!checkDebInstalled()) {
+    QMessageBox::critical(0, tr("Error"),
+                          tr("Flash is installed through other means, cannot update with this program."));
     refresh();
     return;
   }
@@ -104,8 +142,7 @@ void mxflash::updateFlash() {
   // manual update
   if (ui->manualRadioButton->isChecked()) {
     setConnections(timer, proc);
-    cmd = QString("update-flashplugin-nonfree -i");
-    proc->start(cmd);
+    proc->start("update-flashplugin-nonfree -i");
 
   //automatic update
   } else {
@@ -132,8 +169,15 @@ void mxflash::updateFlash() {
 }
 
 void mxflash::installFlash() {
+  QString cmd;
   setConnections(timer, proc);
-  QString cmd = QString("apt-get install flashplugin-nonfree");
+
+  //if non sse2
+  if (system("grep -q \"^flags.*\\<sse2\\>\" /proc/cpuinfo") != 0) {
+    cmd = QString("tar --directory=/usr/lib/flashplugin-nonfree --extract --file=/var/cache/flashplugin-nonfree/flashplayer_SSE_11.2.202.235.so.tar.gz libflashplayer.so");
+  } else {
+    cmd = QString("apt-get install flashplugin-nonfree");
+  }
   proc->start(cmd);
 }
 
@@ -158,7 +202,7 @@ void mxflash::procDone(int exitCode, QProcess::ExitStatus exitStatus) {
   setCursor(QCursor(Qt::ArrowCursor));
   if (exitStatus == QProcess::NormalExit) {
     if (QMessageBox::information(0, tr("Success"),
-                             tr("Process finished. Success.\n\nDo you want to exit MX Flash Manager?"),
+                             tr("Process finished with success.\n\nDo you want to exit MX Flash Manager?"),
                              QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok){
       qApp->exit(0);
     } else {

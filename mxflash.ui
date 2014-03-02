@@ -26,7 +26,7 @@
          <x>20</x>
          <y>20</y>
          <width>481</width>
-         <height>71</height>
+         <height>51</height>
         </rect>
        </property>
        <property name="text">
@@ -34,8 +34,7 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Adobe Flash comes preinstalled on MX-14. However, it's a non-free program that has ongoing security problems that concern some users. Consult the Help document for details.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;What would you like MX Flash Manager to do?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Adobe Flash comes preinstalled on MX-14. However, it's a non-free program that has ongoing problems that concern some users. Consult the Help document for details.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="textFormat">
         <enum>Qt::RichText</enum>
@@ -47,8 +46,8 @@ p, li { white-space: pre-wrap; }
       <widget class="QGroupBox" name="whatGroupBox">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>70</y>
+         <x>20</x>
+         <y>80</y>
          <width>491</width>
          <height>111</height>
         </rect>
@@ -60,7 +59,7 @@ p, li { white-space: pre-wrap; }
         </sizepolicy>
        </property>
        <property name="title">
-        <string/>
+        <string>What would you like MX Flash Manager to do?</string>
        </property>
        <layout class="QGridLayout" name="_2">
         <property name="margin">
@@ -69,19 +68,6 @@ p, li { white-space: pre-wrap; }
         <property name="spacing">
          <number>6</number>
         </property>
-        <item row="0" column="0">
-         <widget class="QRadioButton" name="removeRadioButton">
-          <property name="toolTip">
-           <string>Select to copy/sync entire home</string>
-          </property>
-          <property name="text">
-           <string>Remove Flash</string>
-          </property>
-          <property name="checked">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
         <item row="4" column="0">
          <widget class="QRadioButton" name="installRadioButton">
           <property name="text">
@@ -99,6 +85,19 @@ p, li { white-space: pre-wrap; }
           </property>
          </widget>
         </item>
+        <item row="1" column="0">
+         <widget class="QRadioButton" name="removeRadioButton">
+          <property name="toolTip">
+           <string>Select to copy/sync entire home</string>
+          </property>
+          <property name="text">
+           <string>Remove Flash</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
      </widget>
@@ -110,9 +109,9 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>10</x>
-            <y>30</y>
+            <y>0</y>
             <width>481</width>
-            <height>91</height>
+            <height>181</height>
            </rect>
           </property>
           <property name="text">
@@ -133,15 +132,15 @@ p, li { white-space: pre-wrap; }
          <x>0</x>
          <y>10</y>
          <width>521</width>
-         <height>201</height>
+         <height>111</height>
         </rect>
        </property>
        <widget class="QGroupBox" name="whatUpdateBox">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>20</x>
           <y>0</y>
-          <width>511</width>
+          <width>491</width>
           <height>100</height>
          </rect>
         </property>
@@ -152,7 +151,7 @@ p, li { white-space: pre-wrap; }
          </sizepolicy>
         </property>
         <property name="title">
-         <string/>
+         <string>What kind of update do you prefer?</string>
         </property>
         <layout class="QGridLayout" name="_3">
          <property name="margin">
@@ -161,7 +160,7 @@ p, li { white-space: pre-wrap; }
          <property name="spacing">
           <number>6</number>
          </property>
-         <item row="1" column="0">
+         <item row="0" column="0">
           <widget class="QRadioButton" name="manualRadioButton">
            <property name="sizePolicy">
             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
@@ -180,7 +179,7 @@ p, li { white-space: pre-wrap; }
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
+         <item row="2" column="0">
           <widget class="QRadioButton" name="automaticRadioButton">
            <property name="sizePolicy">
             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
@@ -193,13 +192,6 @@ p, li { white-space: pre-wrap; }
            </property>
            <property name="text">
             <string>Update on an automatic schedule</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="whatUpdateLabel">
-           <property name="text">
-            <string>What kind of update do you prefer?</string>
            </property>
           </widget>
          </item>
@@ -221,9 +213,9 @@ p, li { white-space: pre-wrap; }
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>30</y>
+          <y>-10</y>
           <width>481</width>
-          <height>91</height>
+          <height>181</height>
          </rect>
         </property>
         <property name="text">
@@ -241,6 +233,9 @@ p, li { white-space: pre-wrap; }
     <widget class="QProgressBar" name="progressBar">
      <property name="value">
       <number>0</number>
+     </property>
+     <property name="textVisible">
+      <bool>false</bool>
      </property>
     </widget>
    </item>
