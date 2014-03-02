@@ -110,7 +110,7 @@ void mxflash::removeFlash() {
         proc->start("true");
       } else {
         QMessageBox::critical(0, tr("Error"),
-                              tr("Count not remove ") + fname + tr(" file."));
+                              tr("Could not remove ") + fname);
         refresh();
       }
     }
