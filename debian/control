@@ -1,0 +1,22 @@
+Source: mx-flash
+Section: system
+Priority: optional
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Build-Depends: qt4-qmake,
+	debhelper (>=7.0.50~)
+Standards-Version: 3.9.4
+Homepage: https://github.com/AdrianTM/mx-flash
+
+Package: mx-flash
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, gksu, cron
+Suggests: anacron
+Description: Adobe Flash (tm) plugin manager
+ The MX Adobe Flash (tm) Manager provides an easy way to install and manage the
+ Adobe Flash (tm) plugin.  Includes an option to check for and update the plugin
+ atomatically.
+ *
+ WARNING: Some options of this program cause the  Adobe Flash Player to be
+ downloaded from www.adobe.com.
+ The End User License Agreement of the Adobe Flash Player is available at
+ www.adobe.com.

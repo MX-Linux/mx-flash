@@ -1,0 +1,3 @@
+mx-flash 		 usr/sbin
+mx-flash.desktop	         usr/share/applications/mx
+translations/*.qm 	 usr/share/mx-flash/locales

@@ -1,0 +1,5 @@
+mx-flash (0.13.98+git20140302-mx140+1) mx; urgency=low
+
+  * Initial packaging.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Sun, 02 Feb 2014 12:10:53 -0800
