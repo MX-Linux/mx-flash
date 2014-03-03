@@ -52,5 +52,6 @@ TRANSLATIONS += translations/mx-flash_ar.ts \
                 translations/mx-flash_pl.ts \
                 translations/mx-flash_pt.ts \
                 translations/mx-flash_pt_BR.ts \
+                translations/mx-flash_ro.ts \
                 translations/mx-flash_zh_CN.ts \
                 translations/mx-flash_zh_TW.ts
