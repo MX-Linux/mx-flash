@@ -1,3 +1,9 @@
+mx-flash (0.13.98+git20140304-mx140+2) mx; urgency=low
+
+  * made a webkit help/license window instead of calling browser
+
+ -- Adrian <adrian@mx1>  Tue, 04 Mar 2014 10:31:08 -0500
+
 mx-flash (0.13.98+git20140303-mx140+1) mx; urgency=low
 
   * Initial packaging.
