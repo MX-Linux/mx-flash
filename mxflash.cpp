@@ -28,11 +28,11 @@
 
 #include <stdio.h>
 
-#include <QDesktopServices>
 #include <QUrl>
 #include <QFile>
 #include <QDir>
 #include <QTextStream>
+#include <QWebView>
 
 
 mxflash::mxflash(QWidget *parent) :
@@ -324,18 +324,28 @@ void mxflash::on_buttonOk_clicked() {
 void mxflash::on_buttonAbout_clicked() {
     QMessageBox msgBox(QMessageBox::NoIcon,
                        tr("About MX Flash Manager"), "<p align=\"center\"><b><h2>" +
-                       tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">MX14+git20140303</p><p align=\"center\"><h3>" +
+                       tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">MX14+git20140304</p><p align=\"center\"><h3>" +
                        tr("Simple Flash manager for antiX MX") + "</h3></p><p align=\"center\"><a href=\"http://www.mepiscommunity.org/mx\">http://www.mepiscommunity.org/mx</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) antiX") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
     msgBox.addButton(QMessageBox::Cancel);
     if (msgBox.exec() == QMessageBox::AcceptRole)
-        QDesktopServices::openUrl(QUrl("file:///usr/local/share/doc/mx-flash-license.html"));
+        displaySite("file:///usr/local/share/doc/mx-flash-license.html");
 }
 
 
 // Help button clicked
 void mxflash::on_buttonHelp_clicked() {
-    QDesktopServices::openUrl(QUrl("file:///usr/local/share/doc/mxapps.html#flash"));
+    displaySite("file:///usr/local/share/doc/mxapps.html#flash");
 }
 
+// pop up a window and display website
+void mxflash::displaySite(QString site) {
+    QWidget *window = new QWidget(this, Qt::Dialog);
+    window->setWindowTitle("MX Flash Manager");
+    window->resize(800, 500);
+    QWebView *webview = new QWebView(window);
+    webview->load(QUrl(site));
+    webview->show();
+    window->show();
+}

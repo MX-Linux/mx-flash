@@ -48,6 +48,7 @@ public:
     // helpers
     static QString getCmdOut(QString cmd);
     void refresh();
+    void displaySite(QString site);
 
     void removeFlash();
     void updateFlash();
