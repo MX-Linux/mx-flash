@@ -169,7 +169,7 @@ void mxflash::updateFlash() {
 
         setCursor(QCursor(Qt::ArrowCursor));
         if (QMessageBox::information(0, tr("Success"),
-                                     tr("Flash update will run daily.<p><b>Do you want to exit MX Flash Manager?</b>"),
+                                     tr("An automatic daily update was scheduled. You can close the program now.<p><b>Do you want to exit MX Flash Manager?</b>"),
                                      QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok){
             qApp->exit(0);
         } else {
@@ -195,7 +195,7 @@ void mxflash::downloadFlash() {
     connect(proc, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(procDownloadDone(int, QProcess::ExitStatus)));
 
     ui->labelInstall->setText("Downloading Flash..");
-    QString cmd = QString("wget -q http://sourceforge.net/projects/antix-linux/files/Testing/MX-14/tarballs/flashplayer_SSE_11.2.202.235.so.tar.gz");
+    QString cmd = QString("wget -q -nc http://sourceforge.net/projects/antix-linux/files/Testing/MX-14/tarballs/flashplayer_SSE_11.2.202.235.so.tar.gz");
     proc->start(cmd);
 }
 
