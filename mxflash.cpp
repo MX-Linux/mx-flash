@@ -342,7 +342,7 @@ void mxflash::on_buttonHelp_clicked() {
 // pop up a window and display website
 void mxflash::displaySite(QString site) {
     QWidget *window = new QWidget(this, Qt::Dialog);
-    window->setWindowTitle("MX Flash Manager");
+    window->setWindowTitle(this->windowTitle());
     window->resize(800, 500);
     QWebView *webview = new QWebView(window);
     webview->load(QUrl(site));
