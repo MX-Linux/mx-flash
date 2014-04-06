@@ -46,7 +46,6 @@ public:
     explicit mxflash(QWidget *parent = 0);
     ~mxflash();
     // helpers
-    static QString getCmdOut(QString cmd);
     void refresh();
     void displaySite(QString site);
 

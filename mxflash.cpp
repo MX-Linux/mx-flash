@@ -1,11 +1,9 @@
 /*****************************************************************************
  * mxflash.cpp
  *****************************************************************************
- * Copyright (C) 2014 MX Authors with the exeption of getCmdOut function
- *  getCmdOut function copyright (C) 2003-2014 Warren Woodford
- *   released under the Apache License version 2.0
+ * Copyright (C) 2014 MX Authors
  *
-//  * Authors: Adrian
+ * Authors: Adrian
  *          MEPIS Community <http://forum.mepiscommunity.org>
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -26,14 +24,9 @@
 #include "mxflash.h"
 #include "ui_mxflash.h"
 
-#include <stdio.h>
-
-#include <QUrl>
-#include <QFile>
 #include <QDir>
 #include <QTextStream>
 #include <QWebView>
-
 
 mxflash::mxflash(QWidget *parent) :
     QDialog(parent),
@@ -49,38 +42,17 @@ mxflash::~mxflash() {
     delete ui;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////
-// Util function taken from minstall, part of MEPIS, Copyright (C) 2003-2010 by Warren Woodford
-// Licensed under the Apache License, Version 2.0
-
-QString mxflash::getCmdOut(QString cmd) {
-    char line[260];
-    const char* ret = "";
-    FILE* fp = popen(cmd.toAscii(), "r");
-    if (fp == NULL) {
-        return QString (ret);
-    }
-    int i;
-    if (fgets(line, sizeof line, fp) != NULL) {
-        i = strlen(line);
-        line[--i] = '\0';
-        ret = line;
-    }
-    pclose(fp);
-    return QString (ret);
-}
-
-
 /////////////////////////////////////////////////////////////////////////
 // general
 
 bool mxflash::checkDebInstalled() {
-    QString out = getCmdOut("dpkg -s flashplugin-nonfree | grep Status | cut -f 3 -d \" \"");
-    if (out == "ok") {
-        return true;
-    } else {
-        return false;
-    }
+    proc = new QProcess(this);
+    proc->start("/bin/bash -c \"dpkg -s flashplugin-nonfree | grep Status | cut -f 3 -d \' \'\"");
+    proc->setReadChannel(QProcess::StandardOutput);
+    proc->setReadChannelMode(QProcess::MergedChannels);
+    proc->waitForFinished();
+    QString out = proc->readAllStandardOutput();
+    return out.contains("ok");
 }
 
 void mxflash::refresh() {
@@ -94,8 +66,6 @@ void mxflash::refresh() {
 void mxflash::removeFlash() {
     ui->stackedWidget->setCurrentWidget(ui->pageRemove);
     setCursor(QCursor(Qt::WaitCursor));
-    setConnections(timer, proc);
-    QString cmd;
 
     QString fname = "/usr/lib/flashplugin-nonfree/libflashplayer.so";
     QFile file(fname);
@@ -103,10 +73,12 @@ void mxflash::removeFlash() {
     if (file.exists()) {
         // if deb installed
         if (checkDebInstalled()) {
-            cmd = QString("dpkg -P flashplugin-nonfree");
+            QString cmd = QString("dpkg -P flashplugin-nonfree");
+            setConnections(timer, proc);
             proc->start(cmd);
         } else {
             if (QFile::remove(fname)) {
+                setConnections(timer, proc);
                 proc->start("true");
             } else {
                 QMessageBox::critical(0, tr("Error"),
@@ -324,7 +296,7 @@ void mxflash::on_buttonOk_clicked() {
 void mxflash::on_buttonAbout_clicked() {
     QMessageBox msgBox(QMessageBox::NoIcon,
                        tr("About MX Flash Manager"), "<p align=\"center\"><b><h2>" +
-                       tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">MX14+git20140304</p><p align=\"center\"><h3>" +
+                       tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">MX14+git20140406</p><p align=\"center\"><h3>" +
                        tr("Simple Flash manager for antiX MX") + "</h3></p><p align=\"center\"><a href=\"http://www.mepiscommunity.org/mx\">http://www.mepiscommunity.org/mx</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) antiX") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("License"), QMessageBox::AcceptRole);

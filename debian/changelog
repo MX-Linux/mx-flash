@@ -1,3 +1,9 @@
+mx-flash (0.13.98+git20140406-mx140+3) mx; urgency=low
+
+  * replaced Apache licensed function
+
+ -- Adrian <adrian@mx1>  Sun, 06 Apr 2014 00:29:14 -0400
+
 mx-flash (0.13.98+git20140304-mx140+2) mx; urgency=low
 
   * made a webkit help/license window instead of calling browser
