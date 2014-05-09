@@ -42,6 +42,17 @@ mxflash::~mxflash() {
     delete ui;
 }
 
+
+// Util function
+QString mxflash::getCmdOut(QString cmd) {
+    proc = new QProcess(this);
+    proc->start("/bin/bash", QStringList() << "-c" << cmd);
+    proc->setReadChannel(QProcess::StandardOutput);
+    proc->setReadChannelMode(QProcess::MergedChannels);
+    proc->waitForFinished(-1);
+    return proc->readAllStandardOutput().trimmed();
+}
+
 /////////////////////////////////////////////////////////////////////////
 // general
 
@@ -60,6 +71,36 @@ void mxflash::refresh() {
     ui->progressBar->hide();
     ui->progressBar->setValue(0);
     setCursor(QCursor(Qt::ArrowCursor));
+    detectVersion();
+}
+
+// detect and list the version of Flash and PepperFlash
+void mxflash::detectVersion() {
+    QString out;
+    // Current version on Adobe site
+    QString bit = getCmdOut("dpkg --print-architecture | sed 's/amd64/64/;s/i386/32/'");
+    QString cmd = QString("wget -qO- http://get.adobe.com/flashplayer/download/%3Finstaller=Flash_Player_11.2_for_other_Linux_%28.tar.gz%29_%1-bit%26standalone=1 | grep location.href | cut -f2 -d\\' | cut -f7 -d/").arg(bit);
+    QString currentversion = getCmdOut(cmd);
+    out = tr("Current version: ") + currentversion + "\n";
+    // Adobe Flash version
+    QString version = getCmdOut("strings /usr/lib/flashplugin-nonfree/libflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
+    if (version != "") {
+        out += tr("Adobe Flash installed version: ") + version;
+    } else {
+        out += tr("Adobe Flash is not installed.");
+    }
+    // PepperFlash
+    QString versionChrome = getCmdOut("strings /opt/google/chrome/PepperFlash/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
+    QString versionChromium = getCmdOut("strings /usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
+    if (versionChrome != "" && versionChromium == "" ) {
+        out += "\n" + tr("PepperFlash for Chrome version: ") + versionChrome;
+    } else if (versionChrome == "" && versionChromium != "" ) {
+        out += "\n" + tr("PepperFlash for Chromium version: ") + versionChromium;
+    } else  if (versionChrome != "" && versionChromium != "" ) {
+        out += "\n" + tr("PepperFlash for Chrome version: ") + versionChrome + "\n" + tr("PepperFlash for Chromium version: ") + versionChromium;
+    }
+
+    ui->labelVersion->setText(out);
 }
 
 
@@ -163,8 +204,8 @@ void mxflash::downloadFlash() {
     connect(timer, SIGNAL(timeout()), this, SLOT(procTime()));
     disconnect(proc, SIGNAL(started()), 0, 0);
     connect(proc, SIGNAL(started()), this, SLOT(procStart()));
-    disconnect(proc, SIGNAL(finished(int, QProcess::ExitStatus)), 0, 0);
-    connect(proc, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(procDownloadDone(int, QProcess::ExitStatus)));
+    disconnect(proc, SIGNAL(finished(int)), 0, 0);
+    connect(proc, SIGNAL(finished(int)), this, SLOT(procDownloadDone(int)));
 
     ui->labelInstall->setText("Downloading Flash..");
     QString cmd = QString("wget -q -nc http://sourceforge.net/projects/antix-linux/files/Testing/MX-14/tarballs/flashplayer_SSE_11.2.202.235.so.tar.gz");
@@ -184,8 +225,8 @@ void mxflash::installFlash() {
         connect(timer, SIGNAL(timeout()), this, SLOT(procTime()));
         disconnect(proc, SIGNAL(started()), 0, 0);
         connect(proc, SIGNAL(started()), this, SLOT(procStart()));
-        disconnect(proc, SIGNAL(finished(int, QProcess::ExitStatus)), 0, 0);
-        connect(proc, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(procUpdateDone(int, QProcess::ExitStatus)));
+        disconnect(proc, SIGNAL(finished(int)), 0, 0);
+        connect(proc, SIGNAL(finished(int)), this, SLOT(procUpdateDone(int)));
         ui->labelInstall->setText("Running apt-get update...");
         proc->start("apt-get update");
     }
@@ -206,7 +247,7 @@ void mxflash::procTime() {
     ui->progressBar->setValue(i);
 }
 
-void mxflash::procDone(int exitCode, QProcess::ExitStatus exitStatus) {
+void mxflash::procDone(int exitCode) {
     timer->stop();
     ui->progressBar->setValue(100);
     setCursor(QCursor(Qt::ArrowCursor));
@@ -226,7 +267,7 @@ void mxflash::procDone(int exitCode, QProcess::ExitStatus exitStatus) {
 }
 
 // install flashplugin-nonfree when done with apt-get update
-void mxflash::procUpdateDone(int exitCode, QProcess::ExitStatus exitStatus) {
+void mxflash::procUpdateDone(int exitCode) {
     timer->stop();
     if (exitCode == 0) {
         setConnections(timer, proc);
@@ -239,7 +280,7 @@ void mxflash::procUpdateDone(int exitCode, QProcess::ExitStatus exitStatus) {
     }
 }
 
-void mxflash::procDownloadDone(int exitCode, QProcess::ExitStatus exitStatus) {
+void mxflash::procDownloadDone(int exitCode) {
     timer->stop();
     ui->progressBar->setValue(100);
     if (exitCode == 0) {
@@ -249,8 +290,8 @@ void mxflash::procDownloadDone(int exitCode, QProcess::ExitStatus exitStatus) {
         connect(timer, SIGNAL(timeout()), this, SLOT(procTime()));
         disconnect(proc, SIGNAL(started()), 0, 0);
         connect(proc, SIGNAL(started()), this, SLOT(procStart()));
-        disconnect(proc, SIGNAL(finished(int, QProcess::ExitStatus)), 0, 0);
-        connect(proc, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(procDone(int, QProcess::ExitStatus)));
+        disconnect(proc, SIGNAL(finished(int)), 0, 0);
+        connect(proc, SIGNAL(finished(int)), this, SLOT(procDone(int)));
         QString cmd = QString("tar --directory=/usr/lib/flashplugin-nonfree --extract --file=%1/flashplayer_SSE_11.2.202.235.so.tar.gz libflashplayer.so").arg(path);
         ui->labelInstall->setText("Installing...");
         proc->start(cmd);
@@ -267,8 +308,8 @@ void mxflash::setConnections(QTimer* timer, QProcess* proc) {
     connect(timer, SIGNAL(timeout()), this, SLOT(procTime()));
     disconnect(proc, SIGNAL(started()), 0, 0);
     connect(proc, SIGNAL(started()), this, SLOT(procStart()));
-    disconnect(proc, SIGNAL(finished(int, QProcess::ExitStatus)), 0, 0);
-    connect(proc, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(procDone(int, QProcess::ExitStatus)));
+    disconnect(proc, SIGNAL(finished(int)), 0, 0);
+    connect(proc, SIGNAL(finished(int)), this, SLOT(procDone(int)));
 }
 
 /////////////////////////////////////////////////////////////////////////
@@ -296,7 +337,7 @@ void mxflash::on_buttonOk_clicked() {
 void mxflash::on_buttonAbout_clicked() {
     QMessageBox msgBox(QMessageBox::NoIcon,
                        tr("About MX Flash Manager"), "<p align=\"center\"><b><h2>" +
-                       tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">MX14+git20140406</p><p align=\"center\"><h3>" +
+                       tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">MX14+git20140509</p><p align=\"center\"><h3>" +
                        tr("Simple Flash manager for antiX MX") + "</h3></p><p align=\"center\"><a href=\"http://www.mepiscommunity.org/mx\">http://www.mepiscommunity.org/mx</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) antiX") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("License"), QMessageBox::AcceptRole);

@@ -46,8 +46,10 @@ public:
     explicit mxflash(QWidget *parent = 0);
     ~mxflash();
     // helpers
+    QString getCmdOut(QString cmd);
     void refresh();
     void displaySite(QString site);
+    void detectVersion();
 
     void removeFlash();
     void updateFlash();
@@ -58,9 +60,9 @@ public:
 public slots:
     void procStart();
     void procTime();
-    void procDone(int exitCode, QProcess::ExitStatus exitStatus);
-    void procUpdateDone(int exitCode, QProcess::ExitStatus exitStatus);
-    void procDownloadDone(int exitCode, QProcess::ExitStatus exitStatus);
+    void procDone(int exitCode);
+    void procUpdateDone(int exitCode);
+    void procDownloadDone(int exitCode);
     void setConnections(QTimer* timer, QProcess* proc);
 
     virtual void on_buttonOk_clicked();
