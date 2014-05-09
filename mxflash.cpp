@@ -81,7 +81,7 @@ void mxflash::detectVersion() {
     QString bit = getCmdOut("dpkg --print-architecture | sed 's/amd64/64/;s/i386/32/'");
     QString cmd = QString("wget -qO- http://get.adobe.com/flashplayer/download/%3Finstaller=Flash_Player_11.2_for_other_Linux_%28.tar.gz%29_%1-bit%26standalone=1 | grep location.href | cut -f2 -d\\' | cut -f7 -d/").arg(bit);
     QString currentversion = getCmdOut(cmd);
-    out = tr("Current version: ") + currentversion + "\n";
+    out = tr("Adobe Flash current version: ") + currentversion + "\n";
     // Adobe Flash version
     QString version = getCmdOut("strings /usr/lib/flashplugin-nonfree/libflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
     if (version != "") {
@@ -98,7 +98,6 @@ void mxflash::detectVersion() {
     if (versionChromium != "" ) {
         out += "\n" + tr("PepperFlash for Chromium version: ") + versionChromium;
     }
-
     ui->labelVersion->setText(out);
 }
 
