@@ -92,12 +92,11 @@ void mxflash::detectVersion() {
     // PepperFlash
     QString versionChrome = getCmdOut("strings /opt/google/chrome/PepperFlash/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
     QString versionChromium = getCmdOut("strings /usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
-    if (versionChrome != "" && versionChromium == "" ) {
+    if (versionChrome != "") {
         out += "\n" + tr("PepperFlash for Chrome version: ") + versionChrome;
-    } else if (versionChrome == "" && versionChromium != "" ) {
+    }
+    if (versionChromium != "" ) {
         out += "\n" + tr("PepperFlash for Chromium version: ") + versionChromium;
-    } else  if (versionChrome != "" && versionChromium != "" ) {
-        out += "\n" + tr("PepperFlash for Chrome version: ") + versionChrome + "\n" + tr("PepperFlash for Chromium version: ") + versionChromium;
     }
 
     ui->labelVersion->setText(out);
