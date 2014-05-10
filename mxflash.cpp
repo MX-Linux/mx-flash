@@ -70,6 +70,9 @@ void mxflash::refresh() {
     ui->stackedWidget->setCurrentIndex(0);
     ui->progressBar->hide();
     ui->progressBar->setValue(0);
+    ui->removeRadioButton->setAutoExclusive(false);
+    ui->removeRadioButton->setChecked(false);
+    ui->removeRadioButton->setAutoExclusive(true);
     setCursor(QCursor(Qt::ArrowCursor));
     detectVersion();
 }
