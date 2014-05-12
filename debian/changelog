@@ -1,6 +1,15 @@
+mx-flash (0.14-mx140+1.1) mx; urgency=low
+
+  * Rebuild for MX 14 repository:
+    - use "su-to-root -X -c" to execute mx-flash in desktop file.
+    - debian/control: drop dependency on gksu and build-dep on qt4-qmake, add 
+      build-deps for libqt4-dev and libqtwebkit-dev 
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Sun, 11 May 2014 11:53:11 -0700
+
 mx-flash (0.14-mx140+1) mx; urgency=low
 
-  * added info about installed and availalbe versions 
+  * added info about installed and available versions 
 
  -- Adrian <adrian@mx1>  Fri, 09 May 2014 11:25:29 -0400
 
