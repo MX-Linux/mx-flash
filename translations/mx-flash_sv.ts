@@ -1,10 +1,10 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="nl" version="2.0">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="sv" version="2.0">
 <context>
     <name>QApplication</name>
     <message>
         <location filename="main.cpp" line="56"/>
         <source>You must run this program as root.</source>
-        <translation>U dient deze toepassing als &apos;root&apos; uit te voeren.</translation>
+        <translation>Du måste köra detta program som root</translation>
     </message>
 </context>
 <context>
@@ -13,17 +13,17 @@
         <location filename="mxflash.ui" line="20"/>
         <location filename="mxflash.cpp" line="341"/>
         <source>MX Flash Manager</source>
-        <translation>MX Flashbeheer</translation>
+        <translation>MX Flash-hanterare</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="47"/>
         <source>About this application</source>
-        <translation>Over deze toepassing</translation>
+        <translation>Om detta program</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="50"/>
         <source>About...</source>
-        <translation>Over...</translation>
+        <translation>Om...</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="57"/>
@@ -33,12 +33,12 @@
     <message>
         <location filename="mxflash.ui" line="86"/>
         <source>Display help </source>
-        <translation>Toon help</translation>
+        <translation>Visa hjälp</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="89"/>
         <source>Help</source>
-        <translation>Help</translation>
+        <translation>Hjälp</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="96"/>
@@ -48,7 +48,7 @@
     <message>
         <location filename="mxflash.ui" line="103"/>
         <source>Apply any changes then quit</source>
-        <translation>Veranderingen toepassen en afsluiten</translation>
+        <translation>Genomför ändringarna och sedan sluta</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="106"/>
@@ -58,12 +58,12 @@
     <message>
         <location filename="mxflash.ui" line="161"/>
         <source>Cancel any changes then quit</source>
-        <translation>Iedere verandering ongedaan maken, dan afsluiten</translation>
+        <translation>Avbryt ändringarna och sedan sluta</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="164"/>
         <source>Cancel</source>
-        <translation>Cancel</translation>
+        <translation>Avbryt</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="171"/>
@@ -81,92 +81,92 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Adobe Flash is reeds geïnstalleerd op MX-14. Echter, het is een niet-gratis programma dat problemen geeft die sommige gebruikers treft. Raadpleeg het Help document voor details.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Adobe Flash kommer förinstallerat i MX-14. Programmet är emellertid inte fritt och har problem som berör en del användare. Läs Hjälp-dokumentet för detaljer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="236"/>
         <source>What would you like MX Flash Manager to do?</source>
-        <translation>Wat wilt u dat MX Flashbeheer doet?</translation>
+        <translation>Vad vill du att MX Flash-hanterare ska göra?</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="248"/>
         <source>Update Flash</source>
-        <translation>Flash Opwaarderen</translation>
+        <translation>Uppdatera Flash</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="255"/>
         <source>This option (re)installs Flash, if needed will install non-sse2 Flash</source>
-        <translation>Deze optie (her)installeert Flash, indien nodig installeert het niet-sse2 Flash</translation>
+        <translation>Detta alternativ (om)installerar Flash, om nödvändigt installeras non-sse2 Flash</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="258"/>
         <source>Reinstall Flash</source>
-        <translation>Herinstalleer Flash</translation>
+        <translation>Ominstallera Flash</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="265"/>
         <source>Remove Flash</source>
-        <translation>Verwijder Flash</translation>
+        <translation>Ta bort Flash</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="307"/>
         <source>Removing Flash...</source>
-        <translation>Flash Verwijderen...</translation>
+        <translation>Tar bort Flash...</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="343"/>
         <source>What kind of update do you prefer?</source>
-        <translation>Welke soort opwaardering geniet uw voorkeur?</translation>
+        <translation>Vilket slags uppdatering föredrar du?</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="361"/>
         <source>Select to update manually</source>
-        <translation>Selecteer om automatisch op te waarderen</translation>
+        <translation>Välj att uppdatera manuellt</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="364"/>
         <source>Update just one time</source>
-        <translation>Waardeer een enkele keer op</translation>
+        <translation>Uppdatera bara en gång</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="380"/>
         <source>Select to set a daily scheduled update</source>
-        <translation>Selecteer om dagelijks op te waarderen</translation>
+        <translation>Välj att använda en daglig schemalagd uppdatering</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="383"/>
         <source>Update on an automatic schedule</source>
-        <translation>Waardeer automatisch op</translation>
+        <translation>Uppdatera efter ett automatiskt schema</translation>
     </message>
     <message>
         <location filename="mxflash.ui" line="411"/>
         <source>Installing Flash...</source>
-        <translation>Flash Installeren...</translation>
+        <translation>Installerar Flash...</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="87"/>
         <source>Adobe Flash most recent version: </source>
-        <translation>Adobe Flash meest recente versie:</translation>
+        <translation>Senaste version av Adobe Flash:</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="91"/>
         <source>Adobe Flash installed version: </source>
-        <translation>Adobe Flash geïnstalleerde versie:</translation>
+        <translation>Installerad version av Adobe Flash:</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="93"/>
         <source>Adobe Flash is not installed.</source>
-        <translation>Adobe Flash is niet geïnstalleerd.</translation>
+        <translation>Adobe Flash är inte installerad.</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="99"/>
         <source>PepperFlash for Chrome version: </source>
-        <translation>PepperFlash voor Chrome versie:</translation>
+        <translation>Version av PepperFlash för Chrome:</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="102"/>
         <source>PepperFlash for Chromium version: </source>
-        <translation>Pepperflash voor Chromium versie:</translation>
+        <translation>Version av PepperFlash för Chromium:</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="126"/>
@@ -177,22 +177,22 @@ p, li { white-space: pre-wrap; }
         <location filename="mxflash.cpp" line="278"/>
         <location filename="mxflash.cpp" line="300"/>
         <source>Error</source>
-        <translation>Fout</translation>
+        <translation>Fel</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="127"/>
         <source>Could not remove </source>
-        <translation>Kon niet verwijderen</translation>
+        <translation>Kunde inte ta bort</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="134"/>
         <source>Flash is not installed</source>
-        <translation>Flash is niet geïnstalleerd</translation>
+        <translation>Flash är inte installerad</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="146"/>
         <source>&lt;b&gt;Flash is not installed. Would you like to install it?&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Flash is niet geïnstalleerd. Wilt u het installeren?&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Flash är inte installerad. Vill du installera den?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="147"/>
@@ -202,53 +202,53 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="mxflash.cpp" line="147"/>
         <source>No</source>
-        <translation>Nee</translation>
+        <translation>Nej</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="158"/>
         <source>Flash is installed through other means, cannot update with this program.</source>
-        <translation>Flash is op een andere manier geïnstalleerd, kan het niet opwaarderen met dit programma.</translation>
+        <translation>Flash är installerad på annat sätt, kan inte uppdateras med detta program.</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="185"/>
         <location filename="mxflash.cpp" line="256"/>
         <source>Success</source>
-        <translation>Gelukt</translation>
+        <translation>Det lyckades</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="186"/>
         <source>An automatic daily update was scheduled. You can close the program now.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
-        <translation>Flash update zal automatisch dagelijks starten. U kunt het programma nu afsluiten.&lt;p&gt;&lt;b&gt;Wilt u MX Flashbeheer afsluiten?&lt;/b&gt;</translation>
+        <translation>En daglig automatisk uppdatering blev schemalagd. Du kan stänga programmet nu.&lt;p&gt;&lt;b&gt;Vill du stänga Flash Manager?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="257"/>
         <source>Process finished with success.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
-        <translation>Proces succesvol beëindigd.&lt;p&gt;&lt;b&gt;Wilt u MX Flashbeheer aflsuiten?&lt;/b&gt;</translation>
+        <translation>Processen avslutades framgångsrikt.&lt;p&gt;&lt;b&gt;Vill du stänga MX Flash-hanterare?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="265"/>
         <source>Process finished. Errors have occurred.</source>
-        <translation>Proces beëindigd. Er zijn fouten opgetreden.</translation>
+        <translation>Processen avslutad. Fel har inträffat.</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="279"/>
         <source>&quot;apt-get update&quot; command did not run successfully.</source>
-        <translation>&quot;apt-get update&quot; opdracht is niet succesvol verlopen.</translation>
+        <translation>&quot;apt-get update&quot; -kommandot kördes inte med framgång.</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="301"/>
         <source>Could not download Flash for non-SSE2 CPUs.</source>
-        <translation>Kon Flash niet downloaden voor niet-SSE2 CPUs.</translation>
+        <translation>Kunde inte ladda ner Flash för non-SSE2 CPUs.</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="340"/>
         <source>About MX Flash Manager</source>
-        <translation>Over MX Flashbeheer</translation>
+        <translation>Om MX Flash-hanterare</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="342"/>
         <source>Simple Flash manager for antiX MX</source>
-        <translation>Eenvoudig Flashbeheer voor antiX MX</translation>
+        <translation>Enkel Flash-hanterare för antiX MX</translation>
     </message>
     <message>
         <location filename="mxflash.cpp" line="343"/>
@@ -258,7 +258,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="mxflash.cpp" line="344"/>
         <source>License</source>
-        <translation>Licentie</translation>
+        <translation>Licens</translation>
     </message>
 </context>
 </TS>
