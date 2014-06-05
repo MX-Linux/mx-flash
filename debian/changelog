@@ -1,0 +1,32 @@
+mx-flash (0.14-mx140+1.1) mx; urgency=low
+
+  * Rebuild for MX 14 repository:
+    - use "su-to-root -X -c" to execute mx-flash in desktop file.
+    - debian/control: drop dependency on gksu and build-dep on qt4-qmake, add 
+      build-deps for libqt4-dev and libqtwebkit-dev 
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Sun, 11 May 2014 11:53:11 -0700
+
+mx-flash (0.14-mx140+1) mx; urgency=low
+
+  * added info about installed and available versions 
+
+ -- Adrian <adrian@mx1>  Fri, 09 May 2014 11:25:29 -0400
+
+mx-flash (0.13.98+git20140406-mx140+3) mx; urgency=low
+
+  * replaced Apache licensed function
+
+ -- Adrian <adrian@mx1>  Sun, 06 Apr 2014 00:29:14 -0400
+
+mx-flash (0.13.98+git20140304-mx140+2) mx; urgency=low
+
+  * made a webkit help/license window instead of calling browser
+
+ -- Adrian <adrian@mx1>  Tue, 04 Mar 2014 10:31:08 -0500
+
+mx-flash (0.13.98+git20140303-mx140+1) mx; urgency=low
+
+  * Initial packaging.
+
+ -- Steven Pusser (Stevo) <maintainer@mepiscommunity.org>  Sun, 02 Feb 2014 12:10:53 -0800

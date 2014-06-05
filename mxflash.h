@@ -36,41 +36,41 @@ class mxflash;
 
 class mxflash : public QDialog
 {
-  Q_OBJECT
+    Q_OBJECT
 
 protected:
-  QProcess *proc;
-  QTimer *timer;
+    QProcess *proc;
+    QTimer *timer;
 
 public:
-  explicit mxflash(QWidget *parent = 0);
-  ~mxflash();
-  // helpers
-  static QString getCmdOut(QString cmd);
-  void refresh();
+    explicit mxflash(QWidget *parent = 0);
+    ~mxflash();
+    // helpers
+    QString getCmdOut(QString cmd);
+    void refresh();
+    void displaySite(QString site);
+    void detectVersion();
 
-  void removeFlash();
-  void updateFlash();
-  void installFlash();
-<<<<<<< HEAD
-  void oldFlash();
-=======
-  bool checkDebInstalled();
->>>>>>> upstream/master
+    void removeFlash();
+    void updateFlash();
+    void installFlash();
+    void downloadFlash();
+    bool checkDebInstalled();
 
 public slots:
-  void procStart();
-  void procTime();
-  void procDone(int exitCode, QProcess::ExitStatus exitStatus);
-  void procUpdateDone(int exitCode, QProcess::ExitStatus exitStatus);
-  void setConnections(QTimer* timer, QProcess* proc);
+    void procStart();
+    void procTime();
+    void procDone(int exitCode);
+    void procUpdateDone(int exitCode);
+    void procDownloadDone(int exitCode);
+    void setConnections(QTimer* timer, QProcess* proc);
 
-  virtual void on_buttonOk_clicked();
-  virtual void on_buttonAbout_clicked();
-  virtual void on_buttonHelp_clicked();
+    virtual void on_buttonOk_clicked();
+    virtual void on_buttonAbout_clicked();
+    virtual void on_buttonHelp_clicked();
 
 private:
-  Ui::mxflash *ui;
+    Ui::mxflash *ui;
 };
 
 #endif // MXFLASH_H

@@ -32,29 +32,29 @@
 
 int main(int argc, char *argv[])
 {
-  QApplication a(argc, argv);
-  a.setWindowIcon(QIcon("/usr/share/icons/mx-flash.png"));
+    QApplication a(argc, argv);
+    a.setWindowIcon(QIcon("/usr/share/pixmaps/mx/mx-flash.png"));
 
-  QTranslator qtTran;
-  qtTran.load(QString("qt_") + QLocale::system().name());
-  a.installTranslator(&qtTran);
+    QTranslator qtTran;
+    qtTran.load(QString("qt_") + QLocale::system().name());
+    a.installTranslator(&qtTran);
 
-  QTranslator appTran;
-  appTran.load(QString("mx-flash_") + QLocale::system().name(), "/usr/share/mx-flash/locale");
-  a.installTranslator(&appTran);
+    QTranslator appTran;
+    appTran.load(QString("mx-flash_") + QLocale::system().name(), "/usr/share/mx-flash/locale");
+    a.installTranslator(&appTran);
 
 
-  if (getuid() == 0) {
-    mxflash w;
-    w.show();
+    if (getuid() == 0) {
+        mxflash w;
+        w.show();
 
-    return a.exec();
+        return a.exec();
 
-  } else {
-    QApplication::beep();
-    QMessageBox::critical(0, QString::null,
-                          QApplication::tr("You must run this program as root."));
-    return 1;
-  }
+    } else {
+        QApplication::beep();
+        QMessageBox::critical(0, QString::null,
+                              QApplication::tr("You must run this program as root."));
+        return 1;
+    }
 
 }

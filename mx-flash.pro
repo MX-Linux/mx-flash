@@ -23,7 +23,7 @@
 # *****************************************************************************/
 
 
-QT       += core gui
+QT       += core gui webkit
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -52,5 +52,7 @@ TRANSLATIONS += translations/mx-flash_ar.ts \
                 translations/mx-flash_pl.ts \
                 translations/mx-flash_pt.ts \
                 translations/mx-flash_pt_BR.ts \
+                translations/mx-flash_ro.ts \
+                translations/mx-flash_sv.ts \
                 translations/mx-flash_zh_CN.ts \
                 translations/mx-flash_zh_TW.ts
