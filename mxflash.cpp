@@ -318,14 +318,14 @@ void mxflash::setConnections(QTimer* timer, QProcess* proc) {
 
 // OK button clicked
 void mxflash::on_buttonOk_clicked() {
-    if (ui->stackedWidget->currentIndex() == 0) {
-        if (ui->removeRadioButton->isChecked()) {
-            removeFlash();
-        } else if (ui->updateRadioButton->isChecked()) {
-            ui->stackedWidget->setCurrentWidget(ui->pageUpdate);
-        } else if (ui->installRadioButton->isChecked()) {
-            installFlash();
-        }
+  if (ui->stackedWidget->currentIndex() == 0) {
+    if (ui->removeRadioButton->isChecked()) {
+      removeFlash();
+    } else if (ui->updateRadioButton->isChecked()) {
+      ui->stackedWidget->setCurrentWidget(ui->pageUpdate);
+    } else if (ui->installRadioButton->isChecked()) {
+      installFlash();
+    }
     } else if (ui->stackedWidget->currentWidget() == ui->pageUpdate) {
         updateFlash();
     } else {
