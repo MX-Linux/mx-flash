@@ -1,3 +1,9 @@
+mx-flash (0.14-mx140+1.2) mx; urgency=low
+
+  * update languages 
+
+ -- Adrian <adrian@mxlinux.org>  Tue, 17 Jun 2014 13:19:00 -0400
+
 mx-flash (0.14-mx140+1.1) mx; urgency=low
 
   * Rebuild for MX 14 repository:
