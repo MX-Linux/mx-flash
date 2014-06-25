@@ -1,3 +1,9 @@
+mx-flash (0.14.1mx141+3) mx; urgency=low
+
+  * fixed button translation 
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 25 Jun 2014 09:00:49 -0400
+
 mx-flash (0.14.1mx141+1.2) mx; urgency=low
 
   * update languages 

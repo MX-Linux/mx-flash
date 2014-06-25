@@ -184,7 +184,7 @@ void mxflash::updateFlash() {
         setCursor(QCursor(Qt::ArrowCursor));
         if (QMessageBox::information(0, tr("Success"),
                                      tr("An automatic daily update was scheduled. You can close the program now.<p><b>Do you want to exit MX Flash Manager?</b>"),
-                                     QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok){
+                                     tr("Yes"), tr("No")) == 0){
             qApp->exit(0);
         } else {
             refresh();
@@ -255,7 +255,7 @@ void mxflash::procDone(int exitCode) {
     if (exitCode == 0) {
         if (QMessageBox::information(0, tr("Success"),
                                      tr("Process finished with success.<p><b>Do you want to exit MX Flash Manager?</b>"),
-                                     QMessageBox::Ok, QMessageBox::Cancel) == QMessageBox::Ok){
+                                     tr("Yes"), tr("No")) == 0){
             qApp->exit(0);
         } else {
             refresh();
@@ -338,11 +338,11 @@ void mxflash::on_buttonOk_clicked() {
 void mxflash::on_buttonAbout_clicked() {
     QMessageBox msgBox(QMessageBox::NoIcon,
                        tr("About MX Flash Manager"), "<p align=\"center\"><b><h2>" +
-                       tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">MX14+git20140617</p><p align=\"center\"><h3>" +
+                       tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">MX14+git20140625</p><p align=\"center\"><h3>" +
                        tr("Simple Flash manager for antiX MX") + "</h3></p><p align=\"center\"><a href=\"http://www.mepiscommunity.org/mx\">http://www.mepiscommunity.org/mx</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) antiX") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
-    msgBox.addButton(QMessageBox::Cancel);
+    msgBox.addButton(tr("Cancel"), QMessageBox::DestructiveRole);
     if (msgBox.exec() == QMessageBox::AcceptRole)
         displaySite("file:///usr/local/share/doc/mx-flash-license.html");
 }
