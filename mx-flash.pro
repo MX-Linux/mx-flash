@@ -38,8 +38,11 @@ HEADERS  += mxflash.h
 
 FORMS    += mxflash.ui
 
-TRANSLATIONS += translations/mx-flash_es.ts \
+TRANSLATIONS += translations/mx-flash_ca.ts \
+                translations/mx-flash_de.ts \
+                translations/mx-flash_es.ts \
                 translations/mx-flash_fr.ts \
+                translations/mx-flash_it.ts \
                 translations/mx-flash_ja.ts \
                 translations/mx-flash_nl.ts \
                 translations/mx-flash_ro.ts \
