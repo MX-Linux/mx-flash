@@ -72,18 +72,35 @@ bool mxflash::checkDebInstalled() {
 }
 
 void mxflash::refresh() {
+    this->show();
     ui->stackedWidget->setCurrentIndex(0);
     ui->progressBar->hide();
     ui->progressBar->setValue(0);
-    ui->removeRadioButton->setAutoExclusive(false);
-    ui->removeRadioButton->setChecked(false);
-    ui->removeRadioButton->setAutoExclusive(true);
+    ui->removeFlashButton->setAutoExclusive(false);
+    ui->removeFlashButton->setChecked(false);
+    ui->removeFlashButton->setAutoExclusive(true);
     setCursor(QCursor(Qt::ArrowCursor));
     detectVersion();
+
+    // checks if PepperFlash is installed
     if (getCmdOut("dpkg -s pepperflashplugin-nonfree| grep Status") != "Status: install ok installed") {
         ui->pepperButton->setText(tr("Install PepperFlash for Chromium"));
+        ui->updatePepperButton->hide();
     } else {
         ui->pepperButton->setText(tr("Remove PepperFlash"));
+        ui->updatePepperButton->show();
+    }
+
+    // checks if Flash present
+    QFile file("/usr/lib/flashplugin-nonfree/libflashplayer.so");
+    if (file.exists()) {
+        ui->updateFlashButton->show();
+        ui->removeFlashButton->show();
+        ui->installFlashButton->setText(tr("Reinstall Flash"));
+    } else {
+        ui->updateFlashButton->hide();
+        ui->removeFlashButton->hide();
+        ui->installFlashButton->setText(tr("Install Flash"));
     }
 }
 
@@ -102,7 +119,12 @@ void mxflash::detectVersion() {
     } else {
         out += tr("Adobe Flash is not installed.");
     }
-    // PepperFlash
+    //// PepperFlash
+    // Current version
+    cmd = "wget -qO- https://www.adobe.com/software/flash/about/ 2>/dev/null | grep Linux -A10 | grep Chrome -A1 -m1 | tail -n1 | cut -f2 -d\\> | cut -f1 -d\\<";
+    QString peppercurrent = getCmdOut(cmd);
+    out += "\n" + tr("PepperFlash most recent version: ") + peppercurrent;
+
     QString versionChrome = getCmdOut("strings /opt/google/chrome/PepperFlash/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
     QString versionChromium = getCmdOut("strings /usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
     if (versionChrome != "") {
@@ -147,14 +169,14 @@ void mxflash::removeFlash() {
 }
 
 void mxflash::updateFlash() {
-    QString fname = "/usr/lib/flashplugin-nonfree/libflashplayer.so";
-    QFile file(fname);
-
+    QFile file("/usr/lib/flashplugin-nonfree/libflashplayer.so");
     // checks if Flash present
     if (!file.exists()) {
+        this->hide();
         int ans = QMessageBox::critical(0, tr("Error"),
                                         tr("<b>Flash is not installed. Would you like to install it?</b>"),
                                         tr("Yes"), tr("No"));
+        this->show();
         if (ans == 0) {
             installFlash();
             return;
@@ -164,6 +186,7 @@ void mxflash::updateFlash() {
         }
     // if file is present but not installed with a deb
     } else if (!checkDebInstalled()) {
+        this->hide();
         QMessageBox::critical(0, tr("Error"),
                               tr("Flash is installed through other means, cannot update with this program."));
         refresh();
@@ -174,7 +197,7 @@ void mxflash::updateFlash() {
     qApp->processEvents();
 
     // manual update
-    if (ui->manualRadioButton->isChecked()) {
+    if (ui->manualFlashButton->isChecked()) {
         setConnections(timer, proc);
         proc->start("update-flashplugin-nonfree -i");
 
@@ -192,6 +215,42 @@ void mxflash::updateFlash() {
         system(cmd.toAscii());
 
         setCursor(QCursor(Qt::ArrowCursor));
+        this->hide();
+        if (QMessageBox::information(0, tr("Success"),
+                                     tr("An automatic daily update was scheduled. You can close the program now.<p><b>Do you want to exit MX Flash Manager?</b>"),
+                                     tr("Yes"), tr("No")) == 0){
+            qApp->exit(0);
+        } else {
+            refresh();
+        }
+    }
+}
+
+// update PepperFlash
+void mxflash::updatePepper() {
+    setCursor(QCursor(Qt::WaitCursor));
+    qApp->processEvents();
+
+    // manual update
+    if (ui->manualPepperButton->isChecked()) {
+        setConnections(timer, proc);
+        proc->start("update-pepperflashplugin-nonfree -i");
+
+        //automatic update
+    } else {
+        // write a pepperflashupdate file in cron.daily
+        QFile file("/etc/cron.daily/pepperflashupdate");
+        file.open(QIODevice::WriteOnly | QIODevice::Text);
+        QTextStream out(&file);
+        out << "#!/bin/sh\n\ntest -x /usr/sbin/update-pepperflashplugin-nonfree && /usr/sbin/update-pepperflashplugin-nonfree --install --quiet";
+        file.close();
+
+        // set file executable
+        QString cmd = QString("chmod +x %1").arg(file.fileName());
+        system(cmd.toAscii());
+
+        setCursor(QCursor(Qt::ArrowCursor));
+        this->hide();
         if (QMessageBox::information(0, tr("Success"),
                                      tr("An automatic daily update was scheduled. You can close the program now.<p><b>Do you want to exit MX Flash Manager?</b>"),
                                      tr("Yes"), tr("No")) == 0){
@@ -304,6 +363,7 @@ void mxflash::procDone(int exitCode) {
     ui->progressBar->setValue(100);
     setCursor(QCursor(Qt::ArrowCursor));
     if (exitCode == 0) {
+        this->hide();
         if (QMessageBox::information(0, tr("Success"),
                                      tr("Process finished with success.<p><b>Do you want to exit MX Flash Manager?</b>"),
                                      tr("Yes"), tr("No")) == 0){
@@ -370,17 +430,21 @@ void mxflash::setConnections(QTimer* timer, QProcess* proc) {
 // OK button clicked
 void mxflash::on_buttonOk_clicked() {
     if (ui->stackedWidget->currentIndex() == 0) {
-        if (ui->removeRadioButton->isChecked()) {
+        if (ui->removeFlashButton->isChecked()) {
             removeFlash();
-        } else if (ui->updateRadioButton->isChecked()) {
-            ui->stackedWidget->setCurrentWidget(ui->pageUpdate);
-        } else if (ui->installRadioButton->isChecked()) {
+        } else if (ui->updateFlashButton->isChecked()) {
+            ui->stackedWidget->setCurrentWidget(ui->pageFlashUpdate);
+        } else if (ui->installFlashButton->isChecked()) {
             installFlash();
         } else if (ui->pepperButton->isChecked()) {
             installRemovePepper();
+        } else if (ui->updatePepperButton->isChecked()) {
+            ui->stackedWidget->setCurrentWidget(ui->pagePepperUpdate);
         }
-    } else if (ui->stackedWidget->currentWidget() == ui->pageUpdate) {
+    } else if (ui->stackedWidget->currentWidget() == ui->pageFlashUpdate) {
         updateFlash();
+    } else if (ui->stackedWidget->currentWidget() == ui->pagePepperUpdate) {
+        updatePepper();
     } else {
         qApp->exit(0);
     }

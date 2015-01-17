@@ -53,6 +53,7 @@ public:
 
     void removeFlash();
     void updateFlash();
+    void updatePepper();
     void installFlash();
     void downloadFlash();
     bool checkDebInstalled();
