@@ -10,7 +10,7 @@ Homepage: https://github.com/AdrianTM/mx-flash
 
 Package: mx-flash
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, cron
+Depends: ${misc:Depends}, ${shlibs:Depends}, cron, mx-viewer
 Suggests: anacron
 Description: Adobe Flash (tm) plugin manager
  The MX Adobe Flash (tm) Manager provides an easy way to install and manage the

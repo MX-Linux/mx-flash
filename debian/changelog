@@ -1,3 +1,9 @@
+mx-flash (14.4) mx; urgency=low
+
+  * install/remove Pepper Flash for Chromium
+
+ -- Adrian <adrian@mxlinux.org>  Fri, 16 Jan 2015 19:33:22 -0500
+
 mx-flash (0.14.1mx141+3) mx; urgency=low
 
   * fixed button translation 

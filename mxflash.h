@@ -4,7 +4,7 @@
  * Copyright (C) 2014 MX Authors
  *
  * Authors: Adrian
- *          MEPIS Community <http://forum.mepiscommunity.org>
+ *          MX & MEPIS Community <http://forum.mepiscommunity.org>
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
@@ -47,8 +47,8 @@ public:
     ~mxflash();
     // helpers
     QString getCmdOut(QString cmd);
+    QString getVersion(QString name);
     void refresh();
-    void displaySite(QString site);
     void detectVersion();
 
     void removeFlash();
@@ -56,6 +56,7 @@ public:
     void installFlash();
     void downloadFlash();
     bool checkDebInstalled();
+    void installRemovePepper();
 
 public slots:
     void procStart();

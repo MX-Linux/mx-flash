@@ -4,7 +4,7 @@
  * Copyright (C) 2014 MX Authors
  *
  * Authors: Adrian
- *          MEPIS Community <http://forum.mepiscommunity.org>
+ *          MX & MEPIS Community <http://forum.mepiscommunity.org>
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
@@ -47,10 +47,15 @@ mxflash::~mxflash() {
 QString mxflash::getCmdOut(QString cmd) {
     proc = new QProcess(this);
     proc->start("/bin/bash", QStringList() << "-c" << cmd);
-    proc->setReadChannel(QProcess::StandardOutput);
-    proc->setReadChannelMode(QProcess::MergedChannels);
     proc->waitForFinished(-1);
     return proc->readAllStandardOutput().trimmed();
+}
+
+// Get version of the program
+QString mxflash::getVersion(QString name)
+{
+    QString cmd = QString("dpkg -l %1 | awk 'NR==6 {print $3}'").arg(name);
+    return getCmdOut(cmd);
 }
 
 /////////////////////////////////////////////////////////////////////////
@@ -75,6 +80,11 @@ void mxflash::refresh() {
     ui->removeRadioButton->setAutoExclusive(true);
     setCursor(QCursor(Qt::ArrowCursor));
     detectVersion();
+    if (getCmdOut("dpkg -s pepperflashplugin-nonfree| grep Status") != "Status: install ok installed") {
+        ui->pepperButton->setText(tr("Install PepperFlash for Chromium"));
+    } else {
+        ui->pepperButton->setText(tr("Remove PepperFlash"));
+    }
 }
 
 // detect and list the version of Flash and PepperFlash
@@ -208,7 +218,7 @@ void mxflash::downloadFlash() {
     disconnect(proc, SIGNAL(finished(int)), 0, 0);
     connect(proc, SIGNAL(finished(int)), this, SLOT(procDownloadDone(int)));
 
-    ui->labelInstall->setText("Downloading Flash..");
+    ui->labelInstall->setText(tr("Downloading Flash.."));
     QString cmd = QString("wget -q -nc http://sourceforge.net/projects/antix-linux/files/Testing/MX-14/tarballs/flashplayer_SSE_11.2.202.235.so.tar.gz");
     proc->start(cmd);
 }
@@ -228,8 +238,37 @@ void mxflash::installFlash() {
         connect(proc, SIGNAL(started()), this, SLOT(procStart()));
         disconnect(proc, SIGNAL(finished(int)), 0, 0);
         connect(proc, SIGNAL(finished(int)), this, SLOT(procUpdateDone(int)));
-        ui->labelInstall->setText("Running apt-get update...");
+        ui->labelInstall->setText(tr("Running apt-get update..."));
         proc->start("apt-get update");
+    }
+}
+
+void mxflash::installRemovePepper() {
+    setCursor(QCursor(Qt::WaitCursor));
+    ui->stackedWidget->setCurrentWidget(ui->pageInstall);
+    if (getCmdOut("dpkg -s pepperflashplugin-nonfree| grep Status") != "Status: install ok installed") {
+        // run updates
+        ui->progressBar->show();
+        QEventLoop loop;
+        disconnect(timer, SIGNAL(timeout()), 0, 0);
+        connect(timer, SIGNAL(timeout()), this, SLOT(procTime()));
+        disconnect(proc, SIGNAL(started()), 0, 0);
+        connect(proc, SIGNAL(started()), this, SLOT(procStart()));
+        disconnect(proc, SIGNAL(finished(int)), 0, 0);
+        connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
+        ui->labelInstall->setText(tr("Running apt-get update..."));
+        proc->start("apt-get update");
+        loop.exec();
+
+        // run install
+        ui->progressBar->show();
+        ui->labelInstall->setText(tr("Installing PepperFlash..."));
+        connect(proc, SIGNAL(finished(int)), this, SLOT(procDone(int)));
+        proc->start("apt-get install pepperflashplugin-nonfree");
+
+    } else { //remove pepperflash
+        setConnections(timer, proc);
+        proc->start("dpkg -P pepperflashplugin-nonfree");
     }
 }
 
@@ -272,7 +311,7 @@ void mxflash::procUpdateDone(int exitCode) {
     timer->stop();
     if (exitCode == 0) {
         setConnections(timer, proc);
-        ui->labelInstall->setText("Installing...");
+        ui->labelInstall->setText(tr("Installing..."));
         proc->start("apt-get install flashplugin-nonfree");
     } else {
         QMessageBox::critical(0, tr("Error"),
@@ -294,7 +333,7 @@ void mxflash::procDownloadDone(int exitCode) {
         disconnect(proc, SIGNAL(finished(int)), 0, 0);
         connect(proc, SIGNAL(finished(int)), this, SLOT(procDone(int)));
         QString cmd = QString("tar --directory=/usr/lib/flashplugin-nonfree --extract --file=%1/flashplayer_SSE_11.2.202.235.so.tar.gz libflashplayer.so").arg(path);
-        ui->labelInstall->setText("Installing...");
+        ui->labelInstall->setText(tr("Installing..."));
         proc->start(cmd);
     } else {
         QMessageBox::critical(0, tr("Error"),
@@ -318,14 +357,16 @@ void mxflash::setConnections(QTimer* timer, QProcess* proc) {
 
 // OK button clicked
 void mxflash::on_buttonOk_clicked() {
-  if (ui->stackedWidget->currentIndex() == 0) {
-    if (ui->removeRadioButton->isChecked()) {
-      removeFlash();
-    } else if (ui->updateRadioButton->isChecked()) {
-      ui->stackedWidget->setCurrentWidget(ui->pageUpdate);
-    } else if (ui->installRadioButton->isChecked()) {
-      installFlash();
-    }
+    if (ui->stackedWidget->currentIndex() == 0) {
+        if (ui->removeRadioButton->isChecked()) {
+            removeFlash();
+        } else if (ui->updateRadioButton->isChecked()) {
+            ui->stackedWidget->setCurrentWidget(ui->pageUpdate);
+        } else if (ui->installRadioButton->isChecked()) {
+            installFlash();
+        } else if (ui->pepperButton->isChecked()) {
+            installRemovePepper();
+        }
     } else if (ui->stackedWidget->currentWidget() == ui->pageUpdate) {
         updateFlash();
     } else {
@@ -338,28 +379,19 @@ void mxflash::on_buttonOk_clicked() {
 void mxflash::on_buttonAbout_clicked() {
     QMessageBox msgBox(QMessageBox::NoIcon,
                        tr("About MX Flash Manager"), "<p align=\"center\"><b><h2>" +
-                       tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">MX14+git20140625</p><p align=\"center\"><h3>" +
-                       tr("Simple Flash manager for antiX MX") + "</h3></p><p align=\"center\"><a href=\"http://www.mepiscommunity.org/mx\">http://www.mepiscommunity.org/mx</a><br /></p><p align=\"center\">" +
-                       tr("Copyright (c) antiX") + "<br /><br /></p>", 0, this);
-    msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
-    msgBox.addButton(tr("Cancel"), QMessageBox::DestructiveRole);
-    if (msgBox.exec() == QMessageBox::AcceptRole)
-        displaySite("file:///usr/local/share/doc/mx-flash-license.html");
+                       tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">" + tr("Version: ") +
+                       getVersion("mx-flash") + "</p><p align=\"center\"><h3>" +
+                       tr("Simple Flash manager for antiX MX Linux") + "</h3></p><p align=\"center\"><a href=\"http://www.mepiscommunity.org/mx\">http://www.mepiscommunity.org/mx</a><br /></p><p align=\"center\">" +
+                       tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
+    msgBox.addButton(tr("Cancel"), QMessageBox::AcceptRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
+    msgBox.addButton(tr("License"), QMessageBox::RejectRole);
+    if (msgBox.exec() == QMessageBox::RejectRole)
+        system("mx-viewer file:///usr/local/share/doc/mx-flash-license.html " + tr("'MX Flash License'").toAscii());
 }
 
 
 // Help button clicked
 void mxflash::on_buttonHelp_clicked() {
-    displaySite("file:///usr/local/share/doc/mxapps.html#flash");
+    system("mx-viewer file:///usr/local/share/doc/mxapps.html#flash " + tr("'MX Flash Help'").toAscii());
 }
 
-// pop up a window and display website
-void mxflash::displaySite(QString site) {
-    QWidget *window = new QWidget(this, Qt::Dialog);
-    window->setWindowTitle(this->windowTitle());
-    window->resize(800, 500);
-    QWebView *webview = new QWebView(window);
-    webview->load(QUrl(site));
-    webview->show();
-    window->show();
-}
