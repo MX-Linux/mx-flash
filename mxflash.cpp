@@ -268,6 +268,7 @@ void mxflash::installRemovePepper() {
 
     } else { //remove pepperflash
         setConnections(timer, proc);
+        ui->labelInstall->setText(tr("Removing PepperFlash..."));
         proc->start("dpkg -P pepperflashplugin-nonfree");
     }
 }
