@@ -123,15 +123,17 @@ void mxflash::detectVersion() {
     // Current version
     cmd = "wget -qO- https://www.adobe.com/software/flash/about/ 2>/dev/null | grep Linux -A10 | grep Chrome -A1 -m1 | tail -n1 | cut -f2 -d\\> | cut -f1 -d\\<";
     QString peppercurrent = getCmdOut(cmd);
-    out += "\n" + tr("PepperFlash most recent version: ") + peppercurrent;
+    out += "\n\n" + tr("PepperFlash most recent version: ") + peppercurrent;
 
     QString versionChrome = getCmdOut("strings /opt/google/chrome/PepperFlash/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
     QString versionChromium = getCmdOut("strings /usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
     if (versionChrome != "") {
-        out += "\n" + tr("PepperFlash for Chrome version: ") + versionChrome;
+        out += "\n" + tr("PepperFlash for Chrome installed version: ") + versionChrome;
     }
     if (versionChromium != "" ) {
-        out += "\n" + tr("PepperFlash for Chromium version: ") + versionChromium;
+        out += "\n" + tr("PepperFlash for Chromium installed version: ") + versionChromium;
+    } else {
+        out += "\n" + tr("PepperFlash is not installed.") + versionChromium;
     }
     ui->labelVersion->setText(out);
 }
