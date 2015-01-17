@@ -247,6 +247,17 @@ void mxflash::installRemovePepper() {
     setCursor(QCursor(Qt::WaitCursor));
     ui->stackedWidget->setCurrentWidget(ui->pageInstall);
     if (getCmdOut("dpkg -s pepperflashplugin-nonfree| grep Status") != "Status: install ok installed") {
+        if (getCmdOut("dpkg -s chromium-browser| grep Status") != "Status: install ok installed") {
+            this->hide();
+            int ans = QMessageBox::question(0, tr("MX Flash Manager"),
+                                  tr("Chromium is not installed. Do you want to install PepperFlash anyway?"), tr("Yes"), tr("No"));
+            this->show();
+            if (ans == 1) {
+                setCursor(QCursor(Qt::ArrowCursor));
+                ui->stackedWidget->setCurrentWidget(ui->pageAction);
+                return;
+            }
+        }
         // run updates
         ui->progressBar->show();
         QEventLoop loop;
