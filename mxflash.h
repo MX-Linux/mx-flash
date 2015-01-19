@@ -48,6 +48,7 @@ public:
     // helpers
     QString getCmdOut(QString cmd);
     QString getVersion(QString name);
+    bool checkOnline();
     void refresh();
     void detectVersion();
 

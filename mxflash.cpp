@@ -26,7 +26,6 @@
 
 #include <QDir>
 #include <QTextStream>
-#include <QWebView>
 
 mxflash::mxflash(QWidget *parent) :
     QDialog(parent),
@@ -56,6 +55,14 @@ QString mxflash::getVersion(QString name)
 {
     QString cmd = QString("dpkg -l %1 | awk 'NR==6 {print $3}'").arg(name);
     return getCmdOut(cmd);
+}
+
+bool mxflash::checkOnline()
+{
+    if(system("ping -q -w1 -c1 mepiscommunity.org >/dev/null 2>&1") == 0) {
+        return true;
+    }
+    return false;
 }
 
 /////////////////////////////////////////////////////////////////////////
@@ -463,13 +470,22 @@ void mxflash::on_buttonAbout_clicked() {
                        tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("Cancel"), QMessageBox::AcceptRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
     msgBox.addButton(tr("License"), QMessageBox::RejectRole);
-    if (msgBox.exec() == QMessageBox::RejectRole)
-        system("mx-viewer file:///usr/local/share/doc/mx-flash-license.html " + tr("'MX Flash License'").toAscii());
+    if (msgBox.exec() == QMessageBox::RejectRole) {
+        if (checkOnline()) {
+            system("mx-viewer http://www.mepiscommunity.org/doc_mx/mx-flash-license.html " + tr("'MX Flash License'").toAscii());
+        } else {
+            system("mx-viewer file:///usr/local/share/doc/mx-flash-license.html " + tr("'MX Flash License'").toAscii());
+        }
+    }
 }
 
 
 // Help button clicked
 void mxflash::on_buttonHelp_clicked() {
-    system("mx-viewer file:///usr/local/share/doc/mxapps.html#flash " + tr("'MX Flash Help'").toAscii());
+    if (checkOnline()) {
+        system("mx-viewer http://www.mepiscommunity.org/doc_mx/mxapps.html#flash " + tr("'MX Flash Help'").toAscii());
+    } else {
+        system("mx-viewer file:///usr/local/share/doc/mxapps.html#flash " + tr("'MX Flash Help'").toAscii());
+    }
 }
 
