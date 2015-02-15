@@ -39,6 +39,7 @@ FORMS    += mxflash.ui
 
 TRANSLATIONS += translations/mx-flash_ca.ts \
                 translations/mx-flash_de.ts \
+                translations/mx-flash_el.ts \
                 translations/mx-flash_es.ts \
                 translations/mx-flash_fr.ts \
                 translations/mx-flash_it.ts \
