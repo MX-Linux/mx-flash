@@ -1,3 +1,9 @@
+mx-flash (15.2) mx; urgency=medium
+
+  * changed help URL
+
+ -- Adrian <adrian@mxlinux.org>  Sun, 15 Feb 2015 10:29:16 -0500
+
 mx-flash (14.4) mx; urgency=low
 
   * install/remove Pepper Flash for Chromium

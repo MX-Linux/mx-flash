@@ -483,7 +483,7 @@ void mxflash::on_buttonAbout_clicked() {
 // Help button clicked
 void mxflash::on_buttonHelp_clicked() {
     if (checkOnline()) {
-        system("mx-viewer http://www.mepiscommunity.org/doc_mx/mxapps.html#flash " + tr("'MX Flash Help'").toAscii());
+        system("mx-viewer http://www.mepiscommunity.org/public_html/user_manual_mx15/mxum.html#flash " + tr("'MX Flash Help'").toAscii());
     } else {
         system("mx-viewer file:///usr/local/share/doc/mxapps.html#flash " + tr("'MX Flash Help'").toAscii());
     }
