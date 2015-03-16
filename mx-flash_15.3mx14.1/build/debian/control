@@ -1,0 +1,20 @@
+Source: mx-flash
+Section: system
+Priority: optional
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Build-Depends: debhelper (>=7.0.50~),
+               libqt4-dev
+Standards-Version: 3.9.4
+Homepage: https://github.com/AdrianTM/mx-flash
+
+Package: mx-flash
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, cron, mx-viewer
+Suggests: anacron
+Description: Flash plugin manager
+ The MX Flash Manager provides an easy way to install and manage the the 
+ Adobe Flash (tm) and PepperFlash plugins and includes an option to check 
+ for and update the plugins automatically.
+ *WARNING: Some options of this program cause the Adobe Flash Player to be
+ downloaded from www.adobe.com. The End User License Agreement of the Adobe 
+ Flash Player is available at www.adobe.com.

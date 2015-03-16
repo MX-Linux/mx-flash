@@ -1,0 +1,27 @@
+[Desktop Entry]
+Name=MX Flash Manager
+Name[de]=Flash-Manager für MX
+Name[el]=Διαχειριστής του Flash για MX
+Name[es]=MX Gestor de Flash
+Name[fr]=Gestionnaire de Flash pour MX
+Name[it]=MX Flash Manager
+Name[ja]=MX Flash Manager
+Name[nl]=MX Flash-Beheer
+Name[ro]=MX Manager Flash
+Name[ru]=Flash менеджер для MX
+Name[sv]=Flash-Hanterare för MX
+Comment=Simple Adobe Flash configuration
+Comment[de]=Einfacher Manager von Adobe Flash
+Comment[el]=Απλό Διαχειριστή του AdobeFlash
+Comment[es]=Configuración simple de Adobe Flash
+Comment[fr]=Simple Gestionnaire Adobe Flash
+Comment[it]=Configurazione semplice d'Adobe Flash
+Comment[ja]=シンプルな Adobe Flash マネージャー
+Comment[nl]=Eenvoudige Adobe Flash-Configuratie
+Comment[ro]=Simplu manager pentru Adobe Flash
+Comment[sv]=Enkel Adobe Flash-Konfiguration
+Exec=su-to-root -X -c mx-flash
+Icon=/usr/share/pixmaps/mx/mx-flash.png
+NoDisplay=false
+Categories=System;
+Type=Application
