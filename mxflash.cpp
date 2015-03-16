@@ -486,6 +486,6 @@ void mxflash::on_buttonHelp_clicked() {
     if (checkOnline()) {
         system("mx-viewer http://www.mepiscommunity.org/user_manual_mx15/mxum.html#flash " + tr("'MX Flash Help'").toAscii());
     } else {
-        system("mx-viewer file:///usr/local/share/doc/mxapps.html#flash " + tr("'MX Flash Help'").toAscii());
+        system("mx-viewer file:///usr/local/share/doc/mxum.html#flash " + tr("'MX Flash Help'").toAscii());
     }
 }
