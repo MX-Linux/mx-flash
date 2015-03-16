@@ -58,7 +58,7 @@ QString mxflash::getVersion(QString name)
 
 bool mxflash::checkOnline()
 {
-    if(system("ping -q -w1 -c1 mepiscommunity.org >/dev/null 2>&1") == 0) {
+    if(system("wget -q --spider http://www.mepiscommunity.org >/dev/null 2>&1") == 0) {
         return true;
     }
     return false;
