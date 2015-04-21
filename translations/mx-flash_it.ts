@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="it" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="it">
 <context>
     <name>QApplication</name>
     <message>
@@ -187,12 +189,12 @@
     <message>
         <location filename="../mxflash.cpp" line="139"/>
         <source>PepperFlash for Chrome installed version: </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="142"/>
         <source>PepperFlash for Chromium installed version: </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="144"/>
@@ -275,7 +277,7 @@
     <message>
         <location filename="../mxflash.cpp" line="322"/>
         <source>Chromium is not installed. Do you want to install PepperFlash anyway?</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="345"/>
@@ -285,7 +287,7 @@
     <message>
         <location filename="../mxflash.cpp" line="351"/>
         <source>Removing PepperFlash...</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="378"/>
@@ -326,7 +328,7 @@
     <message>
         <location filename="../mxflash.cpp" line="470"/>
         <source>Simple Flash manager for antiX MX Linux</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="471"/>
@@ -342,13 +344,13 @@
         <location filename="../mxflash.cpp" line="476"/>
         <location filename="../mxflash.cpp" line="478"/>
         <source>&apos;MX Flash License&apos;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="487"/>
         <location filename="../mxflash.cpp" line="489"/>
         <source>&apos;MX Flash Help&apos;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
