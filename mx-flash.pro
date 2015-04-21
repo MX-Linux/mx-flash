@@ -45,5 +45,6 @@ TRANSLATIONS += translations/mx-flash_ca.ts \
                 translations/mx-flash_it.ts \
                 translations/mx-flash_ja.ts \
                 translations/mx-flash_nl.ts \
+                translations/mx-flash_pl.ts \
                 translations/mx-flash_ro.ts \
                 translations/mx-flash_sv.ts

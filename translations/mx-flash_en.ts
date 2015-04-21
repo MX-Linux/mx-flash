@@ -11,8 +11,8 @@
     <name>mxflash</name>
     <message>
         <location filename="../mxflash.ui" line="20"/>
-        <location filename="../mxflash.cpp" line="319"/>
-        <location filename="../mxflash.cpp" line="466"/>
+        <location filename="../mxflash.cpp" line="321"/>
+        <location filename="../mxflash.cpp" line="468"/>
         <source>MX Flash Manager</source>
         <translation>MX Flash Manager</translation>
     </message>
@@ -33,13 +33,13 @@
     </message>
     <message>
         <location filename="../mxflash.ui" line="95"/>
-        <location filename="../mxflash.cpp" line="105"/>
+        <location filename="../mxflash.cpp" line="107"/>
         <source>Reinstall Flash</source>
         <translation>Reinstall Flash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="102"/>
-        <location filename="../mxflash.cpp" line="93"/>
+        <location filename="../mxflash.cpp" line="95"/>
         <source>Install PepperFlash for Chromium</source>
         <translation>Install PepperFlash for Chromium</translation>
     </message>
@@ -145,7 +145,7 @@
     </message>
     <message>
         <location filename="../mxflash.ui" line="525"/>
-        <location filename="../mxflash.cpp" line="470"/>
+        <location filename="../mxflash.cpp" line="472"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
@@ -155,198 +155,198 @@
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="96"/>
+        <location filename="../mxflash.cpp" line="98"/>
         <source>Remove PepperFlash</source>
         <translation>Remove PepperFlash</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="109"/>
+        <location filename="../mxflash.cpp" line="111"/>
         <source>Install Flash</source>
         <translation>Install Flash</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="120"/>
+        <location filename="../mxflash.cpp" line="122"/>
         <source>Adobe Flash most recent version: </source>
         <translation>Adobe Flash most recent version: </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="124"/>
+        <location filename="../mxflash.cpp" line="126"/>
         <source>Adobe Flash installed version: </source>
         <translation>Adobe Flash installed version: </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="126"/>
+        <location filename="../mxflash.cpp" line="128"/>
         <source>Adobe Flash is not installed.</source>
         <translation>Adobe Flash is not installed.</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="132"/>
+        <location filename="../mxflash.cpp" line="134"/>
         <source>PepperFlash most recent version: </source>
         <translation>PepperFlash most recent version: </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="137"/>
+        <location filename="../mxflash.cpp" line="139"/>
         <source>PepperFlash for Chrome installed version: </source>
         <translation>PepperFlash for Chrome installed version: </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="140"/>
+        <location filename="../mxflash.cpp" line="142"/>
         <source>PepperFlash for Chromium installed version: </source>
         <translation>PepperFlash for Chromium installed version: </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="142"/>
+        <location filename="../mxflash.cpp" line="144"/>
         <source>PepperFlash is not installed.</source>
         <translation>PepperFlash is not installed.</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="166"/>
-        <location filename="../mxflash.cpp" line="173"/>
-        <location filename="../mxflash.cpp" line="184"/>
-        <location filename="../mxflash.cpp" line="198"/>
-        <location filename="../mxflash.cpp" line="383"/>
-        <location filename="../mxflash.cpp" line="397"/>
-        <location filename="../mxflash.cpp" line="419"/>
+        <location filename="../mxflash.cpp" line="168"/>
+        <location filename="../mxflash.cpp" line="175"/>
+        <location filename="../mxflash.cpp" line="186"/>
+        <location filename="../mxflash.cpp" line="200"/>
+        <location filename="../mxflash.cpp" line="385"/>
+        <location filename="../mxflash.cpp" line="399"/>
+        <location filename="../mxflash.cpp" line="421"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="167"/>
+        <location filename="../mxflash.cpp" line="169"/>
         <source>Could not remove </source>
         <translation>Could not remove </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="174"/>
+        <location filename="../mxflash.cpp" line="176"/>
         <source>Flash is not installed</source>
         <translation>Flash is not installed</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="185"/>
+        <location filename="../mxflash.cpp" line="187"/>
         <source>&lt;b&gt;Flash is not installed. Would you like to install it?&lt;/b&gt;</source>
         <translation>&lt;b&gt;Flash is not installed. Would you like to install it?&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="186"/>
-        <location filename="../mxflash.cpp" line="229"/>
-        <location filename="../mxflash.cpp" line="264"/>
-        <location filename="../mxflash.cpp" line="320"/>
-        <location filename="../mxflash.cpp" line="377"/>
+        <location filename="../mxflash.cpp" line="188"/>
+        <location filename="../mxflash.cpp" line="231"/>
+        <location filename="../mxflash.cpp" line="266"/>
+        <location filename="../mxflash.cpp" line="322"/>
+        <location filename="../mxflash.cpp" line="379"/>
         <source>Yes</source>
         <translation>Yes</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="186"/>
-        <location filename="../mxflash.cpp" line="229"/>
-        <location filename="../mxflash.cpp" line="264"/>
-        <location filename="../mxflash.cpp" line="320"/>
-        <location filename="../mxflash.cpp" line="377"/>
+        <location filename="../mxflash.cpp" line="188"/>
+        <location filename="../mxflash.cpp" line="231"/>
+        <location filename="../mxflash.cpp" line="266"/>
+        <location filename="../mxflash.cpp" line="322"/>
+        <location filename="../mxflash.cpp" line="379"/>
         <source>No</source>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="199"/>
+        <location filename="../mxflash.cpp" line="201"/>
         <source>Flash is installed through other means, cannot update with this program.</source>
         <translation>Flash is installed through other means, cannot update with this program.</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="227"/>
-        <location filename="../mxflash.cpp" line="262"/>
-        <location filename="../mxflash.cpp" line="375"/>
+        <location filename="../mxflash.cpp" line="229"/>
+        <location filename="../mxflash.cpp" line="264"/>
+        <location filename="../mxflash.cpp" line="377"/>
         <source>Success</source>
         <translation>Success</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="228"/>
-        <location filename="../mxflash.cpp" line="263"/>
+        <location filename="../mxflash.cpp" line="230"/>
+        <location filename="../mxflash.cpp" line="265"/>
         <source>An automatic daily update was scheduled. You can close the program now.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
         <translation>An automatic daily update was scheduled. You can close the program now.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="288"/>
+        <location filename="../mxflash.cpp" line="290"/>
         <source>Downloading Flash..</source>
         <translation>Downloading Flash..</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="308"/>
-        <location filename="../mxflash.cpp" line="337"/>
+        <location filename="../mxflash.cpp" line="310"/>
+        <location filename="../mxflash.cpp" line="339"/>
         <source>Running apt-get update...</source>
         <translation>Running apt-get update...</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="320"/>
+        <location filename="../mxflash.cpp" line="322"/>
         <source>Chromium is not installed. Do you want to install PepperFlash anyway?</source>
         <translation>Chromium is not installed. Do you want to install PepperFlash anyway?</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="343"/>
+        <location filename="../mxflash.cpp" line="345"/>
         <source>Installing PepperFlash...</source>
         <translation>Installing PepperFlash...</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="349"/>
+        <location filename="../mxflash.cpp" line="351"/>
         <source>Removing PepperFlash...</source>
         <translation>Removing PepperFlash...</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="376"/>
+        <location filename="../mxflash.cpp" line="378"/>
         <source>Process finished with success.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
         <translation>Process finished with success.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="384"/>
+        <location filename="../mxflash.cpp" line="386"/>
         <source>Process finished. Errors have occurred.</source>
         <translation>Process finished. Errors have occurred.</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="394"/>
-        <location filename="../mxflash.cpp" line="416"/>
+        <location filename="../mxflash.cpp" line="396"/>
+        <location filename="../mxflash.cpp" line="418"/>
         <source>Installing...</source>
         <translation>Installing...</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="398"/>
+        <location filename="../mxflash.cpp" line="400"/>
         <source>&quot;apt-get update&quot; command did not run successfully.</source>
         <translation>&quot;apt-get update&quot; command did not run successfully.</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="420"/>
+        <location filename="../mxflash.cpp" line="422"/>
         <source>Could not download Flash for non-SSE2 CPUs.</source>
         <translation>Could not download Flash for non-SSE2 CPUs.</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="465"/>
+        <location filename="../mxflash.cpp" line="467"/>
         <source>About MX Flash Manager</source>
         <translation>About MX Flash Manager</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="466"/>
+        <location filename="../mxflash.cpp" line="468"/>
         <source>Version: </source>
         <translation>Version: </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="468"/>
+        <location filename="../mxflash.cpp" line="470"/>
         <source>Simple Flash manager for antiX MX Linux</source>
         <translation>Simple Flash manager for antiX MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="469"/>
+        <location filename="../mxflash.cpp" line="471"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="471"/>
+        <location filename="../mxflash.cpp" line="473"/>
         <source>License</source>
         <translation>License</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="474"/>
         <location filename="../mxflash.cpp" line="476"/>
+        <location filename="../mxflash.cpp" line="478"/>
         <source>&apos;MX Flash License&apos;</source>
         <translation>&apos;MX Flash License&apos;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="485"/>
         <location filename="../mxflash.cpp" line="487"/>
+        <location filename="../mxflash.cpp" line="489"/>
         <source>&apos;MX Flash Help&apos;</source>
         <translation>&apos;MX Flash Help&apos;</translation>
     </message>
