@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 03 Jun 2015 11:23:01 -0400
+Source: mx-flash
+Binary: mx-flash
+Architecture: source i386
+Version: 15.6mx14
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description: 
+ mx-flash   - Flash plugin manager
+Changes: 
+ mx-flash (15.6mx14) mx; urgency=medium
+ .
+   * changed documentation URL
+Checksums-Sha1: 
+ 25ee2b19e80efb5ab53b56457e51929152eb12e7 603 mx-flash_15.6mx14.dsc
+ 786f0d643ddb6e98a8e270aaba0fe94c52f693c1 44891 mx-flash_15.6mx14.tar.gz
+ 0f97dc32d6d01c813d177779ab0ea3ab864a4a56 48298 mx-flash_15.6mx14_i386.deb
+Checksums-Sha256: 
+ ec5da5801beee169a2738c857f996e649b0dcf645c244f201ac4e0848131a425 603 mx-flash_15.6mx14.dsc
+ 917d7d7cbe8917fbe91a2951d1da5fb6dda406d1ed586c05f91e6c6d1f5c6c4b 44891 mx-flash_15.6mx14.tar.gz
+ 74c5ec86afdf3c6bb6fad764f242ce63e20bcd146a6a683fff5b1074f5433716 48298 mx-flash_15.6mx14_i386.deb
+Files: 
+ f34d41c3cf0e19a236745814017d3888 603 system optional mx-flash_15.6mx14.dsc
+ d834f3ba474d62567d21814a4d034437 44891 system optional mx-flash_15.6mx14.tar.gz
+ 35cd3d25282e1d7d2cc689f10271c688 48298 system optional mx-flash_15.6mx14_i386.deb
