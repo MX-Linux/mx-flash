@@ -316,7 +316,11 @@ void mxflash::installRemovePepper() {
     setCursor(QCursor(Qt::WaitCursor));
     ui->stackedWidget->setCurrentWidget(ui->pageInstall);
     if (getCmdOut("dpkg -s pepperflashplugin-nonfree| grep Status") != "Status: install ok installed") {
-        if (getCmdOut("dpkg -s chromium-browser| grep Status") != "Status: install ok installed") {
+        if (system("grep -q \"^flags.*\\<sse2\\>\" /proc/cpuinfo") != 0) {
+            QMessageBox::critical(0, tr("Error"),tr("PepperFlash cannot be installed because your CPU does not support SSE2."));;
+            return;
+        }
+        if (getCmdOut("dpkg -s chromium| grep Status") != "Status: install ok installed") {
             this->hide();
             int ans = QMessageBox::question(0, tr("MX Flash Manager"),
                                   tr("Chromium is not installed. Do you want to install PepperFlash anyway?"), tr("Yes"), tr("No"));

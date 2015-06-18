@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 18 Jun 2015 14:52:28 -0400
+Source: mx-flash
+Binary: mx-flash
+Architecture: source i386
+Version: 15.6.1mx14
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description: 
+ mx-flash   - Flash plugin manager
+Changes: 
+ mx-flash (15.6.1mx14) mx; urgency=medium
+ .
+   * fixed downloading PepperFlash, added error if CPU does not support SSE2
+Checksums-Sha1: 
+ ffbd2f67cacc2b29c4e2f8ab27c0b07cdf4b8f78 611 mx-flash_15.6.1mx14.dsc
+ daf70aa983ef71532da38451aca93cdff9f88a35 45374 mx-flash_15.6.1mx14.tar.gz
+ 930ed96937c64b38178597e762e8715fe06fa93a 48474 mx-flash_15.6.1mx14_i386.deb
+Checksums-Sha256: 
+ 6d29377723542404edea7706e053b3ed97f0580a05f43ce479f15cf2288e3354 611 mx-flash_15.6.1mx14.dsc
+ 3cdc7b5705d9a65120d80d042f1188383009c3379f8c684e1d883fcb64218442 45374 mx-flash_15.6.1mx14.tar.gz
+ 75b20a5a742474d07587f37f6a49b345dad62a2c69ed161320e0e3517faa58ad 48474 mx-flash_15.6.1mx14_i386.deb
+Files: 
+ 914bd4800cd654b04549f503f2a82459 611 system optional mx-flash_15.6.1mx14.dsc
+ 707567b6b2b2952eb572d87438502e3b 45374 system optional mx-flash_15.6.1mx14.tar.gz
+ 8ab66be23b91cfa27d55a2df8653405d 48474 system optional mx-flash_15.6.1mx14_i386.deb
