@@ -157,6 +157,11 @@
         <translation>Alt+N</translation>
     </message>
     <message>
+        <location filename="../mxflash.cpp" line="89"/>
+        <source>Please wait, loading...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mxflash.cpp" line="98"/>
         <source>Remove PepperFlash</source>
         <translation>Elimina PepperFlash </translation>

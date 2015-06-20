@@ -86,7 +86,7 @@ void mxflash::refresh() {
     ui->removeFlashButton->setChecked(false);
     ui->removeFlashButton->setAutoExclusive(true);
     setCursor(QCursor(Qt::ArrowCursor));
-    ui->labelVersion->setText("Please wait, loading...");
+    ui->labelVersion->setText(tr("Please wait, loading..."));
     qApp->processEvents();
     detectVersion();
 
