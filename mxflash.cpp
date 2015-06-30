@@ -43,6 +43,7 @@ mxflash::~mxflash() {
 
 // Util function
 QString mxflash::getCmdOut(QString cmd) {
+    qApp->processEvents();
     proc = new QProcess(this);
     proc->start("/bin/bash", QStringList() << "-c" << cmd);
     proc->waitForFinished(-1);
@@ -87,8 +88,6 @@ void mxflash::refresh() {
     ui->removeFlashButton->setAutoExclusive(true);
     setCursor(QCursor(Qt::ArrowCursor));
     ui->labelVersion->setText(tr("Please wait, loading..."));
-    qApp->processEvents();
-    detectVersion();
 
     // checks if PepperFlash is installed
     if (getCmdOut("dpkg -s pepperflashplugin-nonfree| grep Status") != "Status: install ok installed") {
@@ -110,10 +109,12 @@ void mxflash::refresh() {
         ui->removeFlashButton->hide();
         ui->installFlashButton->setText(tr("Install Flash"));
     }
+    detectVersion();
 }
 
 // detect and list the version of Flash and PepperFlash
 void mxflash::detectVersion() {
+    ui->whatGroupBox->hide();
     QString out;
     // Current version on Adobe site
     QString bit = getCmdOut("dpkg --print-architecture | sed 's/amd64/64/;s/i386/32/'");
@@ -141,9 +142,10 @@ void mxflash::detectVersion() {
     if (versionChromium != "" ) {
         out += "\n" + tr("PepperFlash for Chromium installed version: ") + versionChromium;
     } else {
-        out += "\n" + tr("PepperFlash is not installed.") + versionChromium;
+        out += "\n" + tr("PepperFlash for Chromium is not installed.") + versionChromium;
     }
     ui->labelVersion->setText(out);
+    ui->whatGroupBox->show();
 }
 
 
@@ -222,7 +224,7 @@ void mxflash::updateFlash() {
 
         // set file executable
         QString cmd = QString("chmod +x %1").arg(file.fileName());
-        system(cmd.toAscii());
+        system(cmd.toUtf8());
 
         setCursor(QCursor(Qt::ArrowCursor));
         this->hide();
@@ -257,7 +259,7 @@ void mxflash::updatePepper() {
 
         // set file executable
         QString cmd = QString("chmod +x %1").arg(file.fileName());
-        system(cmd.toAscii());
+        system(cmd.toUtf8());
 
         setCursor(QCursor(Qt::ArrowCursor));
         this->hide();
@@ -477,9 +479,9 @@ void mxflash::on_buttonAbout_clicked() {
     msgBox.addButton(tr("License"), QMessageBox::RejectRole);
     if (msgBox.exec() == QMessageBox::RejectRole) {
         if (checkOnline()) {
-            system("mx-viewer http://www.mepiscommunity.org/doc_mx/mx-flash-license.html " + tr("'MX Flash License'").toAscii());
+            system("mx-viewer http://www.mepiscommunity.org/doc_mx/mx-flash-license.html " + tr("'MX Flash License'").toUtf8());
         } else {
-            system("mx-viewer file:///usr/local/share/doc/mx-flash-license.html " + tr("'MX Flash License'").toAscii());
+            system("mx-viewer file:///usr/local/share/doc/mx-flash-license.html " + tr("'MX Flash License'").toUtf8());
         }
     }
 }
@@ -488,8 +490,8 @@ void mxflash::on_buttonAbout_clicked() {
 // Help button clicked
 void mxflash::on_buttonHelp_clicked() {
     if (checkOnline()) {
-        system("mx-viewer http://mepiscommunity.org/wiki/help-files/help-mx-flash-manager " + tr("'MX Flash Help'").toAscii());
+        system("mx-viewer http://mepiscommunity.org/wiki/help-files/help-mx-flash-manager " + tr("'MX Flash Help'").toUtf8());
     } else {
-        system("mx-viewer file:///usr/local/share/doc/mxum.html#flash " + tr("'MX Flash Help'").toAscii());
+        system("mx-viewer file:///usr/local/share/doc/mxum.html#flash " + tr("'MX Flash Help'").toUtf8());
     }
 }

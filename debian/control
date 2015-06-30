@@ -3,7 +3,7 @@ Section: system
 Priority: optional
 Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
 Build-Depends: debhelper (>=7.0.50~),
-               libqt4-dev
+               qt5-qmake
 Standards-Version: 3.9.4
 Homepage: https://github.com/AdrianTM/mx-flash
 

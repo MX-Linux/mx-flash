@@ -1,3 +1,9 @@
+mx-flash (15.7mx14) mx; urgency=medium
+
+  * moved to qt5
+
+ -- Adrian <adrian@mxlinux.org>  Tue, 30 Jun 2015 13:45:20 -0400
+
 mx-flash (15.6.2mx14) mx; urgency=medium
 
   * translations

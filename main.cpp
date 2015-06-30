@@ -22,8 +22,8 @@
 
 
 #include <QApplication>
-#include <qtranslator.h>
-#include <qlocale.h>
+#include <QTranslator>
+#include <QLocale>
 #include "mxflash.h"
 #include <unistd.h>
 
