@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="it" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="it">
 <context>
     <name>QApplication</name>
     <message>
@@ -202,7 +204,7 @@
     <message>
         <location filename="../mxflash.cpp" line="145"/>
         <source>PepperFlash for Chromium is not installed.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="170"/>

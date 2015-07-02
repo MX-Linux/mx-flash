@@ -15,14 +15,14 @@ Changes:
  .
    * moved to qt5
 Checksums-Sha1:
- 8fd4989ee4d051b26f3c4104129bcf17caef4c0c 607 mx-flash_15.7mx15.dsc
- 1e9aa2bd04cb3547bcbf58c955f2b03c538b29ab 41308 mx-flash_15.7mx15.tar.xz
- dbeb62c4a29a4843e8c8cb9cd65f73af147efbed 51880 mx-flash_15.7mx15_i386.deb
+ 42bd7af02bed6be5bd273d4a001a0db8da748c8b 607 mx-flash_15.7mx15.dsc
+ 2a06880ee7433e85308d35c15bcb738d804bd708 83680 mx-flash_15.7mx15.tar.xz
+ 86559d1e7dc8f869831d93b8a68b01fbf1d25e7d 52670 mx-flash_15.7mx15_i386.deb
 Checksums-Sha256:
- 5c1a44ed27f41d887f7266c3d71768ea99f62e86c1ec1f1f9a323de1034f2445 607 mx-flash_15.7mx15.dsc
- 7c93171c9cab444e8066c75a3104fbc11f37ef27bb6213ed29d198b860ac00c8 41308 mx-flash_15.7mx15.tar.xz
- eb3c84edf81f0bc2c4549ba6b7e7e99ed4b082216f63ab8a22ffed0e3327bb2b 51880 mx-flash_15.7mx15_i386.deb
+ f349787385023c2e8eb90b15e63fa18858f85a4e317f5b45a7c267d8a5b08d28 607 mx-flash_15.7mx15.dsc
+ 0513d5f9690bc02145f92b77840a4b4f526d544199c608413be6e20d1766ecf1 83680 mx-flash_15.7mx15.tar.xz
+ 72d37efe0d04e0bb09e87af5fe5c1841f90a9a3566d04c1a939586d60ccb254f 52670 mx-flash_15.7mx15_i386.deb
 Files:
- 1f8d0ff98de9ee9176db273151bc49fd 607 system optional mx-flash_15.7mx15.dsc
- 1164c7b21a9e991efa1acbb12bbe78d1 41308 system optional mx-flash_15.7mx15.tar.xz
- 404a307bcfe4235ae837ef6d2373de71 51880 system optional mx-flash_15.7mx15_i386.deb
+ 5cedc78c91d3df2982f22eb7f06ff7b5 607 system optional mx-flash_15.7mx15.dsc
+ b21636bf71ceec2e75b1f4e48e39afab 83680 system optional mx-flash_15.7mx15.tar.xz
+ cd93a3ded8ad2f2956eb68f977f62028 52670 system optional mx-flash_15.7mx15_i386.deb
