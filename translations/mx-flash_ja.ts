@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ja" version="2.0">
 <context>
     <name>QApplication</name>
     <message>
@@ -159,7 +157,7 @@
     <message>
         <location filename="../mxflash.cpp" line="90"/>
         <source>Please wait, loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>お待ち下さい。読込中...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="97"/>
@@ -202,13 +200,9 @@
         <translation>Chromium の PepperFlash インストール済バージョン: </translation>
     </message>
     <message>
-        <source>PepperFlash is not installed.</source>
-        <translation type="vanished">PepperFlash はインストールされていません。</translation>
-    </message>
-    <message>
         <location filename="../mxflash.cpp" line="145"/>
         <source>PepperFlash for Chromium is not installed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chromium の PepperFlash はインストールされていません。</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="170"/>
@@ -287,7 +281,7 @@
     <message>
         <location filename="../mxflash.cpp" line="322"/>
         <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation type="unfinished"></translation>
+        <translation>CPU が SSE2 をサポートしないため PepperFlash はインストールする事ができません。</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="328"/>

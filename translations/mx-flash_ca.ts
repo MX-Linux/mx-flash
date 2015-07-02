@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ca">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ca" version="2.0">
 <context>
     <name>QApplication</name>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>You must run this program as root.</source>
-        <translation>Cal ser usuari principal per executar aquest programa</translation>
+        <translation>Cal ser usuari principal per executar aquest programa. </translation>
     </message>
 </context>
 <context>
@@ -26,7 +24,7 @@
     <message>
         <location filename="../mxflash.ui" line="71"/>
         <source>What would you like MX Flash Manager to do?</source>
-        <translation>Què voldríeu que fes el Gestor de Flash?</translation>
+        <translation>Què voldríeu que fes el MX Gestor de Flash? </translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="92"/>
@@ -69,13 +67,13 @@
         <location filename="../mxflash.ui" line="185"/>
         <location filename="../mxflash.ui" line="273"/>
         <source>What kind of update do you prefer?</source>
-        <translation>Quina mena d&apos;actualització preferiu?</translation>
+        <translation>Quina mena d&apos;actualització preferiu? </translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="212"/>
         <location filename="../mxflash.ui" line="300"/>
         <source>Select to set a daily scheduled update</source>
-        <translation>Trieu per provar d&apos;actualitzar diàriament</translation>
+        <translation>Trieu per provar d&apos;actualitzar diàriament </translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="215"/>
@@ -87,7 +85,7 @@
         <location filename="../mxflash.ui" line="228"/>
         <location filename="../mxflash.ui" line="316"/>
         <source>Select to update manually</source>
-        <translation>Trieu per actualitzar manualment</translation>
+        <translation>Trieu per actualitzar manualment </translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="231"/>
@@ -98,17 +96,17 @@
     <message>
         <location filename="../mxflash.ui" line="361"/>
         <source>Installing Flash...</source>
-        <translation>Instal·lant el Flash...</translation>
+        <translation>Instal·lant el Flash... </translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="408"/>
         <source>About this application</source>
-        <translation>Quant al programa</translation>
+        <translation>Quant al programa </translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="411"/>
         <source>About...</source>
-        <translation>Quant a...</translation>
+        <translation>Quant a... </translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="418"/>
@@ -133,7 +131,7 @@
     <message>
         <location filename="../mxflash.ui" line="464"/>
         <source>Apply any changes then quit</source>
-        <translation>Aplica els canvis i surt</translation>
+        <translation>Aplica els canvis i surt </translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="467"/>
@@ -143,7 +141,7 @@
     <message>
         <location filename="../mxflash.ui" line="522"/>
         <source>Cancel any changes then quit</source>
-        <translation>Cancel·la els canvis i surt</translation>
+        <translation>Cancel·la els canvis i surt </translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="525"/>
@@ -159,7 +157,7 @@
     <message>
         <location filename="../mxflash.cpp" line="90"/>
         <source>Please wait, loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Espereu mentre carrega, si us plau... </translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="97"/>
@@ -202,13 +200,9 @@
         <translation>Versió instal·lada de PepperFlash per Chromium: </translation>
     </message>
     <message>
-        <source>PepperFlash is not installed.</source>
-        <translation type="vanished">PepperFlash no està instal·lat. </translation>
-    </message>
-    <message>
         <location filename="../mxflash.cpp" line="145"/>
         <source>PepperFlash for Chromium is not installed.</source>
-        <translation type="unfinished"></translation>
+        <translation>No s&apos;ha instal·lat PepperFlash per Chromium.  </translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="170"/>
@@ -287,7 +281,7 @@
     <message>
         <location filename="../mxflash.cpp" line="322"/>
         <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation type="unfinished"></translation>
+        <translation>No es pot instal·lar PepperFlash perquè la vostra CPU no suporta SSE2.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="328"/>

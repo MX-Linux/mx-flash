@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="el">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="el" version="2.0">
 <context>
     <name>QApplication</name>
     <message>
@@ -159,7 +157,7 @@
     <message>
         <location filename="../mxflash.cpp" line="90"/>
         <source>Please wait, loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Παρακαλώ περιμένετε, φόρτωση ...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="97"/>
@@ -202,13 +200,9 @@
         <translation>Εγκατεστημένη έκδοση του PepperFlash:</translation>
     </message>
     <message>
-        <source>PepperFlash is not installed.</source>
-        <translation type="vanished">Το PepperFlash δεν είναι εγκατεστημένο </translation>
-    </message>
-    <message>
         <location filename="../mxflash.cpp" line="145"/>
         <source>PepperFlash for Chromium is not installed.</source>
-        <translation type="unfinished"></translation>
+        <translation>PepperFlash για την έκδοση του Chromium δεν είναι εγκατεστημένο</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="170"/>
@@ -287,7 +281,7 @@
     <message>
         <location filename="../mxflash.cpp" line="322"/>
         <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το PepperFlash δεν μπορεί να εγκατασταθεί επειδή η CPU σας δεν υποστηρίζει SSE2.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="328"/>
