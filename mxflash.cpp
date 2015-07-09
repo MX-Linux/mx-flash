@@ -478,11 +478,7 @@ void mxflash::on_buttonAbout_clicked() {
     msgBox.addButton(tr("Cancel"), QMessageBox::AcceptRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
     msgBox.addButton(tr("License"), QMessageBox::RejectRole);
     if (msgBox.exec() == QMessageBox::RejectRole) {
-        if (checkOnline()) {
-            system("mx-viewer http://www.mepiscommunity.org/doc_mx/mx-flash-license.html " + tr("'MX Flash License'").toUtf8());
-        } else {
-            system("mx-viewer file:///usr/local/share/doc/mx-flash-license.html " + tr("'MX Flash License'").toUtf8());
-        }
+        system("mx-viewer file:///usr/share/doc/mx-flash/license.html " + tr("'MX Flash License'").toUtf8());
     }
 }
 

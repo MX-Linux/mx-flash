@@ -3,3 +3,4 @@ mx-flash.desktop	         usr/share/applications/mx
 translations/*.qm 	 usr/share/mx-flash/locale
 mx-flash.png 		 usr/share/pixmaps/mx
 icons/*			 usr/share/mx-flash/icons
+license.html		 usr/share/doc/mx-flash

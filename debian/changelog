@@ -1,3 +1,9 @@
+mx-flash (15.7.1mx15) mx; urgency=medium
+
+  * added build-dep, fixed license
+
+ -- Adrian <adrian@mxlinux.org>  Thu, 09 Jul 2015 19:53:02 -0400
+
 mx-flash (15.7mx15) mx; urgency=medium
 
   * moved to qt5

@@ -352,14 +352,13 @@
         <translation>Licență</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="482"/>
-        <location filename="../mxflash.cpp" line="484"/>
+        <location filename="../mxflash.cpp" line="481"/>
         <source>&apos;MX Flash License&apos;</source>
         <translation>&apos;Licență MX Flash&apos;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="493"/>
-        <location filename="../mxflash.cpp" line="495"/>
+        <location filename="../mxflash.cpp" line="489"/>
+        <location filename="../mxflash.cpp" line="491"/>
         <source>&apos;MX Flash Help&apos;</source>
         <translation>&apos;Ajutor MX Flash&apos;</translation>
     </message>
