@@ -10,8 +10,8 @@ Build-Depends: debhelper (>= 7.0.50~), qt5-default, qttools5-dev-tools, qt5-qmak
 Package-List:
  mx-flash deb system optional arch=any
 Checksums-Sha1:
- afd53d46f1fcd5b3f5507abfeb99700e4e0ff3a5 170200 mx-flash_15.7.1mx15.tar.xz
+ ed79f821b93d09b02f802f90504e8145562251e1 213164 mx-flash_15.7.1mx15.tar.xz
 Checksums-Sha256:
- 3d0741063bf5ceb6c23a31e0ca2b4cc5a638dc0f0916d3970f7b9f0b93e0e1b5 170200 mx-flash_15.7.1mx15.tar.xz
+ 9d702dc5c1e397579f26624904898d39128cd1418033251c5b484e832f8fb164 213164 mx-flash_15.7.1mx15.tar.xz
 Files:
- 18859d4f8b5fa9322eb4e3d7f45c19a4 170200 mx-flash_15.7.1mx15.tar.xz
+ d61329ed5a4f69f173b047575319875a 213164 mx-flash_15.7.1mx15.tar.xz

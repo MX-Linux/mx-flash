@@ -15,14 +15,14 @@ Changes:
  .
    * added build-dep, fixed license
 Checksums-Sha1:
- c67bc36924e2d5928305f9836556e06b0054afa7 651 mx-flash_15.7.1mx15.dsc
- afd53d46f1fcd5b3f5507abfeb99700e4e0ff3a5 170200 mx-flash_15.7.1mx15.tar.xz
- 8fc91ad718cccb3bc0ac6dc7e6bc38be46737bb8 53406 mx-flash_15.7.1mx15_i386.deb
+ 45ac6b10f19f537dfefbe8b55e9701ab6a20dc19 651 mx-flash_15.7.1mx15.dsc
+ ed79f821b93d09b02f802f90504e8145562251e1 213164 mx-flash_15.7.1mx15.tar.xz
+ afe417a2e0c65ff1ea2205045f68fe33f07eada4 53478 mx-flash_15.7.1mx15_i386.deb
 Checksums-Sha256:
- dd5d870f14d6c1c9795e8132f3f7555d647129eb704896e2833186640aa28ca6 651 mx-flash_15.7.1mx15.dsc
- 3d0741063bf5ceb6c23a31e0ca2b4cc5a638dc0f0916d3970f7b9f0b93e0e1b5 170200 mx-flash_15.7.1mx15.tar.xz
- d171f7171bbc7930efd9a24132d4399be9c1cb11c55d721dd18716114d048dfd 53406 mx-flash_15.7.1mx15_i386.deb
+ 00ff3bdaf1f6a8686b8ad8b0b18f3f352cbab79698c55ddfdaebbfab32f64cdf 651 mx-flash_15.7.1mx15.dsc
+ 9d702dc5c1e397579f26624904898d39128cd1418033251c5b484e832f8fb164 213164 mx-flash_15.7.1mx15.tar.xz
+ 8bc9d2c1c692e7ec46d2be157b121ceaad4d631a65cdf6edf6f2e4df84183a47 53478 mx-flash_15.7.1mx15_i386.deb
 Files:
- 2768a209a4a70daa256506e6836d3a5f 651 system optional mx-flash_15.7.1mx15.dsc
- 18859d4f8b5fa9322eb4e3d7f45c19a4 170200 system optional mx-flash_15.7.1mx15.tar.xz
- b8ed3ead419b1b40d1e3e376d5878a66 53406 system optional mx-flash_15.7.1mx15_i386.deb
+ 1cd0b26e17e36149433e8b93ff6ebe95 651 system optional mx-flash_15.7.1mx15.dsc
+ d61329ed5a4f69f173b047575319875a 213164 system optional mx-flash_15.7.1mx15.tar.xz
+ c1155cfd6b0e480533a945d7f734dd74 53478 system optional mx-flash_15.7.1mx15_i386.deb

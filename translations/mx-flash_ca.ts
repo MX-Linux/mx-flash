@@ -147,7 +147,7 @@
     </message>
     <message>
         <location filename="../mxflash.ui" line="525"/>
-        <location filename="../mxflash.cpp" line="478"/>
+        <location filename="../mxflash.cpp" line="479"/>
         <source>Cancel</source>
         <translation>Cancel·la</translation>
     </message>
@@ -347,7 +347,7 @@
         <translation>Copyright (c) MX Linux </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="479"/>
+        <location filename="../mxflash.cpp" line="478"/>
         <source>License</source>
         <translation>Llicència</translation>
     </message>
