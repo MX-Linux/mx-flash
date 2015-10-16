@@ -1,3 +1,9 @@
+mx-flash (15.10mx15) mx; urgency=medium
+
+  * new icon
+
+ -- Adrian <adrian@mxlinux.org>  Fri, 16 Oct 2015 10:04:59 -0400
+
 mx-flash (15.7.1mx15) mx; urgency=medium
 
   * added build-dep, fixed license
