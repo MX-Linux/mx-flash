@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sat, 24 Oct 2015 00:54:39 -0400
+Source: mx-flash
+Binary: mx-flash
+Architecture: source i386
+Version: 15.10.1mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-flash   - Flash plugin manager
+Changes:
+ mx-flash (15.10.1mx15) mx; urgency=medium
+ .
+   * new translations
+Checksums-Sha1:
+ a006fb94b9fa2cf8eaa7d301e134f495d9ef2a36 652 mx-flash_15.10.1mx15.dsc
+ 665b1d78f78ad787f6007ba754fd33d38206fb5a 42024 mx-flash_15.10.1mx15.tar.xz
+ 9cb25f7b4c692d613d63eee879d04f7b2432e914 53230 mx-flash_15.10.1mx15_i386.deb
+Checksums-Sha256:
+ 0f9a577c5ec99dda0a7838060dfb47c01d4343139f68c09923ced7d4737ccffc 652 mx-flash_15.10.1mx15.dsc
+ f3295ab7f20d21bad958910ef087489920c2890fcafe2640ad75cb44a7f0bc06 42024 mx-flash_15.10.1mx15.tar.xz
+ ce4b6f80382c22ae42d5f457789c3a2782c7f78452e806af3d51cdb6e08c3721 53230 mx-flash_15.10.1mx15_i386.deb
+Files:
+ dbe337a122c5855addf7a33f4b48ef4b 652 system optional mx-flash_15.10.1mx15.dsc
+ 1ed5cb8d12074465b0335840abbda682 42024 system optional mx-flash_15.10.1mx15.tar.xz
+ 9beb45529de4de6b4be5e68352c58ea4 53230 system optional mx-flash_15.10.1mx15_i386.deb
