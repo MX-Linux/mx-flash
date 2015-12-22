@@ -469,6 +469,7 @@ void mxflash::on_buttonOk_clicked() {
 
 // About button clicked
 void mxflash::on_buttonAbout_clicked() {
+    this->hide();
     QMessageBox msgBox(QMessageBox::NoIcon,
                        tr("About MX Flash Manager"), "<p align=\"center\"><b><h2>" +
                        tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">" + tr("Version: ") +
@@ -480,14 +481,17 @@ void mxflash::on_buttonAbout_clicked() {
     if (msgBox.exec() == QMessageBox::AcceptRole) {
         system("mx-viewer file:///usr/share/doc/mx-flash/license.html " + tr("'MX Flash License'").toUtf8());
     }
+    this->show();
 }
 
 
 // Help button clicked
 void mxflash::on_buttonHelp_clicked() {
+    this->hide();
     if (checkOnline()) {
         system("mx-viewer http://mepiscommunity.org/wiki/help-files/help-mx-flash-manager " + tr("'MX Flash Help'").toUtf8());
     } else {
         system("mx-viewer file:///usr/local/share/doc/mxum.html#flash " + tr("'MX Flash Help'").toUtf8());
     }
+    this->show();
 }

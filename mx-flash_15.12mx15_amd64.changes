@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Tue, 22 Dec 2015 18:10:33 -0500
+Source: mx-flash
+Binary: mx-flash
+Architecture: source amd64
+Version: 15.12mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-flash   - Flash plugin manager
+Changes:
+ mx-flash (15.12mx15) mx; urgency=medium
+ .
+   * hide GUI when displaying help/license
+Checksums-Sha1:
+ 1bc096e5846ecc6d04b1827c5f124fc3fd16ebd6 1165 mx-flash_15.12mx15.dsc
+ 2145259b92e933b829def62902364346017c2d6f 84868 mx-flash_15.12mx15.tar.xz
+ 969347af54ca1c42949f4613f81b0bc5f7962295 53112 mx-flash_15.12mx15_amd64.deb
+Checksums-Sha256:
+ eccdfd4577d6a16e7a780a6cad06cddf370dd4e5dfd124e7c71b05ba2d19467a 1165 mx-flash_15.12mx15.dsc
+ 755060927b7531cc3232f9746a60c27eda65f8f7dd95f2dcd87b504484f89d43 84868 mx-flash_15.12mx15.tar.xz
+ 771e672702108c06072244623865543f6bb786ac48518d9bd3b167ad18b3c78c 53112 mx-flash_15.12mx15_amd64.deb
+Files:
+ c3c58e9913ee2c2f70b137fd026dc502 1165 system optional mx-flash_15.12mx15.dsc
+ 83688185518fffce43bede3bd06bdedc 84868 system optional mx-flash_15.12mx15.tar.xz
+ 09bea44d3da614efeacf23035d15cf3b 53112 system optional mx-flash_15.12mx15_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJWedlFAAoJEHCTjHgGee6YFc4H/RBj7S19kcPAOliRs08SC4XY
+ZWOL/scVLC6uvcHDVtvq3BdoJ827FtrlJCVrANV4mZCIZpwdE6Y/zrn9G5eQBrvX
+QTGmCerHl2bl/gmJI2wZXgrOtxEb0w/m6HbDJDmPnrrHLsYvcQvN6hO4bYZxXuah
+rzJlBPpmqq3wHdCRdTnsCU/4Y+hogiExr0QPPm9B0sn5jdIjFPT+oC7d5SOqbH4M
+QOlhMl/4Tp9YUmDBa2G6e4ZqeMzxn3jqZKJ52vOWLM4xZVK31lmf0eT8IoYudSB/
+2vIeyuuAQ+PIyN1TM69vB/WC1mNicUAV8ujTN7yPkMozD6l/KDfVFqnI5TOfSm4=
+=v1gi
+-----END PGP SIGNATURE-----

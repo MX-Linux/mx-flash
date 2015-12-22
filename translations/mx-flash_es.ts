@@ -14,7 +14,7 @@
     <message>
         <location filename="../mxflash.ui" line="20"/>
         <location filename="../mxflash.cpp" line="327"/>
-        <location filename="../mxflash.cpp" line="474"/>
+        <location filename="../mxflash.cpp" line="475"/>
         <source>MX Flash Manager</source>
         <translation>Manejador de MX para Flash</translation>
     </message>
@@ -147,7 +147,7 @@
     </message>
     <message>
         <location filename="../mxflash.ui" line="525"/>
-        <location filename="../mxflash.cpp" line="479"/>
+        <location filename="../mxflash.cpp" line="480"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
@@ -327,38 +327,38 @@
         <translation>No se pudo descargar Flash para CPUs sin SSE2.</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="473"/>
+        <location filename="../mxflash.cpp" line="474"/>
         <source>About MX Flash Manager</source>
         <translation>Acerca de MX manejador de Flash</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="474"/>
+        <location filename="../mxflash.cpp" line="475"/>
         <source>Version: </source>
         <translation>Versión:</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="476"/>
+        <location filename="../mxflash.cpp" line="477"/>
         <source>Simple Flash manager for antiX MX Linux</source>
         <translation>Manejador simple de Flash para antiX MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="477"/>
+        <location filename="../mxflash.cpp" line="478"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="478"/>
+        <location filename="../mxflash.cpp" line="479"/>
         <source>License</source>
         <translation>Licencia</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="481"/>
+        <location filename="../mxflash.cpp" line="482"/>
         <source>&apos;MX Flash License&apos;</source>
         <translation>&quot;Licencia de MX Flash&quot;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="489"/>
-        <location filename="../mxflash.cpp" line="491"/>
+        <location filename="../mxflash.cpp" line="492"/>
+        <location filename="../mxflash.cpp" line="494"/>
         <source>&apos;MX Flash Help&apos;</source>
         <translation>&quot;Ayuda de MX Flash&quot;</translation>
     </message>

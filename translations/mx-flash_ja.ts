@@ -14,7 +14,7 @@
     <message>
         <location filename="../mxflash.ui" line="20"/>
         <location filename="../mxflash.cpp" line="327"/>
-        <location filename="../mxflash.cpp" line="474"/>
+        <location filename="../mxflash.cpp" line="475"/>
         <source>MX Flash Manager</source>
         <translation>MX Flash Manager</translation>
     </message>
@@ -147,7 +147,7 @@
     </message>
     <message>
         <location filename="../mxflash.ui" line="525"/>
-        <location filename="../mxflash.cpp" line="479"/>
+        <location filename="../mxflash.cpp" line="480"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
@@ -327,38 +327,38 @@
         <translation>SSE2 CPU 非対応版の Flash をダウンロードできませんでした。</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="473"/>
+        <location filename="../mxflash.cpp" line="474"/>
         <source>About MX Flash Manager</source>
         <translation>MX Flash Manager について</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="474"/>
+        <location filename="../mxflash.cpp" line="475"/>
         <source>Version: </source>
         <translation>Version: </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="476"/>
+        <location filename="../mxflash.cpp" line="477"/>
         <source>Simple Flash manager for antiX MX Linux</source>
         <translation>antiX MX Linux シンプルフラッシュ管理</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="477"/>
+        <location filename="../mxflash.cpp" line="478"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="478"/>
+        <location filename="../mxflash.cpp" line="479"/>
         <source>License</source>
         <translation>ライセンス</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="481"/>
+        <location filename="../mxflash.cpp" line="482"/>
         <source>&apos;MX Flash License&apos;</source>
         <translation>&apos;MX Flash ライセンス&apos;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="489"/>
-        <location filename="../mxflash.cpp" line="491"/>
+        <location filename="../mxflash.cpp" line="492"/>
+        <location filename="../mxflash.cpp" line="494"/>
         <source>&apos;MX Flash Help&apos;</source>
         <translation>&apos;MX Flash ヘルプ&apos;</translation>
     </message>

@@ -1,3 +1,9 @@
+mx-flash (15.12mx15) mx; urgency=medium
+
+  * hide GUI when displaying help/license
+
+ -- Adrian <adrian@mxlinux.org>  Tue, 22 Dec 2015 18:10:33 -0500
+
 mx-flash (15.11mx15) mx; urgency=medium
 
   * new translations
