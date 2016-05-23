@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sun, 22 May 2016 21:28:10 -0400
+Source: mx-flash
+Binary: mx-flash
+Architecture: source amd64
+Version: 16.5mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphinoracle <dolphinoracle@gmail.com>
+Description:
+ mx-flash   - Flash plugin manager
+Changes:
+ mx-flash (16.5mx15) mx; urgency=medium
+ .
+   * new desktop file
+Checksums-Sha1:
+ 50c04e5df702010a00fa877f2c29687b2bbd0176 640 mx-flash_16.5mx15.dsc
+ 9edd952eaef02bec8198b69847577e545808126b 41944 mx-flash_16.5mx15.tar.xz
+ 79b6e1e08776fa9727449c1153884e5da7d1b42a 53142 mx-flash_16.5mx15_amd64.deb
+Checksums-Sha256:
+ 16e9f8baedea14435c4a981882709ad213f4b8999702a3fa87f12ae47dfd56fd 640 mx-flash_16.5mx15.dsc
+ b1ca9f3d8eff7bc9bef1d9f46dc8ea41e82b8b6e66464917d667612a695ba28a 41944 mx-flash_16.5mx15.tar.xz
+ 3cfab1e8c89d647ae404693271b2ea1f5db309c846df0b2ad743833b63f9232d 53142 mx-flash_16.5mx15_amd64.deb
+Files:
+ d36461e4efaaed4430cb97c62d8d0aad 640 system optional mx-flash_16.5mx15.dsc
+ 49e62cfebd9ffffdcea3344e9fe16dfb 41944 system optional mx-flash_16.5mx15.tar.xz
+ 9eb7bc32c7cd0c5730eb52a424291f13 53142 system optional mx-flash_16.5mx15_amd64.deb
