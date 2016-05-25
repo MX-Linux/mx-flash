@@ -26,5 +26,5 @@ Comment[sv]=Enkel Adobe Flash-Konfiguration
 Exec=su-to-root -X -c mx-flash
 Icon=mx-flash
 NoDisplay=false
-Categories=System;
+Categories=System;MX-Maintenance;
 Type=Application
