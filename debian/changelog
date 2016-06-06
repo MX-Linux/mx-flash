@@ -1,3 +1,9 @@
+mx-flash (16.6mx15) mx; urgency=medium
+
+  * minor change 
+
+ -- Adrian <adrian@mxlinux.org>  Mon, 06 Jun 2016 18:10:39 -0400
+
 mx-flash (16.5mx15) mx; urgency=medium
 
   * new desktop file
