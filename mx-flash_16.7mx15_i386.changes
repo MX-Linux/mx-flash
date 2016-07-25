@@ -1,0 +1,37 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Mon, 25 Jul 2016 16:54:28 -0400
+Source: mx-flash
+Binary: mx-flash
+Architecture: i386
+Version: 16.7mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-flash   - Flash plugin manager
+Changes:
+ mx-flash (16.7mx15) mx; urgency=medium
+ .
+   * updated/fixed code to display latest version
+Checksums-Sha1:
+ 881b5b69edc82f37411ff8d645309dd8348ca7ae 53232 mx-flash_16.7mx15_i386.deb
+Checksums-Sha256:
+ d62567991c6df407c62c4e85b3bee03324ff0e2a35c4e2e236b874130d0a05c8 53232 mx-flash_16.7mx15_i386.deb
+Files:
+ 55cb8a4e8e64de5f479a8a3a8c4a2b54 53232 system optional mx-flash_16.7mx15_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJXln1LAAoJEHCTjHgGee6YmOwH/2ErJyb38pm7pxIZJR9/uPrl
+oT7QXisDQBrIvosY9glhSmYjJyeIKeQKqBWhnSlr6gczfKohvSd6wx41drG/g4x3
+9cTgJdnP4Eiz21rmxkelSCTXiYli/RhcZyZx3OrBYZStMolQiyimzerD5HqTxhtv
+Cxp3HGU72joT/v9tFII9q+3JZeuZfOtXjUqJdM3ibN2Ecc8hyKYjb7wmQ6DNUdtL
+NXr3mU9+neW/hczJr70sS+6EDw649X5ocfX5PHbY5y49dTLJLNk4sdOlOZmHkBpY
+SkmLkOGol+En+RFeNX3Bd5gA6hfzMil8F0tbC5FLsQbzcR0+6YJYzAYn08XlUhg=
+=bo4j
+-----END PGP SIGNATURE-----

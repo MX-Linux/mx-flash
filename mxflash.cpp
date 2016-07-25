@@ -117,8 +117,8 @@ void mxflash::detectVersion() {
     ui->whatGroupBox->hide();
     QString out;
     // Current version on Adobe site
-    QString bit = getCmdOut("dpkg --print-architecture | sed 's/amd64/64/;s/i386/32/'");
-    QString cmd = QString("wget -qO- http://get.adobe.com/flashplayer/download/%3Finstaller=Flash_Player_11.2_for_other_Linux_%28.tar.gz%29_%1-bit%26standalone=1 | grep location.href | cut -f2 -d\\' | cut -f7 -d/").arg(bit);
+    // QString bit = getCmdOut("dpkg --print-architecture | sed 's/amd64/64/;s/i386/32/'");
+    QString cmd = QString("wget -qO- https://www.adobe.com/software/flash/about/ | grep Linux -A10 | grep NPAPI -A1 | grep -Eo [0-9.]+");
     QString currentversion = getCmdOut(cmd);
     out = tr("Adobe Flash most recent version: ") + currentversion + "\n";
     // Adobe Flash version
@@ -130,7 +130,7 @@ void mxflash::detectVersion() {
     }
     //// PepperFlash
     // Current version
-    cmd = "wget -qO- https://www.adobe.com/software/flash/about/ 2>/dev/null | grep Linux -A10 | grep Chrome -A1 -m1 | tail -n1 | cut -f2 -d\\> | cut -f1 -d\\<";
+    cmd = "wget -qO- https://www.adobe.com/software/flash/about/ | grep Linux -A10 | grep Chrome -A1 | grep -Eo [0-9.]+";
     QString peppercurrent = getCmdOut(cmd);
     out += "\n\n" + tr("PepperFlash most recent version: ") + peppercurrent;
 

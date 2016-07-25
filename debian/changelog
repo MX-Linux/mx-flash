@@ -1,3 +1,9 @@
+mx-flash (16.7mx15) mx; urgency=medium
+
+  * updated/fixed code to display latest version
+
+ -- Adrian <adrian@mxlinux.org>  Mon, 25 Jul 2016 16:54:28 -0400
+
 mx-flash (16.6mx15) mx; urgency=medium
 
   * minor change 
