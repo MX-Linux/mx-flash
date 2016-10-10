@@ -338,8 +338,8 @@
     </message>
     <message>
         <location filename="../mxflash.cpp" line="477"/>
-        <source>Simple Flash manager for antiX MX Linux</source>
-        <translation>antiX MX Linux シンプルフラッシュ管理</translation>
+        <source>Simple Flash manager for MX Linux</source>
+        <translation>MX Linux シンプルフラッシュ管理</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="478"/>

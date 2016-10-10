@@ -1,3 +1,9 @@
+mx-flash (16.10mx16) mx; urgency=medium
+
+  * changed URLs
+
+ -- Adrian <adrian@mxlinux.org>  Mon, 10 Oct 2016 13:23:46 -0400
+
 mx-flash (16.7mx15) mx; urgency=medium
 
   * updated/fixed code to display latest version

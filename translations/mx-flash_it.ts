@@ -338,7 +338,7 @@
     </message>
     <message>
         <location filename="../mxflash.cpp" line="477"/>
-        <source>Simple Flash manager for antiX MX Linux</source>
+        <source>Simple Flash manager for MX Linux</source>
         <translation>Configurazione semplice d&apos;Adobe Flash</translation>
     </message>
     <message>

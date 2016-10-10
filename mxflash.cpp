@@ -4,7 +4,7 @@
  * Copyright (C) 2014 MX Authors
  *
  * Authors: Adrian
- *          MX & MEPIS Community <http://forum.mepiscommunity.org>
+ *          MX Linux <http://mxlinux.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -59,7 +59,7 @@ QString mxflash::getVersion(QString name)
 
 bool mxflash::checkOnline()
 {
-    if(system("wget -q --spider http://www.mepiscommunity.org >/dev/null 2>&1") == 0) {
+    if(system("wget -q --spider http://mxlinux.org >/dev/null 2>&1") == 0) {
         return true;
     }
     return false;
@@ -474,7 +474,7 @@ void mxflash::on_buttonAbout_clicked() {
                        tr("About MX Flash Manager"), "<p align=\"center\"><b><h2>" +
                        tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">" + tr("Version: ") +
                        getVersion("mx-flash") + "</p><p align=\"center\"><h3>" +
-                       tr("Simple Flash manager for antiX MX Linux") + "</h3></p><p align=\"center\"><a href=\"http://www.mepiscommunity.org/mx\">http://www.mepiscommunity.org/mx</a><br /></p><p align=\"center\">" +
+                       tr("Simple Flash manager for MX Linux") + "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
     msgBox.addButton(tr("Cancel"), QMessageBox::RejectRole);
@@ -489,7 +489,7 @@ void mxflash::on_buttonAbout_clicked() {
 void mxflash::on_buttonHelp_clicked() {
     this->hide();
     if (checkOnline()) {
-        system("mx-viewer http://mepiscommunity.org/wiki/help-files/help-mx-flash-manager " + tr("'MX Flash Help'").toUtf8());
+        system("mx-viewer https://mxlinux.org/wiki/help-files/help-mx-flash-manager " + tr("'MX Flash Help'").toUtf8());
     } else {
         system("mx-viewer file:///usr/local/share/doc/mxum.html#flash " + tr("'MX Flash Help'").toUtf8());
     }

@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Mon, 10 Oct 2016 13:23:46 -0400
+Source: mx-flash
+Binary: mx-flash
+Architecture: source amd64
+Version: 16.10mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-flash   - Flash plugin manager
+Changes:
+ mx-flash (16.10mx16) mx; urgency=medium
+ .
+   * changed URLs
+Checksums-Sha1:
+ 0fed3d106fd28599a739ff719248cc3d918f12f2 1165 mx-flash_16.10mx16.dsc
+ 6743ca3761f17774f630b9037b6e775f9767986b 42068 mx-flash_16.10mx16.tar.xz
+ 48eec0166346051b85ca0c90e8c52e95baf45bf3 52992 mx-flash_16.10mx16_amd64.deb
+Checksums-Sha256:
+ 220cbd27afb866f4b07a20adbba4a1355db057ad2fb8ffb3bedd81e04c3072b7 1165 mx-flash_16.10mx16.dsc
+ 3843227f51a05950878c479f8ef29030d57f3ee7e08b12950fda57cb474bccd2 42068 mx-flash_16.10mx16.tar.xz
+ b09a21f52fe35caa28baa57b9cdc849291b77fb007b4bf2638de7d0a2966b951 52992 mx-flash_16.10mx16_amd64.deb
+Files:
+ c82b6e0e64bb8bbd21b885ea84027b12 1165 system optional mx-flash_16.10mx16.dsc
+ c637755551b4c204bb629a15a16c0944 42068 system optional mx-flash_16.10mx16.tar.xz
+ f20cd8b5dc0b10be2f50255fdca8ca6f 52992 system optional mx-flash_16.10mx16_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJX+8+PAAoJEHCTjHgGee6YUK8IANF0vlGh6tBh/QA/D6LwLo2v
+EbBL2ahLjTFnpJkghoucYTClwEZdvpCHKZ7PeLqiG/lW0FUxN93JTwocUE+iuzvc
+HeZQleGYyqD/sVWigK5nzYzBAvkDLWV4ltTwDsTnk3MlDZzEmVFztkPzcS3WWJ2/
+aLdtJr84aziDj08y6nNytcwk34eOIYReNoORT0uRKbXJQUwvSk3Cx81wsCpoqMKg
+U5f4FqY7BsIK4pSf/m404ogpkojFQ3FwdPpFHXZIQf2WS9jW1ReqinTuUV/UYb4F
+xTlyYRCBq67vLaSeIrZYqsYRg6e0EtUoO9OgpZ9eCCuryFc2fo8Ktyis4Kpt12k=
+=V6Uk
+-----END PGP SIGNATURE-----
