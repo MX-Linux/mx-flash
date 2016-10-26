@@ -47,17 +47,19 @@ public:
     // helpers
     QString getCmdOut(QString cmd);
     QString getVersion(QString name);
-    bool checkOnline();
-    void refresh();
-    void detectVersion();
 
-    void removeFlash();
-    void updateFlash();
-    void updatePepper();
-    void installFlash();
-    void downloadFlash();
     bool checkDebInstalled();
+    bool checkOnline();
+    void detectVersion();
+    void downloadFlash();
+    void installFlash();
+    void installPepper();
     void installRemovePepper();
+    void refresh();
+    void removeFlash();
+    void removePepper();
+    void updateFlash();
+    void updatePepper();              
 
 public slots:
     void procStart();

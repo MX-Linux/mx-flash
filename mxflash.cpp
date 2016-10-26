@@ -26,6 +26,8 @@
 #include <QDir>
 #include <QTextStream>
 
+#include <QDebug>
+
 mxflash::mxflash(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::mxflash)
@@ -90,7 +92,8 @@ void mxflash::refresh() {
     ui->labelVersion->setText(tr("Please wait, loading..."));
 
     // checks if PepperFlash is installed
-    if (getCmdOut("dpkg -s pepperflashplugin-nonfree| grep Status") != "Status: install ok installed") {
+    if (getCmdOut("dpkg -s pepperflashplugin-nonfree| grep Status") != "Status: install ok installed" &&
+            getCmdOut("dpkg -s bunsen-pepperflash| grep Status") != "Status: install ok installed") {
         ui->pepperButton->setText(tr("Install PepperFlash for Chromium"));
         ui->updatePepperButton->hide();
     } else {
@@ -115,12 +118,13 @@ void mxflash::refresh() {
 // detect and list the version of Flash and PepperFlash
 void mxflash::detectVersion() {
     ui->whatGroupBox->hide();
+    QString version_chromium;
     QString out;
     // Current version on Adobe site
     // QString bit = getCmdOut("dpkg --print-architecture | sed 's/amd64/64/;s/i386/32/'");
     QString cmd = QString("wget -qO- https://www.adobe.com/software/flash/about/ | grep Linux -A10 | grep NPAPI -A1 | grep -Eo [0-9.]+");
-    QString currentversion = getCmdOut(cmd);
-    out = tr("Adobe Flash most recent version: ") + currentversion + "\n";
+    QString current_version = getCmdOut(cmd);
+    out = tr("Adobe Flash most recent version: ") + current_version + "\n";
     // Adobe Flash version
     QString version = getCmdOut("strings /usr/lib/flashplugin-nonfree/libflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
     if (version != "") {
@@ -131,19 +135,30 @@ void mxflash::detectVersion() {
     //// PepperFlash
     // Current version
     cmd = "wget -qO- https://www.adobe.com/software/flash/about/ | grep Linux -A10 | grep Chrome -A1 | grep -Eo [0-9.]+";
-    QString peppercurrent = getCmdOut(cmd);
-    out += "\n\n" + tr("PepperFlash most recent version: ") + peppercurrent;
+    QString pepper_current = getCmdOut(cmd);
+    out += "\n\n" + tr("PepperFlash most recent version: ") + pepper_current;
 
-    QString versionChrome = getCmdOut("strings /opt/google/chrome/PepperFlash/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
-    QString versionChromium = getCmdOut("strings /usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
-    if (versionChrome != "") {
-        out += "\n" + tr("PepperFlash for Chrome installed version: ") + versionChrome;
+    QString version_chrome = getCmdOut("strings /opt/google/chrome/PepperFlash/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
+    if (version_chrome != "") {
+        out += "\n" + tr("PepperFlash for Chrome installed version: ") + version_chrome;
     }
-    if (versionChromium != "" ) {
-        out += "\n" + tr("PepperFlash for Chromium installed version: ") + versionChromium;
+
+    if (QFile("/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so").exists()) {
+        version_chromium = getCmdOut("strings /usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
     } else {
-        out += "\n" + tr("PepperFlash for Chromium is not installed.") + versionChromium;
+        version_chromium = getCmdOut("strings /usr/lib/bunsen-pepperflash/libpepflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
     }
+    if (version_chromium != "" ) {
+        out += "\n" + tr("PepperFlash for Chromium installed version: ") + version_chromium;
+        if (version_chromium == pepper_current) {
+            ui->updatePepperButton->hide();
+        }
+    } else {
+        out += "\n" + tr("PepperFlash for Chromium is not installed.") + version_chromium;
+        ui->pepperButton->setText(tr("Install PepperFlash for Chromium"));
+        ui->updatePepperButton->hide();
+        ui->pepperButton->show();
+    }    
     ui->labelVersion->setText(out);
     ui->whatGroupBox->show();
 }
@@ -241,21 +256,44 @@ void mxflash::updateFlash() {
 // update PepperFlash
 void mxflash::updatePepper() {
     setCursor(QCursor(Qt::WaitCursor));
-    qApp->processEvents();
+    qApp->processEvents();    
 
     // manual update
-    if (ui->manualPepperButton->isChecked()) {
-        setConnections(timer, proc);
-        proc->start("update-pepperflashplugin-nonfree -i");
+    if (ui->manualPepperButton->isChecked()) {        
+        if (getCmdOut("dpkg -s bunsen-pepperflash| grep Status") != "Status: install ok installed") {
+            installPepper();
+        } else {
+            setConnections(timer, proc);
+            proc->start("update-bunsen-pepperflash -i");
+        }
+    } else { //automatic update
+        if (getCmdOut("dpkg -s bunsen-pepperflash| grep Status") != "Status: install ok installed") {
+            ui->stackedWidget->setCurrentWidget(ui->pageInstall);
 
-        //automatic update
-    } else {
+            // run updates
+            ui->progressBar->show();
+            QEventLoop loop;
+            disconnect(timer, SIGNAL(timeout()), 0, 0);
+            connect(timer, SIGNAL(timeout()), this, SLOT(procTime()));
+            disconnect(proc, SIGNAL(started()), 0, 0);
+            connect(proc, SIGNAL(started()), this, SLOT(procStart()));
+            disconnect(proc, SIGNAL(finished(int)), 0, 0);
+            connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
+            ui->labelInstall->setText(tr("Running apt-get update..."));
+            proc->start("apt-get update");
+            loop.exec();
+
+            // run install
+            ui->progressBar->show();
+            ui->labelInstall->setText(tr("Installing PepperFlash..."));
+            proc->start("apt-get -y install bunsen-pepperflash");
+        }
         // write a pepperflashupdate file in cron.daily
-        QFile file("/etc/cron.daily/pepperflashupdate");
+        QFile file("/etc/cron.daily/pepperflashupdate");                                
         file.open(QIODevice::WriteOnly | QIODevice::Text);
-        QTextStream out(&file);
-        out << "#!/bin/sh\n\ntest -x /usr/sbin/update-pepperflashplugin-nonfree && /usr/sbin/update-pepperflashplugin-nonfree --install --quiet";
-        file.close();
+        QTextStream out(&file);                    
+        out << "#!/bin/sh\n\ntest -x /usr/sbin/update-bunsen-pepperflash && /usr/sbin/update-bunsen-pepperflash --install";
+        file.close();        
 
         // set file executable
         QString cmd = QString("chmod +x %1").arg(file.fileName());
@@ -315,9 +353,7 @@ void mxflash::installFlash() {
 }
 
 void mxflash::installRemovePepper() {
-    setCursor(QCursor(Qt::WaitCursor));
-    ui->stackedWidget->setCurrentWidget(ui->pageInstall);
-    if (getCmdOut("dpkg -s pepperflashplugin-nonfree| grep Status") != "Status: install ok installed") {
+    if (ui->pepperButton->text() == (tr("Install PepperFlash for Chromium"))) {
         if (system("grep -q \"^flags.*\\<sse2\\>\" /proc/cpuinfo") != 0) {
             QMessageBox::critical(0, tr("Error"),tr("PepperFlash cannot be installed because your CPU does not support SSE2."));;
             return;
@@ -333,30 +369,42 @@ void mxflash::installRemovePepper() {
                 return;
             }
         }
-        // run updates
-        ui->progressBar->show();
-        QEventLoop loop;
-        disconnect(timer, SIGNAL(timeout()), 0, 0);
-        connect(timer, SIGNAL(timeout()), this, SLOT(procTime()));
-        disconnect(proc, SIGNAL(started()), 0, 0);
-        connect(proc, SIGNAL(started()), this, SLOT(procStart()));
-        disconnect(proc, SIGNAL(finished(int)), 0, 0);
-        connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
-        ui->labelInstall->setText(tr("Running apt-get update..."));
-        proc->start("apt-get update");
-        loop.exec();
-
-        // run install
-        ui->progressBar->show();
-        ui->labelInstall->setText(tr("Installing PepperFlash..."));
-        connect(proc, SIGNAL(finished(int)), this, SLOT(procDone(int)));
-        proc->start("apt-get install pepperflashplugin-nonfree");
-
-    } else { //remove pepperflash
-        setConnections(timer, proc);
-        ui->labelInstall->setText(tr("Removing PepperFlash..."));
-        proc->start("dpkg -P pepperflashplugin-nonfree");
+        installPepper();
+    } else {
+        removePepper();
     }
+}
+
+void mxflash::installPepper() {
+    setCursor(QCursor(Qt::WaitCursor));
+    ui->stackedWidget->setCurrentWidget(ui->pageInstall);
+
+    // run updates
+    ui->progressBar->show();
+    QEventLoop loop;
+    disconnect(timer, SIGNAL(timeout()), 0, 0);
+    connect(timer, SIGNAL(timeout()), this, SLOT(procTime()));
+    disconnect(proc, SIGNAL(started()), 0, 0);
+    connect(proc, SIGNAL(started()), this, SLOT(procStart()));
+    disconnect(proc, SIGNAL(finished(int)), 0, 0);
+    connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
+    ui->labelInstall->setText(tr("Running apt-get update..."));
+    proc->start("apt-get update");
+    loop.exec();
+
+    // run install
+    ui->progressBar->show();
+    ui->labelInstall->setText(tr("Installing PepperFlash..."));
+    connect(proc, SIGNAL(finished(int)), this, SLOT(procDone(int)));
+    proc->start("apt-get -y install bunsen-pepperflash");
+}
+
+void mxflash::removePepper() {
+    setCursor(QCursor(Qt::WaitCursor));
+    ui->stackedWidget->setCurrentWidget(ui->pageInstall);
+    setConnections(timer, proc);
+    ui->labelInstall->setText(tr("Removing PepperFlash..."));
+    proc->start("dpkg -P pepperflashplugin-nonfree bunsen-pepperflash");
 }
 
 /////////////////////////////////////////////////////////////////////////
@@ -459,7 +507,7 @@ void mxflash::on_buttonOk_clicked() {
         }
     } else if (ui->stackedWidget->currentWidget() == ui->pageFlashUpdate) {
         updateFlash();
-    } else if (ui->stackedWidget->currentWidget() == ui->pagePepperUpdate) {
+    } else if (ui->stackedWidget->currentWidget() == ui->pagePepperUpdate) {        
         updatePepper();
     } else {
         qApp->exit(0);
@@ -474,7 +522,7 @@ void mxflash::on_buttonAbout_clicked() {
                        tr("About MX Flash Manager"), "<p align=\"center\"><b><h2>" +
                        tr("MX Flash Manager") + "</h2></b></p><p align=\"center\">" + tr("Version: ") +
                        getVersion("mx-flash") + "</p><p align=\"center\"><h3>" +
-                       tr("Simple Flash manager for MX Linux") + "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p><p align=\"center\">" +
+                       tr("Simple Flash manager for MX Linux") + "</h3></p><p align=\"center\"><a href=\"https://mxlinux.org\">http://mxlinux.org</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
     msgBox.addButton(tr("Cancel"), QMessageBox::RejectRole);

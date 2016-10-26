@@ -1,3 +1,9 @@
+mx-flash (16.10mx16+1) mx; urgency=medium
+
+  * makes use of bunsen-pepperflash
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 26 Oct 2016 13:44:16 -0400
+
 mx-flash (16.10mx16) mx; urgency=medium
 
   * changed URLs
