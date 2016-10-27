@@ -99,7 +99,7 @@
           <item row="5" column="0">
            <widget class="QRadioButton" name="pepperButton">
             <property name="text">
-             <string>Install PepperFlash for Chromium</string>
+             <string>Install PepperFlash</string>
             </property>
            </widget>
           </item>
@@ -139,7 +139,7 @@
           <item row="6" column="0">
            <widget class="QRadioButton" name="updatePepperButton">
             <property name="text">
-             <string>Update PepperFlash for Chromium</string>
+             <string>Update PepperFlash</string>
             </property>
            </widget>
           </item>
