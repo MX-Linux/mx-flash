@@ -13,7 +13,7 @@
     <name>mxflash</name>
     <message>
         <location filename="../mxflash.ui" line="20"/>
-        <location filename="../mxflash.cpp" line="523"/>
+        <location filename="../mxflash.cpp" line="533"/>
         <source>MX Flash Manager</source>
         <translation>MX Flash-hanterare</translation>
     </message>
@@ -148,7 +148,7 @@
     </message>
     <message>
         <location filename="../mxflash.ui" line="525"/>
-        <location filename="../mxflash.cpp" line="528"/>
+        <location filename="../mxflash.cpp" line="538"/>
         <source>Cancel</source>
         <translation>Avbryt</translation>
     </message>
@@ -209,8 +209,8 @@
         <location filename="../mxflash.cpp" line="217"/>
         <location filename="../mxflash.cpp" line="358"/>
         <location filename="../mxflash.cpp" line="439"/>
-        <location filename="../mxflash.cpp" line="453"/>
-        <location filename="../mxflash.cpp" line="475"/>
+        <location filename="../mxflash.cpp" line="463"/>
+        <location filename="../mxflash.cpp" line="485"/>
         <source>Error</source>
         <translation>Fel</translation>
     </message>
@@ -302,54 +302,54 @@
         <translation>Processen avslutad. Fel har inträffat.</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="450"/>
-        <location filename="../mxflash.cpp" line="472"/>
+        <location filename="../mxflash.cpp" line="457"/>
+        <location filename="../mxflash.cpp" line="482"/>
         <source>Installing...</source>
         <translation>Installerar...</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="454"/>
+        <location filename="../mxflash.cpp" line="464"/>
         <source>&quot;apt-get update&quot; command did not run successfully.</source>
         <translation>&quot;apt-get update&quot; -kommandot kördes inte med framgång.</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="476"/>
+        <location filename="../mxflash.cpp" line="486"/>
         <source>Could not download Flash for non-SSE2 CPUs.</source>
         <translation>Kunde inte ladda ner Flash för non-SSE2 CPUs.</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="522"/>
+        <location filename="../mxflash.cpp" line="532"/>
         <source>About MX Flash Manager</source>
         <translation>Om MX Flash-hanterare</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="523"/>
+        <location filename="../mxflash.cpp" line="533"/>
         <source>Version: </source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="525"/>
+        <location filename="../mxflash.cpp" line="535"/>
         <source>Simple Flash manager for MX Linux</source>
         <translation>Enkel Flash-hanterare för MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="526"/>
+        <location filename="../mxflash.cpp" line="536"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="527"/>
+        <location filename="../mxflash.cpp" line="537"/>
         <source>License</source>
         <translation>Licens</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="530"/>
+        <location filename="../mxflash.cpp" line="540"/>
         <source>&apos;MX Flash License&apos;</source>
         <translation>&apos;MX Flash Licens&apos;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="540"/>
-        <location filename="../mxflash.cpp" line="542"/>
+        <location filename="../mxflash.cpp" line="550"/>
+        <location filename="../mxflash.cpp" line="552"/>
         <source>&apos;MX Flash Help&apos;</source>
         <translation>&apos;MX Flash Hjälp&apos;</translation>
     </message>

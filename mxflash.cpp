@@ -226,7 +226,7 @@ void mxflash::updateFlash() {
     // manual update
     if (ui->manualFlashButton->isChecked()) {
         setConnections(timer, proc);
-        proc->start("update-flashplugin-nonfree -i");
+        proc->start("update-flashplugin-nonfree-direct");
 
     //automatic update
     } else {
@@ -234,7 +234,7 @@ void mxflash::updateFlash() {
         QFile file("/etc/cron.daily/flashupdate");
         file.open(QIODevice::WriteOnly | QIODevice::Text);
         QTextStream out(&file);
-        out << "#!/bin/sh\n\ngrep -q \"^flags.*\\<sse2\\>\" /proc/cpuinfo || exit 0\n\ntest -x /usr/sbin/update-flashplugin-nonfree && /usr/sbin/update-flashplugin-nonfree --install --quiet";
+        out << "#!/bin/sh\n\ngrep -q \"^flags.*\\<sse2\\>\" /proc/cpuinfo || exit 0\n\ntest -x /usr/sbin/update-flashplugin-nonfree-direct && /usr/sbin/update-flashplugin-nonfree-direct";
         file.close();
 
         // set file executable
@@ -446,9 +446,19 @@ void mxflash::procDone(int exitCode) {
 void mxflash::procUpdateDone(int exitCode) {
     timer->stop();
     if (exitCode == 0) {
-        setConnections(timer, proc);
+        //setConnections(timer, proc);
+        QEventLoop loop;
+        disconnect(timer, SIGNAL(timeout()), 0, 0);
+        connect(timer, SIGNAL(timeout()), this, SLOT(procTime()));
+        disconnect(proc, SIGNAL(started()), 0, 0);
+        connect(proc, SIGNAL(started()), this, SLOT(procStart()));
+        disconnect(proc, SIGNAL(finished(int)), 0, 0);
+        connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
         ui->labelInstall->setText(tr("Installing..."));
         proc->start("apt-get install flashplugin-nonfree");
+        loop.exec();
+        setConnections(timer,proc);
+        proc->start("update-flashplugin-nonfree-direct");
     } else {
         QMessageBox::critical(0, tr("Error"),
                               tr("\"apt-get update\" command did not run successfully."));
