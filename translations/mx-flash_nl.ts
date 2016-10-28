@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="nl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="nl" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
@@ -13,7 +11,6 @@
     <name>mxflash</name>
     <message>
         <location filename="../mxflash.ui" line="20"/>
-        <location filename="../mxflash.cpp" line="363"/>
         <location filename="../mxflash.cpp" line="523"/>
         <source>MX Flash Manager</source>
         <translation>MX Flashbeheer</translation>
@@ -44,8 +41,8 @@
         <location filename="../mxflash.cpp" line="97"/>
         <location filename="../mxflash.cpp" line="158"/>
         <location filename="../mxflash.cpp" line="356"/>
-        <source>Install PepperFlash for Chromium</source>
-        <translation>Installeer PepperFlash voor Chromium</translation>
+        <source>Install PepperFlash</source>
+        <translation>Installeer PepperFlash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="109"/>
@@ -59,8 +56,8 @@
     </message>
     <message>
         <location filename="../mxflash.ui" line="142"/>
-        <source>Update PepperFlash for Chromium</source>
-        <translation>Update Pepperflash voor Chromium</translation>
+        <source>Update PepperFlash</source>
+        <translation>PepperFlash Opwaarderen</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="159"/>
@@ -194,19 +191,14 @@
         <translation>PepperFlash meest recente versie: </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="143"/>
-        <source>PepperFlash for Chrome installed version: </source>
-        <translation>PepperFlash voor Chrome geïnstalleerde versie:</translation>
-    </message>
-    <message>
         <location filename="../mxflash.cpp" line="152"/>
-        <source>PepperFlash for Chromium installed version: </source>
-        <translation>PepperFlash voor Chromium geïnstalleerde versie:</translation>
+        <source>PepperFlash installed version: </source>
+        <translation>PepperFlash geïnstalleerde versie:</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="157"/>
-        <source>PepperFlash for Chromium is not installed.</source>
-        <translation>PepperFlash voor Chromium is niet geïnstalleerd.</translation>
+        <source>PepperFlash is not installed.</source>
+        <translation>PepperFlash is niet geïnstalleerd.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="185"/>
@@ -239,7 +231,6 @@
         <location filename="../mxflash.cpp" line="205"/>
         <location filename="../mxflash.cpp" line="248"/>
         <location filename="../mxflash.cpp" line="306"/>
-        <location filename="../mxflash.cpp" line="364"/>
         <location filename="../mxflash.cpp" line="433"/>
         <source>Yes</source>
         <translation>Ja</translation>
@@ -248,7 +239,6 @@
         <location filename="../mxflash.cpp" line="205"/>
         <location filename="../mxflash.cpp" line="248"/>
         <location filename="../mxflash.cpp" line="306"/>
-        <location filename="../mxflash.cpp" line="364"/>
         <location filename="../mxflash.cpp" line="433"/>
         <source>No</source>
         <translation>Nee</translation>
@@ -272,11 +262,6 @@
         <translation>Flash update zal automatisch dagelijks starten. U kunt het programma nu afsluiten.&lt;p&gt;&lt;b&gt;Wilt u MX Flashbeheer afsluiten?&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="330"/>
-        <source>Downloading Flash..</source>
-        <translation>Flash Downloaden..</translation>
-    </message>
-    <message>
         <location filename="../mxflash.cpp" line="282"/>
         <location filename="../mxflash.cpp" line="350"/>
         <location filename="../mxflash.cpp" line="391"/>
@@ -284,20 +269,20 @@
         <translation>Apt-get update uitvoeren...</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="358"/>
-        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation>PepperFlash kan niet geïnstalleerd worden omdat uw CPU geen SSE2 ondersteunt.</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="364"/>
-        <source>Chromium is not installed. Do you want to install PepperFlash anyway?</source>
-        <translation>Chromium is niet geïnstalleerd. Wilt u PepperFlash toch installeren?</translation>
-    </message>
-    <message>
         <location filename="../mxflash.cpp" line="288"/>
         <location filename="../mxflash.cpp" line="397"/>
         <source>Installing PepperFlash...</source>
         <translation>PepperFlash installeren...</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="330"/>
+        <source>Downloading Flash..</source>
+        <translation>Flash Downloaden..</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="358"/>
+        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
+        <translation>PepperFlash kan niet geïnstalleerd worden omdat uw CPU geen SSE2 ondersteunt.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="406"/>

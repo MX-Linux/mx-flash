@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="el">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="el" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
@@ -13,7 +11,6 @@
     <name>mxflash</name>
     <message>
         <location filename="../mxflash.ui" line="20"/>
-        <location filename="../mxflash.cpp" line="363"/>
         <location filename="../mxflash.cpp" line="523"/>
         <source>MX Flash Manager</source>
         <translation>Διαχείρηση του Flash</translation>
@@ -44,8 +41,8 @@
         <location filename="../mxflash.cpp" line="97"/>
         <location filename="../mxflash.cpp" line="158"/>
         <location filename="../mxflash.cpp" line="356"/>
-        <source>Install PepperFlash for Chromium</source>
-        <translation>Εγκατάσταση του PepperFlash του Chromium</translation>
+        <source>Install PepperFlash</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.ui" line="109"/>
@@ -59,8 +56,8 @@
     </message>
     <message>
         <location filename="../mxflash.ui" line="142"/>
-        <source>Update PepperFlash for Chromium</source>
-        <translation>Ενημέρωση του PepperFlash του Chromium</translation>
+        <source>Update PepperFlash</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.ui" line="159"/>
@@ -194,19 +191,14 @@
         <translation>Η πιο πρόσφατη έκδοση του PepperFlash:</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="143"/>
-        <source>PepperFlash for Chrome installed version: </source>
-        <translation>Εγκατεστημένη έκδοση του PepperFlash:</translation>
-    </message>
-    <message>
         <location filename="../mxflash.cpp" line="152"/>
-        <source>PepperFlash for Chromium installed version: </source>
-        <translation>Εγκατεστημένη έκδοση του PepperFlash:</translation>
+        <source>PepperFlash installed version: </source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="157"/>
-        <source>PepperFlash for Chromium is not installed.</source>
-        <translation>PepperFlash για την έκδοση του Chromium δεν είναι εγκατεστημένο</translation>
+        <source>PepperFlash is not installed.</source>
+        <translation>Το PepperFlash δεν είναι εγκατεστημένο </translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="185"/>
@@ -239,7 +231,6 @@
         <location filename="../mxflash.cpp" line="205"/>
         <location filename="../mxflash.cpp" line="248"/>
         <location filename="../mxflash.cpp" line="306"/>
-        <location filename="../mxflash.cpp" line="364"/>
         <location filename="../mxflash.cpp" line="433"/>
         <source>Yes</source>
         <translation>Ναι</translation>
@@ -248,7 +239,6 @@
         <location filename="../mxflash.cpp" line="205"/>
         <location filename="../mxflash.cpp" line="248"/>
         <location filename="../mxflash.cpp" line="306"/>
-        <location filename="../mxflash.cpp" line="364"/>
         <location filename="../mxflash.cpp" line="433"/>
         <source>No</source>
         <translation>Όχι</translation>
@@ -272,11 +262,6 @@
         <translation>Μια αυτόματη καθημερινή ενημέρωση είχε προγραμματιστεί. Μπορείτε να κλείσετε το πρόγραμμα τώρα.&lt;p&gt;Θέλετε να βγείτε το MX Flash;&lt;b&gt;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="330"/>
-        <source>Downloading Flash..</source>
-        <translation>Κατεβάζοντας το </translation>
-    </message>
-    <message>
         <location filename="../mxflash.cpp" line="282"/>
         <location filename="../mxflash.cpp" line="350"/>
         <location filename="../mxflash.cpp" line="391"/>
@@ -284,20 +269,20 @@
         <translation>Εκτελώντας την εντολή apt-get update ... </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="358"/>
-        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation>Το PepperFlash δεν μπορεί να εγκατασταθεί επειδή η CPU σας δεν υποστηρίζει SSE2.</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="364"/>
-        <source>Chromium is not installed. Do you want to install PepperFlash anyway?</source>
-        <translation>ΤΟ Chromium δεν έχει εγκατασταθεί. Θέλετε να εγκαταστήσετε το PepperFlash ούτως ή άλλως;</translation>
-    </message>
-    <message>
         <location filename="../mxflash.cpp" line="288"/>
         <location filename="../mxflash.cpp" line="397"/>
         <source>Installing PepperFlash...</source>
         <translation>Εγκατάσταση του </translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="330"/>
+        <source>Downloading Flash..</source>
+        <translation>Κατεβάζοντας το </translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="358"/>
+        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
+        <translation>Το PepperFlash δεν μπορεί να εγκατασταθεί επειδή η CPU σας δεν υποστηρίζει SSE2.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="406"/>
@@ -343,7 +328,7 @@
     <message>
         <location filename="../mxflash.cpp" line="525"/>
         <source>Simple Flash manager for MX Linux</source>
-        <translation>Απλό Διαχειριστή Flash </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="526"/>
