@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="it" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="it">
 <context>
     <name>QApplication</name>
     <message>
@@ -42,7 +44,7 @@
         <location filename="../mxflash.cpp" line="158"/>
         <location filename="../mxflash.cpp" line="356"/>
         <source>Install PepperFlash</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="109"/>
@@ -57,7 +59,7 @@
     <message>
         <location filename="../mxflash.ui" line="142"/>
         <source>Update PepperFlash</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="159"/>
@@ -193,7 +195,7 @@
     <message>
         <location filename="../mxflash.cpp" line="152"/>
         <source>PepperFlash installed version: </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="157"/>
@@ -328,7 +330,7 @@
     <message>
         <location filename="../mxflash.cpp" line="525"/>
         <source>Simple Flash manager for MX Linux</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="526"/>
