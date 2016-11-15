@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="fr" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>You must run this program as root.</source>
-        <translation>Vous devez lancer cette application avec les droits root.</translation>
+        <translation>Vous devez lancer cette application avec les droits administrateur.</translation>
     </message>
 </context>
 <context>
@@ -15,7 +13,7 @@
         <location filename="../mxflash.ui" line="20"/>
         <location filename="../mxflash.cpp" line="533"/>
         <source>MX Flash Manager</source>
-        <translation>MX Gestionnaire Flash</translation>
+        <translation>Gestionnaire Flash MX </translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="33"/>
@@ -160,7 +158,7 @@
     <message>
         <location filename="../mxflash.cpp" line="92"/>
         <source>Please wait, loading...</source>
-        <translation>S&apos;il vous plaît attendez qu&apos;il se charge </translation>
+        <translation>Chargement, patientez ...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="100"/>
@@ -190,12 +188,12 @@
     <message>
         <location filename="../mxflash.cpp" line="139"/>
         <source>PepperFlash most recent version: </source>
-        <translation>PepperFlash version la plus récente:</translation>
+        <translation>Version la plus récente de PepperFlash:</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="152"/>
         <source>PepperFlash installed version: </source>
-        <translation>PepperFlash version installé:</translation>
+        <translation>Version installée de PepperFlash:</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="157"/>
@@ -248,7 +246,7 @@
     <message>
         <location filename="../mxflash.cpp" line="218"/>
         <source>Flash is installed through other means, cannot update with this program.</source>
-        <translation>Flash a été installé par d&apos;autres moyens, ne peut pas mettre à jour avec ce programme.</translation>
+        <translation>Flash a été installé par d&apos;autres moyens, il ne peut pas être mis à jour avec ce programme.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="246"/>

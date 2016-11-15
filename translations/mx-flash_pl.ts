@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="pl" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
@@ -44,7 +42,7 @@
         <location filename="../mxflash.cpp" line="158"/>
         <location filename="../mxflash.cpp" line="356"/>
         <source>Install PepperFlash</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.ui" line="109"/>
@@ -59,7 +57,7 @@
     <message>
         <location filename="../mxflash.ui" line="142"/>
         <source>Update PepperFlash</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.ui" line="159"/>
@@ -160,7 +158,7 @@
     <message>
         <location filename="../mxflash.cpp" line="92"/>
         <source>Please wait, loading...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="100"/>
@@ -195,7 +193,7 @@
     <message>
         <location filename="../mxflash.cpp" line="152"/>
         <source>PepperFlash installed version: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="157"/>
@@ -284,7 +282,7 @@
     <message>
         <location filename="../mxflash.cpp" line="358"/>
         <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="406"/>
@@ -330,7 +328,7 @@
     <message>
         <location filename="../mxflash.cpp" line="535"/>
         <source>Simple Flash manager for MX Linux</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="536"/>
