@@ -1,3 +1,9 @@
+mx-flash (16.11mx16) mx; urgency=medium
+
+  * new translations
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 16 Nov 2016 13:09:44 -0500
+
 mx-flash (16.10mx16+3) mx; urgency=medium
 
   * fix flash install and update
