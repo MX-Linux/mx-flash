@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="fr" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
@@ -15,7 +13,7 @@
         <location filename="../mxflash.ui" line="20"/>
         <location filename="../mxflash.cpp" line="533"/>
         <source>MX Flash Manager</source>
-        <translation>Gestionnaire Flash MX </translation>
+        <translation>MX Gestionnaire Flash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="33"/>
@@ -25,12 +23,12 @@
     <message>
         <location filename="../mxflash.ui" line="71"/>
         <source>What would you like MX Flash Manager to do?</source>
-        <translation>Que souhaitez-vous que le MX Gestionnaire Flash fasse ?</translation>
+        <translation>Que souhaitez-vous que MX Gestionnaire Flash fasse ?</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="92"/>
         <source>This option (re)installs Flash, if needed will install non-sse2 Flash</source>
-        <translation>Cette option (ré) installe Flash, si nécessaire seront installé non-sse2 Flash</translation>
+        <translation>Cette option (ré) installe Flash, si nécessaire Flash non-sse2 sera installé</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="95"/>
@@ -49,7 +47,7 @@
     <message>
         <location filename="../mxflash.ui" line="109"/>
         <source>Update Flash</source>
-        <translation>Mise à jour de Flash</translation>
+        <translation>Mettre à jour Flash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="116"/>
@@ -59,7 +57,7 @@
     <message>
         <location filename="../mxflash.ui" line="142"/>
         <source>Update PepperFlash</source>
-        <translation>Mise à jour de PepperFlash</translation>
+        <translation>Mettre à jour PepperFlash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="159"/>
@@ -76,13 +74,13 @@
         <location filename="../mxflash.ui" line="212"/>
         <location filename="../mxflash.ui" line="300"/>
         <source>Select to set a daily scheduled update</source>
-        <translation>Sélectionnez pour installer une mise à jour programmée tous les jours</translation>
+        <translation>Sélectionner pour définir une mise à jour quotidienne</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="215"/>
         <location filename="../mxflash.ui" line="303"/>
         <source>Update on an automatic schedule</source>
-        <translation>Mise à jour sur un calendrier automatique</translation>
+        <translation>Mettre à jour de manière automatique</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="228"/>
@@ -175,12 +173,12 @@
     <message>
         <location filename="../mxflash.cpp" line="127"/>
         <source>Adobe Flash most recent version: </source>
-        <translation>Adobe Flash version la plus récente:</translation>
+        <translation>Version la plus récente de Adobe Flash: </translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="131"/>
         <source>Adobe Flash installed version: </source>
-        <translation>Adobe Flash version installée:</translation>
+        <translation>Version installée de Adobe Flash: </translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="133"/>
@@ -190,17 +188,17 @@
     <message>
         <location filename="../mxflash.cpp" line="139"/>
         <source>PepperFlash most recent version: </source>
-        <translation>Version la plus récente de PepperFlash:</translation>
+        <translation>Version la plus récente de PepperFlash: </translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="152"/>
         <source>PepperFlash installed version: </source>
-        <translation>Version installée de PepperFlash:</translation>
+        <translation>Version installée de PepperFlash: </translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="157"/>
         <source>PepperFlash is not installed.</source>
-        <translation>PepperFlash n&apos;est pas installé</translation>
+        <translation>PepperFlash n&apos;est pas installé.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="185"/>
@@ -261,30 +259,30 @@
         <location filename="../mxflash.cpp" line="247"/>
         <location filename="../mxflash.cpp" line="305"/>
         <source>An automatic daily update was scheduled. You can close the program now.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
-        <translation>Une mise à jour automatique a été prévue. Vous pouvez fermer le programme maintenant.&lt;p&gt;&lt;b&gt;Voulez-vous quitter le MX Gestionnaire Flash?&lt;/b&gt;</translation>
+        <translation>Une mise à jour automatique a été programmée. Vous pouvez maintenant fermer le programme.&lt;p&gt;&lt;b&gt;Voulez-vous quitter MX Gestionnaire Flash?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="282"/>
         <location filename="../mxflash.cpp" line="350"/>
         <location filename="../mxflash.cpp" line="391"/>
         <source>Running apt-get update...</source>
-        <translation>Exécute apt-get update...</translation>
+        <translation>Exécution de apt-get update...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="288"/>
         <location filename="../mxflash.cpp" line="397"/>
         <source>Installing PepperFlash...</source>
-        <translation>Installation de PepperFlash ...</translation>
+        <translation>Installation de PepperFlash...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="330"/>
         <source>Downloading Flash..</source>
-        <translation>Téléchargement de Flash</translation>
+        <translation>Téléchargement de Flash..</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="358"/>
         <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation>Impossible d&apos;installer PepperFlash parce que votre CPU ne prend pas en charge le SSE2</translation>
+        <translation>Impossible d&apos;installer PepperFlash parce que votre processeur ne prend pas en charge le SSE2</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="406"/>
@@ -294,28 +292,28 @@
     <message>
         <location filename="../mxflash.cpp" line="432"/>
         <source>Process finished with success.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
-        <translation>Processus terminé avec succès. &lt;p&gt;&lt;b&gt; Voulez-vous quitter le MX Gestionnaire Flash?&lt;/b&gt;</translation>
+        <translation>Processus terminé avec succès. &lt;p&gt;&lt;b&gt; Voulez-vous quitter MX Gestionnaire Flash?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="440"/>
         <source>Process finished. Errors have occurred.</source>
-        <translation>Processus terminé. Des erreurs sont survenues.</translation>
+        <translation>Processus terminé. Des erreurs se sont produites.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="457"/>
         <location filename="../mxflash.cpp" line="482"/>
         <source>Installing...</source>
-        <translation>Installation:</translation>
+        <translation>Installation...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="464"/>
         <source>&quot;apt-get update&quot; command did not run successfully.</source>
-        <translation>La commande &quot;apt-get update&quot; n&apos;a pas été exécuté avec succès.</translation>
+        <translation>La commande &quot;apt-get update&quot; n&apos;a pas été exécutée avec succès.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="486"/>
         <source>Could not download Flash for non-SSE2 CPUs.</source>
-        <translation>Impossible de télécharger Flash pour les non-SSE2 CPUs.</translation>
+        <translation>Impossible de télécharger Flash pour les processeurs non-SSE2.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="532"/>
@@ -330,7 +328,7 @@
     <message>
         <location filename="../mxflash.cpp" line="535"/>
         <source>Simple Flash manager for MX Linux</source>
-        <translation>Simple gestionnaire de Flash pour MX Linux</translation>
+        <translation>Un simple gestionnaire de Flash pour MX Linux</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="536"/>
@@ -340,7 +338,7 @@
     <message>
         <location filename="../mxflash.cpp" line="537"/>
         <source>License</source>
-        <translation>License</translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="540"/>
@@ -351,7 +349,7 @@
         <location filename="../mxflash.cpp" line="550"/>
         <location filename="../mxflash.cpp" line="552"/>
         <source>&apos;MX Flash Help&apos;</source>
-        <translation>Assistance de MX Flash</translation>
+        <translation>Aide de MX Flash</translation>
     </message>
 </context>
 </TS>
