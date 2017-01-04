@@ -13,20 +13,20 @@ Build-Depends: debhelper (>= 7.0.50~), qt5-default, qttools5-dev-tools, qt5-qmak
 Package-List:
  mx-flash deb system optional arch=any
 Checksums-Sha1:
- 521be41661fc0dbd233aaf96e3123986dc8c5d34 224788 mx-flash_17.1mx16.tar.xz
+ b1d9a6893e93c0b08bbb2c6ab5a6e0e0541c8be7 43080 mx-flash_17.1mx16.tar.xz
 Checksums-Sha256:
- 161f94fb70f69d4961c27718eebd44863f4dd9570bf2c2e86283ea850bb2ac9e 224788 mx-flash_17.1mx16.tar.xz
+ 3f37da9e87fe845e7eef1171bbc466edeb7d2b837636abdf2a2b9918124fae1c 43080 mx-flash_17.1mx16.tar.xz
 Files:
- 03110a40121bb1010e03b5a8a1945d73 224788 mx-flash_17.1mx16.tar.xz
+ 8686e1e7ab1db6cc5e3f3f5553531a14 43080 mx-flash_17.1mx16.tar.xz
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJYbR+hAAoJEHCTjHgGee6YB+YIANVG2DskhXdXTt33ogWfjJVZ
-d1526/625cvhDq8EisAH2g6rmIEufLnR5P2GXNVQPx18tyZNDx8qzP472Iom374R
-IM+qjRbFlXzMQWFUXBsIZcv00r7PJeOKDFejCDuo0diqYrjXYGqq8Rd3y0ai2PDB
-i/PuJ8H1ObRQ9CnRxhsbfsJZl4Ci1dMWU/zL0v+XbwkOqiKbFM3NCGte0K0Ox+so
-HzZVTiHyUE/tU6n5fXrJuguL47QdYTRM+to+MjmuSQAn5zK196FjBhPuKa5+MLct
-g33tmu7SVbH/OGV0kv4kp9k8vlxaL6XV8SH7mVwflcRHuGpazoltH7q+yjBi/Es=
-=Yg+r
+iQEcBAEBAgAGBQJYbSCAAAoJEHCTjHgGee6Y1OEH/1z3TQNkSfEZ09YNi5ZHyUr3
+fGgMuTCFU3OPGmO2obxl9areAwvzeAcMcllqgHS1z5WlvvUCblK2d1UMOg+Nnjny
+/g4NaG8/ijMBj0900kGCm65+F0dmvnpQKbqg+saSUPglRU93PGExpDsVLTBFI5Az
+bDuFvc4rLIqYC0lvSq5x9GbF6WWzxMhX7PZiUkXL7iP0/uGrLtoHED78pM2gLoXv
+crRBLxn7qqUgCY7Ls5gfcPSggHFz5OyejYuDQNTWDxpUHEu9Q5OFiztWakBQQHvp
+7ySG9YogY8bpuLojj7NUElYo0Oqb0RjMI37rYlcfj7cky+rHHsn1xsJEG/uF8y4=
+=/rLE
 -----END PGP SIGNATURE-----
