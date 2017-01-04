@@ -286,7 +286,7 @@ void mxflash::updatePepper() {
             // run install
             ui->progressBar->show();
             ui->labelInstall->setText(tr("Installing PepperFlash..."));
-            proc->start("apt-get -y install bunsen-pepperflash");
+            proc->start("apt-get -y install bunsen-pepperflash browser-plugin-freshplayer-pepperflash");
         }
         // write a pepperflashupdate file in cron.daily
         QFile file("/etc/cron.daily/pepperflashupdate");
@@ -396,7 +396,7 @@ void mxflash::installPepper() {
     ui->progressBar->show();
     ui->labelInstall->setText(tr("Installing PepperFlash..."));
     connect(proc, SIGNAL(finished(int)), this, SLOT(procDone(int)));
-    proc->start("apt-get -y install bunsen-pepperflash");
+    proc->start("apt-get -y install bunsen-pepperflash browser-plugin-freshplayer-pepperflash");
 }
 
 void mxflash::removePepper() {
@@ -404,7 +404,7 @@ void mxflash::removePepper() {
     ui->stackedWidget->setCurrentWidget(ui->pageInstall);
     setConnections(timer, proc);
     ui->labelInstall->setText(tr("Removing PepperFlash..."));
-    proc->start("dpkg -P pepperflashplugin-nonfree bunsen-pepperflash");
+    proc->start("dpkg -P pepperflashplugin-nonfree bunsen-pepperflash browser-plugin-freshplayer-pepperflash");
 }
 
 /////////////////////////////////////////////////////////////////////////

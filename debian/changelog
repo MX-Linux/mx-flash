@@ -1,3 +1,9 @@
+mx-flash (17.1mx16) mx; urgency=medium
+
+  * add/remove browser-plugin-freshplayer-pepperflash when installing/removing Pepper Flash
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 04 Jan 2017 11:00:12 -0500
+
 mx-flash (16.11mx16) mx; urgency=medium
 
   * new translations

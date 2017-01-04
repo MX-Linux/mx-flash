@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 04 Jan 2017 11:00:12 -0500
+Source: mx-flash
+Binary: mx-flash
+Architecture: source amd64
+Version: 17.1mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-flash   - Flash plugin manager
+Changes:
+ mx-flash (17.1mx16) mx; urgency=medium
+ .
+   * add/remove browser-plugin-freshplayer-pepperflash when installing/removing Pepper Flash
+Checksums-Sha1:
+ 18e24b13f280baec7aad88142b4439dcc75a68c6 1164 mx-flash_17.1mx16.dsc
+ 521be41661fc0dbd233aaf96e3123986dc8c5d34 224788 mx-flash_17.1mx16.tar.xz
+ 374bfc8aa32bd0087a0e9b38633d7befc2124c5b 54452 mx-flash_17.1mx16_amd64.deb
+Checksums-Sha256:
+ c22dcb8b9cfbd3b6b19ed132323917090965ab1a84209eea6e0b60ce0e18bc23 1164 mx-flash_17.1mx16.dsc
+ 161f94fb70f69d4961c27718eebd44863f4dd9570bf2c2e86283ea850bb2ac9e 224788 mx-flash_17.1mx16.tar.xz
+ 30fc028d10958289267dede157b0d63916d8a6ac6904deb50f8e1773ec904994 54452 mx-flash_17.1mx16_amd64.deb
+Files:
+ 03c3e2bdf71aeb1f53ea539a6c210b1d 1164 system optional mx-flash_17.1mx16.dsc
+ 03110a40121bb1010e03b5a8a1945d73 224788 system optional mx-flash_17.1mx16.tar.xz
+ bcc9833a7de5ddf084c04a7dd27c0fec 54452 system optional mx-flash_17.1mx16_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJYbR+lAAoJEHCTjHgGee6YmDAIALPxRxTsuOUcoNAjc/xfAwvk
+ViH7NUpU9VjjM9Wip4F5CxsRoM8pBHZC3iGhK7RFgiT0He8hjWZs9vJGlWPinLXe
+BuZpWJYvfISAUsO3kKBXkIq2JbkHcmXe8iZ5lEhawg34HdToBWDA7cgOSS14g9+2
+ktcoe+XpkCb8yaI7e275DGNLh5M/vXcCJJhYB2H1275+4cQ0HovHfjO6AKHMS0/V
+SCZv0iaS18/RUz6NLQrMhBBLvahR4gHpejriNPTorNDfykUHjWklrj5Ovdmbsix8
+sau/ky8O56/ARj5BQPMzgDsNivaeOgIqfJOzvxL8ccBAqvNFPmA/ma55AIQnITg=
+=MXQA
+-----END PGP SIGNATURE-----
