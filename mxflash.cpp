@@ -129,6 +129,9 @@ void mxflash::detectVersion() {
     QString version = getCmdOut("strings /usr/lib/flashplugin-nonfree/libflashplayer.so | grep LNX | awk '{print $2}' | sed 's/,/./g'");
     if (version != "") {
         out += tr("Adobe Flash installed version: ") + version;
+        if (version == current_version) {
+            ui->updateFlashButton->hide();
+        }
     } else {
         out += tr("Adobe Flash is not installed.");
     }
