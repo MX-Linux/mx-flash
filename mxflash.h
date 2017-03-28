@@ -58,6 +58,7 @@ public:
     void refresh();
     void removeFlash();
     void removePepper();
+    void setAutoUpdates();
     void updateFlash();
     void updatePepper();              
 

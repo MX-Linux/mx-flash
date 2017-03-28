@@ -13,7 +13,7 @@
     <name>mxflash</name>
     <message>
         <location filename="../mxflash.ui" line="20"/>
-        <location filename="../mxflash.cpp" line="533"/>
+        <location filename="../mxflash.cpp" line="505"/>
         <source>MX Flash Manager</source>
         <translation>MX Flash Manager</translation>
     </message>
@@ -34,15 +34,15 @@
     </message>
     <message>
         <location filename="../mxflash.ui" line="95"/>
-        <location filename="../mxflash.cpp" line="109"/>
+        <location filename="../mxflash.cpp" line="111"/>
         <source>Reinstall Flash</source>
         <translation>Flash の再インストール</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="102"/>
-        <location filename="../mxflash.cpp" line="97"/>
-        <location filename="../mxflash.cpp" line="158"/>
-        <location filename="../mxflash.cpp" line="356"/>
+        <location filename="../mxflash.cpp" line="98"/>
+        <location filename="../mxflash.cpp" line="164"/>
+        <location filename="../mxflash.cpp" line="293"/>
         <source>Install PepperFlash</source>
         <translation>PepperFlash インストール</translation>
     </message>
@@ -62,294 +62,283 @@
         <translation>PepperFlash 更新</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="159"/>
+        <location filename="../mxflash.ui" line="149"/>
+        <source>Set Automatic Updates for Flash/PepperFlash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mxflash.ui" line="166"/>
         <source>Removing Flash...</source>
         <translation>Flash を削除中...</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="185"/>
-        <location filename="../mxflash.ui" line="273"/>
         <source>What kind of update do you prefer?</source>
-        <translation>どの最新版を使用しますか？</translation>
+        <translation type="vanished">どの最新版を使用しますか？</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="212"/>
-        <location filename="../mxflash.ui" line="300"/>
         <source>Select to set a daily scheduled update</source>
-        <translation>定期的な自動更新を選択</translation>
+        <translation type="vanished">定期的な自動更新を選択</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="215"/>
-        <location filename="../mxflash.ui" line="303"/>
         <source>Update on an automatic schedule</source>
-        <translation>定期的に自動更新する</translation>
+        <translation type="vanished">定期的に自動更新する</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="228"/>
-        <location filename="../mxflash.ui" line="316"/>
         <source>Select to update manually</source>
-        <translation>手動更新を選択</translation>
+        <translation type="vanished">手動更新を選択</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="231"/>
-        <location filename="../mxflash.ui" line="319"/>
         <source>Update just one time</source>
-        <translation>手動更新する</translation>
+        <translation type="vanished">手動更新する</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="361"/>
+        <location filename="../mxflash.ui" line="192"/>
         <source>Installing Flash...</source>
         <translation>Flash をインストール中...</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="408"/>
+        <location filename="../mxflash.ui" line="239"/>
         <source>About this application</source>
         <translation>このアプリケーションについて</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="411"/>
+        <location filename="../mxflash.ui" line="242"/>
         <source>About...</source>
         <translation>About...</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="418"/>
+        <location filename="../mxflash.ui" line="249"/>
         <source>Alt+B</source>
         <translation>Alt+B</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="447"/>
+        <location filename="../mxflash.ui" line="278"/>
         <source>Display help </source>
         <translation>ヘルプを表示</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="450"/>
+        <location filename="../mxflash.ui" line="281"/>
         <source>Help</source>
         <translation>ヘルプ</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="457"/>
+        <location filename="../mxflash.ui" line="288"/>
         <source>Alt+H</source>
         <translation>Alt+H</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="464"/>
+        <location filename="../mxflash.ui" line="295"/>
         <source>Apply any changes then quit</source>
         <translation>変更を適用して終了</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="467"/>
+        <location filename="../mxflash.ui" line="298"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="522"/>
+        <location filename="../mxflash.ui" line="353"/>
         <source>Cancel any changes then quit</source>
         <translation>変更をキャンセルして終了</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="525"/>
-        <location filename="../mxflash.cpp" line="538"/>
+        <location filename="../mxflash.ui" line="356"/>
+        <location filename="../mxflash.cpp" line="510"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location filename="../mxflash.ui" line="532"/>
+        <location filename="../mxflash.ui" line="363"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="92"/>
+        <location filename="../mxflash.cpp" line="93"/>
         <source>Please wait, loading...</source>
         <translation>お待ち下さい。読込中...</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="100"/>
+        <location filename="../mxflash.cpp" line="101"/>
         <source>Remove PepperFlash</source>
         <translation>PepperFlash を削除</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="113"/>
+        <location filename="../mxflash.cpp" line="116"/>
         <source>Install Flash</source>
         <translation>Flash をインストール</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="127"/>
+        <location filename="../mxflash.cpp" line="130"/>
         <source>Adobe Flash most recent version: </source>
         <translation>Adobe Flash 現在のバージョン: </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="131"/>
+        <location filename="../mxflash.cpp" line="134"/>
         <source>Adobe Flash installed version: </source>
         <translation>Adobe Flash インストール可能なバージョン:</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="133"/>
+        <location filename="../mxflash.cpp" line="139"/>
         <source>Adobe Flash is not installed.</source>
         <translation>Adobe Flash はインストールされていません。</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="139"/>
+        <location filename="../mxflash.cpp" line="145"/>
         <source>PepperFlash most recent version: </source>
         <translation>PepperFlash 最新バージョン:</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="152"/>
+        <location filename="../mxflash.cpp" line="158"/>
         <source>PepperFlash installed version: </source>
         <translation>PepperFlash インストール済バージョン:</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="157"/>
+        <location filename="../mxflash.cpp" line="163"/>
         <source>PepperFlash is not installed.</source>
         <translation>PepperFlash はインストールされていません。</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="185"/>
-        <location filename="../mxflash.cpp" line="192"/>
-        <location filename="../mxflash.cpp" line="203"/>
-        <location filename="../mxflash.cpp" line="217"/>
-        <location filename="../mxflash.cpp" line="358"/>
-        <location filename="../mxflash.cpp" line="439"/>
-        <location filename="../mxflash.cpp" line="463"/>
-        <location filename="../mxflash.cpp" line="485"/>
+        <location filename="../mxflash.cpp" line="191"/>
+        <location filename="../mxflash.cpp" line="198"/>
+        <location filename="../mxflash.cpp" line="209"/>
+        <location filename="../mxflash.cpp" line="223"/>
+        <location filename="../mxflash.cpp" line="295"/>
+        <location filename="../mxflash.cpp" line="413"/>
+        <location filename="../mxflash.cpp" line="437"/>
+        <location filename="../mxflash.cpp" line="459"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="186"/>
+        <location filename="../mxflash.cpp" line="192"/>
         <source>Could not remove </source>
         <translation>削除できません</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="193"/>
+        <location filename="../mxflash.cpp" line="199"/>
         <source>Flash is not installed</source>
         <translation>Flash はインストールされていません</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="204"/>
+        <location filename="../mxflash.cpp" line="210"/>
         <source>&lt;b&gt;Flash is not installed. Would you like to install it?&lt;/b&gt;</source>
         <translation>&lt;b&gt;Flash はインストールされていません。インストールを行いますか？&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="205"/>
-        <location filename="../mxflash.cpp" line="248"/>
-        <location filename="../mxflash.cpp" line="306"/>
-        <location filename="../mxflash.cpp" line="433"/>
+        <location filename="../mxflash.cpp" line="211"/>
+        <location filename="../mxflash.cpp" line="377"/>
+        <location filename="../mxflash.cpp" line="407"/>
         <source>Yes</source>
         <translation>はい</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="205"/>
-        <location filename="../mxflash.cpp" line="248"/>
-        <location filename="../mxflash.cpp" line="306"/>
-        <location filename="../mxflash.cpp" line="433"/>
+        <location filename="../mxflash.cpp" line="211"/>
+        <location filename="../mxflash.cpp" line="377"/>
+        <location filename="../mxflash.cpp" line="407"/>
         <source>No</source>
         <translation>いいえ</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="218"/>
+        <location filename="../mxflash.cpp" line="224"/>
         <source>Flash is installed through other means, cannot update with this program.</source>
         <translation>Flash は他の処理でインストールされています。このプログラムで更新する事ができません。</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="246"/>
-        <location filename="../mxflash.cpp" line="304"/>
-        <location filename="../mxflash.cpp" line="431"/>
+        <location filename="../mxflash.cpp" line="375"/>
+        <location filename="../mxflash.cpp" line="405"/>
         <source>Success</source>
         <translation>完了</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="247"/>
-        <location filename="../mxflash.cpp" line="305"/>
+        <location filename="../mxflash.cpp" line="376"/>
         <source>An automatic daily update was scheduled. You can close the program now.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
         <translation>自動更新の設定を行いました。このプログラムを閉じる事ができます。&lt;p&gt;&lt;b&gt;MX Flash Manager を終了してよろしいですか？&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="282"/>
-        <location filename="../mxflash.cpp" line="350"/>
-        <location filename="../mxflash.cpp" line="391"/>
+        <location filename="../mxflash.cpp" line="287"/>
+        <location filename="../mxflash.cpp" line="328"/>
         <source>Running apt-get update...</source>
         <translation>apt-get update を実行中...</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="288"/>
-        <location filename="../mxflash.cpp" line="397"/>
+        <location filename="../mxflash.cpp" line="334"/>
         <source>Installing PepperFlash...</source>
         <translation>PepperFlash インストール中...</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="330"/>
+        <location filename="../mxflash.cpp" line="267"/>
         <source>Downloading Flash..</source>
         <translation>Flash ダウンロード中..</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="358"/>
+        <location filename="../mxflash.cpp" line="295"/>
         <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
         <translation>CPU が SSE2 をサポートしないため PepperFlash はインストールする事ができません。</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="406"/>
+        <location filename="../mxflash.cpp" line="343"/>
         <source>Removing PepperFlash...</source>
         <translation>PepperFlash 削除中...</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="432"/>
+        <location filename="../mxflash.cpp" line="406"/>
         <source>Process finished with success.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
         <translation>処理が完了しました。&lt;p&gt;&lt;b&gt;MX Flash Manager を終了してよろしいですか？&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="440"/>
+        <location filename="../mxflash.cpp" line="414"/>
         <source>Process finished. Errors have occurred.</source>
         <translation>処理が完了しました。エラーが発生しています。</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="457"/>
-        <location filename="../mxflash.cpp" line="482"/>
+        <location filename="../mxflash.cpp" line="431"/>
+        <location filename="../mxflash.cpp" line="456"/>
         <source>Installing...</source>
         <translation>インストール中...</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="464"/>
+        <location filename="../mxflash.cpp" line="438"/>
         <source>&quot;apt-get update&quot; command did not run successfully.</source>
         <translation>コマンド apt-get update が実行できませんでした。</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="486"/>
+        <location filename="../mxflash.cpp" line="460"/>
         <source>Could not download Flash for non-SSE2 CPUs.</source>
         <translation>SSE2 CPU 非対応版の Flash をダウンロードできませんでした。</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="532"/>
+        <location filename="../mxflash.cpp" line="504"/>
         <source>About MX Flash Manager</source>
         <translation>MX Flash Manager について</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="533"/>
+        <location filename="../mxflash.cpp" line="505"/>
         <source>Version: </source>
         <translation>Version: </translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="535"/>
+        <location filename="../mxflash.cpp" line="507"/>
         <source>Simple Flash manager for MX Linux</source>
         <translation>MX Linux のシンプルな Flash 管理</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="536"/>
+        <location filename="../mxflash.cpp" line="508"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="537"/>
+        <location filename="../mxflash.cpp" line="509"/>
         <source>License</source>
         <translation>ライセンス</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="540"/>
+        <location filename="../mxflash.cpp" line="512"/>
         <source>&apos;MX Flash License&apos;</source>
         <translation>&apos;MX Flash ライセンス&apos;</translation>
     </message>
     <message>
-        <location filename="../mxflash.cpp" line="550"/>
-        <location filename="../mxflash.cpp" line="552"/>
+        <location filename="../mxflash.cpp" line="522"/>
+        <location filename="../mxflash.cpp" line="524"/>
         <source>&apos;MX Flash Help&apos;</source>
         <translation>&apos;MX Flash ヘルプ&apos;</translation>
     </message>

@@ -1,3 +1,9 @@
+mx-flash (17.3mx16) mx; urgency=medium
+
+  * moved autoupdate to main menu
+
+ -- Adrian <adrian@mxlinux.org>  Tue, 28 Mar 2017 13:54:22 -0400
+
 mx-flash (17.1mx16) mx; urgency=medium
 
   * add/remove browser-plugin-freshplayer-pepperflash when installing/removing Pepper Flash

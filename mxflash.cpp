@@ -88,6 +88,7 @@ void mxflash::refresh() {
     ui->removeFlashButton->setAutoExclusive(false);
     ui->removeFlashButton->setChecked(false);
     ui->removeFlashButton->setAutoExclusive(true);
+    ui->radioAutoUpdates->hide();
     setCursor(QCursor(Qt::ArrowCursor));
     ui->labelVersion->setText(tr("Please wait, loading..."));
 
@@ -99,6 +100,7 @@ void mxflash::refresh() {
     } else {
         ui->pepperButton->setText(tr("Remove PepperFlash"));
         ui->updatePepperButton->show();
+        ui->radioAutoUpdates->show();
     }
 
     // checks if Flash present
@@ -107,6 +109,7 @@ void mxflash::refresh() {
         ui->updateFlashButton->show();
         ui->removeFlashButton->show();
         ui->installFlashButton->setText(tr("Reinstall Flash"));
+        ui->radioAutoUpdates->show();
     } else {
         ui->updateFlashButton->hide();
         ui->removeFlashButton->hide();
@@ -227,33 +230,8 @@ void mxflash::updateFlash() {
     qApp->processEvents();
 
     // manual update
-    if (ui->manualFlashButton->isChecked()) {
-        setConnections(timer, proc);
-        proc->start("update-flashplugin-nonfree-direct");
-
-    //automatic update
-    } else {
-        // write a flashupdate file in cron.daily
-        QFile file("/etc/cron.daily/flashupdate");
-        file.open(QIODevice::WriteOnly | QIODevice::Text);
-        QTextStream out(&file);
-        out << "#!/bin/sh\n\ngrep -q \"^flags.*\\<sse2\\>\" /proc/cpuinfo || exit 0\n\ntest -x /usr/sbin/update-flashplugin-nonfree-direct && /usr/sbin/update-flashplugin-nonfree-direct";
-        file.close();
-
-        // set file executable
-        QString cmd = QString("chmod +x %1").arg(file.fileName());
-        system(cmd.toUtf8());
-
-        setCursor(QCursor(Qt::ArrowCursor));
-        this->hide();
-        if (QMessageBox::information(0, tr("Success"),
-                                     tr("An automatic daily update was scheduled. You can close the program now.<p><b>Do you want to exit MX Flash Manager?</b>"),
-                                     tr("Yes"), tr("No")) == 0){
-            qApp->exit(0);
-        } else {
-            refresh();
-        }
-    }
+    setConnections(timer, proc);
+    proc->start("update-flashplugin-nonfree-direct");
 }
 
 // update PepperFlash
@@ -262,55 +240,11 @@ void mxflash::updatePepper() {
     qApp->processEvents();
 
     // manual update
-    if (ui->manualPepperButton->isChecked()) {
-        if (getCmdOut("dpkg -s bunsen-pepperflash| grep Status") != "Status: install ok installed") {
-            installPepper();
-        } else {
-            setConnections(timer, proc);
-            proc->start("update-bunsen-pepperflash -i");
-        }
-    } else { //automatic update
-        if (getCmdOut("dpkg -s bunsen-pepperflash| grep Status") != "Status: install ok installed") {
-            ui->stackedWidget->setCurrentWidget(ui->pageInstall);
-
-            // run updates
-            ui->progressBar->show();
-            QEventLoop loop;
-            disconnect(timer, SIGNAL(timeout()), 0, 0);
-            connect(timer, SIGNAL(timeout()), this, SLOT(procTime()));
-            disconnect(proc, SIGNAL(started()), 0, 0);
-            connect(proc, SIGNAL(started()), this, SLOT(procStart()));
-            disconnect(proc, SIGNAL(finished(int)), 0, 0);
-            connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
-            ui->labelInstall->setText(tr("Running apt-get update..."));
-            proc->start("apt-get update");
-            loop.exec();
-
-            // run install
-            ui->progressBar->show();
-            ui->labelInstall->setText(tr("Installing PepperFlash..."));
-            proc->start("apt-get -y install bunsen-pepperflash browser-plugin-freshplayer-pepperflash");
-        }
-        // write a pepperflashupdate file in cron.daily
-        QFile file("/etc/cron.daily/pepperflashupdate");
-        file.open(QIODevice::WriteOnly | QIODevice::Text);
-        QTextStream out(&file);
-        out << "#!/bin/sh\n\ntest -x /usr/sbin/update-bunsen-pepperflash && /usr/sbin/update-bunsen-pepperflash --install";
-        file.close();
-
-        // set file executable
-        QString cmd = QString("chmod +x %1").arg(file.fileName());
-        system(cmd.toUtf8());
-
-        setCursor(QCursor(Qt::ArrowCursor));
-        this->hide();
-        if (QMessageBox::information(0, tr("Success"),
-                                     tr("An automatic daily update was scheduled. You can close the program now.<p><b>Do you want to exit MX Flash Manager?</b>"),
-                                     tr("Yes"), tr("No")) == 0){
-            qApp->exit(0);
-        } else {
-            refresh();
-        }
+    if (getCmdOut("dpkg -s bunsen-pepperflash| grep Status") != "Status: install ok installed") {
+        installPepper();
+    } else {
+        setConnections(timer, proc);
+        proc->start("update-bunsen-pepperflash -i");
     }
 }
 
@@ -408,6 +342,43 @@ void mxflash::removePepper() {
     setConnections(timer, proc);
     ui->labelInstall->setText(tr("Removing PepperFlash..."));
     proc->start("dpkg -P pepperflashplugin-nonfree bunsen-pepperflash browser-plugin-freshplayer-pepperflash");
+}
+
+void mxflash::setAutoUpdates()
+{
+    QFile file;
+    QString cmd;
+    QTextStream out(&file);
+
+    // write a pepperflashupdate file in cron.daily
+    file.setFileName("/etc/cron.daily/pepperflashupdate");
+    file.open(QIODevice::WriteOnly | QIODevice::Text);
+    out << "#!/bin/sh\n\ntest -x /usr/sbin/update-bunsen-pepperflash && /usr/sbin/update-bunsen-pepperflash --install";
+    file.close();
+
+    // set file executable
+    cmd = QString("chmod +x %1").arg(file.fileName());
+    system(cmd.toUtf8());
+
+    // write a flashupdate file in cron.daily
+    file.setFileName("/etc/cron.daily/flashupdate");
+    file.open(QIODevice::WriteOnly | QIODevice::Text);
+    out << "#!/bin/sh\n\ngrep -q \"^flags.*\\<sse2\\>\" /proc/cpuinfo || exit 0\n\ntest -x /usr/sbin/update-flashplugin-nonfree-direct && /usr/sbin/update-flashplugin-nonfree-direct";
+    file.close();
+
+    // set file executable
+    cmd = QString("chmod +x %1").arg(file.fileName());
+    system(cmd.toUtf8());
+
+    setCursor(QCursor(Qt::ArrowCursor));
+    this->hide();
+    if (QMessageBox::information(0, tr("Success"),
+                                 tr("An automatic daily update was scheduled. You can close the program now.<p><b>Do you want to exit MX Flash Manager?</b>"),
+                                 tr("Yes"), tr("No")) == 0){
+        qApp->exit(0);
+    } else {
+        refresh();
+    }
 }
 
 /////////////////////////////////////////////////////////////////////////
@@ -510,18 +481,16 @@ void mxflash::on_buttonOk_clicked() {
         if (ui->removeFlashButton->isChecked()) {
             removeFlash();
         } else if (ui->updateFlashButton->isChecked()) {
-            ui->stackedWidget->setCurrentWidget(ui->pageFlashUpdate);
+            updateFlash();
         } else if (ui->installFlashButton->isChecked()) {
             installFlash();
         } else if (ui->pepperButton->isChecked()) {
             installRemovePepper();
         } else if (ui->updatePepperButton->isChecked()) {
-            ui->stackedWidget->setCurrentWidget(ui->pagePepperUpdate);
+            updatePepper();
+        } else if (ui->radioAutoUpdates->isChecked()) {
+            setAutoUpdates();
         }
-    } else if (ui->stackedWidget->currentWidget() == ui->pageFlashUpdate) {
-        updateFlash();
-    } else if (ui->stackedWidget->currentWidget() == ui->pagePepperUpdate) {
-        updatePepper();
     } else {
         qApp->exit(0);
     }
