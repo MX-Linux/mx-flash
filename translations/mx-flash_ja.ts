@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ja" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ja">
 <context>
     <name>QApplication</name>
     <message>
@@ -62,7 +64,7 @@
     <message>
         <location filename="../mxflash.ui" line="149"/>
         <source>Set Automatic Updates for Flash/PepperFlash</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="166"/>
@@ -245,7 +247,7 @@
     <message>
         <location filename="../mxflash.cpp" line="343"/>
         <source>Removing PepperFlash...</source>
-        <translationPepperFlash 削除中...</translation>
+        <translation>PepperFlash 削除中...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="375"/>

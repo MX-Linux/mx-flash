@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="pl" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="pl">
 <context>
     <name>QApplication</name>
     <message>
@@ -42,7 +44,7 @@
         <location filename="../mxflash.cpp" line="164"/>
         <location filename="../mxflash.cpp" line="293"/>
         <source>Install PepperFlash</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="109"/>
@@ -57,12 +59,12 @@
     <message>
         <location filename="../mxflash.ui" line="142"/>
         <source>Update PepperFlash</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="149"/>
         <source>Set Automatic Updates for Flash/PepperFlash</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="166"/>
@@ -133,7 +135,7 @@
     <message>
         <location filename="../mxflash.cpp" line="93"/>
         <source>Please wait, loading...</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="101"/>
@@ -168,7 +170,7 @@
     <message>
         <location filename="../mxflash.cpp" line="158"/>
         <source>PepperFlash installed version: </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="163"/>
@@ -235,7 +237,7 @@
     <message>
         <location filename="../mxflash.cpp" line="295"/>
         <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="334"/>
@@ -297,7 +299,7 @@
     <message>
         <location filename="../mxflash.cpp" line="507"/>
         <source>Simple Flash manager for MX Linux</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="508"/>
