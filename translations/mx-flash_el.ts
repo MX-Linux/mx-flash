@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="el">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="el" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
@@ -64,32 +62,12 @@
     <message>
         <location filename="../mxflash.ui" line="149"/>
         <source>Set Automatic Updates for Flash/PepperFlash</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτόματες ενημερώσεις για Flash/PepperFlash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="166"/>
         <source>Removing Flash...</source>
         <translation>Αφαίρεση του Flash...</translation>
-    </message>
-    <message>
-        <source>What kind of update do you prefer?</source>
-        <translation type="vanished">Τι είδους ενημέρωση προτιμάτε;</translation>
-    </message>
-    <message>
-        <source>Select to set a daily scheduled update</source>
-        <translation type="vanished">Επιλέξτε για να ορίσετε έναν ημερήσιο προγραμματισμένη ενημέρωση </translation>
-    </message>
-    <message>
-        <source>Update on an automatic schedule</source>
-        <translation type="vanished">Ενημέρωση με ένα αυτόματο πρόγραμμα</translation>
-    </message>
-    <message>
-        <source>Select to update manually</source>
-        <translation type="vanished">Επιλέξτε για να ενημερώσετε με μη αυτόματο τρόπο </translation>
-    </message>
-    <message>
-        <source>Update just one time</source>
-        <translation type="vanished">Ενημέρωση μόνο μια φορά </translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="192"/>
@@ -244,6 +222,32 @@
         <translation>Το Flash έχει εγκατασταθεί με άλλα μέσα, δεν μπορεί να ενημερώσει με αυτό το πρόγραμμα.</translation>
     </message>
     <message>
+        <location filename="../mxflash.cpp" line="267"/>
+        <source>Downloading Flash..</source>
+        <translation>Κατεβάζοντας το </translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="287"/>
+        <location filename="../mxflash.cpp" line="328"/>
+        <source>Running apt-get update...</source>
+        <translation>Εκτελώντας την εντολή apt-get update ... </translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="295"/>
+        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
+        <translation>Το PepperFlash δεν μπορεί να εγκατασταθεί επειδή η CPU σας δεν υποστηρίζει SSE2.</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="334"/>
+        <source>Installing PepperFlash...</source>
+        <translation>Εγκατάσταση του </translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="343"/>
+        <source>Removing PepperFlash...</source>
+        <translation>Αφαίρεση του PepperFlash...</translation>
+    </message>
+    <message>
         <location filename="../mxflash.cpp" line="375"/>
         <location filename="../mxflash.cpp" line="405"/>
         <source>Success</source>
@@ -253,32 +257,6 @@
         <location filename="../mxflash.cpp" line="376"/>
         <source>An automatic daily update was scheduled. You can close the program now.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
         <translation>Μια αυτόματη καθημερινή ενημέρωση είχε προγραμματιστεί. Μπορείτε να κλείσετε το πρόγραμμα τώρα.&lt;p&gt;Θέλετε να βγείτε το MX Flash;&lt;b&gt;&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="287"/>
-        <location filename="../mxflash.cpp" line="328"/>
-        <source>Running apt-get update...</source>
-        <translation>Εκτελώντας την εντολή apt-get update ... </translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="334"/>
-        <source>Installing PepperFlash...</source>
-        <translation>Εγκατάσταση του </translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="267"/>
-        <source>Downloading Flash..</source>
-        <translation>Κατεβάζοντας το </translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="295"/>
-        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation>Το PepperFlash δεν μπορεί να εγκατασταθεί επειδή η CPU σας δεν υποστηρίζει SSE2.</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="343"/>
-        <source>Removing PepperFlash...</source>
-        <translation>Αφαίρεση του PepperFlash...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="406"/>

@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="pl" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
@@ -44,7 +42,7 @@
         <location filename="../mxflash.cpp" line="164"/>
         <location filename="../mxflash.cpp" line="293"/>
         <source>Install PepperFlash</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.ui" line="109"/>
@@ -59,37 +57,17 @@
     <message>
         <location filename="../mxflash.ui" line="142"/>
         <source>Update PepperFlash</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.ui" line="149"/>
         <source>Set Automatic Updates for Flash/PepperFlash</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.ui" line="166"/>
         <source>Removing Flash...</source>
         <translation>Usuwanie Flasha...</translation>
-    </message>
-    <message>
-        <source>What kind of update do you prefer?</source>
-        <translation type="vanished">Jaki rodzaj aktualizacji wybierasz?</translation>
-    </message>
-    <message>
-        <source>Select to set a daily scheduled update</source>
-        <translation type="vanished">Wybierz, by włączyć codzienne, planowane aktualizacje</translation>
-    </message>
-    <message>
-        <source>Update on an automatic schedule</source>
-        <translation type="vanished">Aktualizacja automatyczna, planowana</translation>
-    </message>
-    <message>
-        <source>Select to update manually</source>
-        <translation type="vanished">Aktualizuj ręcznie</translation>
-    </message>
-    <message>
-        <source>Update just one time</source>
-        <translation type="vanished">Aktualizuj tylko tym razem</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="192"/>
@@ -155,7 +133,7 @@
     <message>
         <location filename="../mxflash.cpp" line="93"/>
         <source>Please wait, loading...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="101"/>
@@ -190,7 +168,7 @@
     <message>
         <location filename="../mxflash.cpp" line="158"/>
         <source>PepperFlash installed version: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="163"/>
@@ -244,6 +222,32 @@
         <translation>Flash został zainstalowany inną metodą. Tym programem go nie zmodyfikujesz.</translation>
     </message>
     <message>
+        <location filename="../mxflash.cpp" line="267"/>
+        <source>Downloading Flash..</source>
+        <translation>Pobieranie Flash...</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="287"/>
+        <location filename="../mxflash.cpp" line="328"/>
+        <source>Running apt-get update...</source>
+        <translation>Uruchomienie apt-get update...</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="295"/>
+        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="334"/>
+        <source>Installing PepperFlash...</source>
+        <translation>Instalowanie PepperFlash...</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="343"/>
+        <source>Removing PepperFlash...</source>
+        <translation>Usuwanie PepperFlash...</translation>
+    </message>
+    <message>
         <location filename="../mxflash.cpp" line="375"/>
         <location filename="../mxflash.cpp" line="405"/>
         <source>Success</source>
@@ -253,32 +257,6 @@
         <location filename="../mxflash.cpp" line="376"/>
         <source>An automatic daily update was scheduled. You can close the program now.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
         <translation>Aktualizacja automatyczna została zaplanowana. Możesz już zamknąć program&lt;p&gt; &lt;b&gt;Czy chcesz wyjść z MX Zarządzanie Flash?&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="287"/>
-        <location filename="../mxflash.cpp" line="328"/>
-        <source>Running apt-get update...</source>
-        <translation>Uruchomienie apt-get update...</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="334"/>
-        <source>Installing PepperFlash...</source>
-        <translation>Instalowanie PepperFlash...</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="267"/>
-        <source>Downloading Flash..</source>
-        <translation>Pobieranie Flash...</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="295"/>
-        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="343"/>
-        <source>Removing PepperFlash...</source>
-        <translation>Usuwanie PepperFlash...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="406"/>
@@ -319,7 +297,7 @@
     <message>
         <location filename="../mxflash.cpp" line="507"/>
         <source>Simple Flash manager for MX Linux</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="508"/>

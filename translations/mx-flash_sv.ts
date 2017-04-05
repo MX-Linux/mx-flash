@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sv">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="sv" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
@@ -64,32 +62,12 @@
     <message>
         <location filename="../mxflash.ui" line="149"/>
         <source>Set Automatic Updates for Flash/PepperFlash</source>
-        <translation type="unfinished"></translation>
+        <translation>Gör automatiska uppdateringar för Flash/PepperFlash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="166"/>
         <source>Removing Flash...</source>
         <translation>Tar bort Flash...</translation>
-    </message>
-    <message>
-        <source>What kind of update do you prefer?</source>
-        <translation type="vanished">Vilket slags uppdatering föredrar du?</translation>
-    </message>
-    <message>
-        <source>Select to set a daily scheduled update</source>
-        <translation type="vanished">Välj att använda en daglig schemalagd uppdatering</translation>
-    </message>
-    <message>
-        <source>Update on an automatic schedule</source>
-        <translation type="vanished">Uppdatera efter ett automatiskt schema</translation>
-    </message>
-    <message>
-        <source>Select to update manually</source>
-        <translation type="vanished">Välj att uppdatera manuellt</translation>
-    </message>
-    <message>
-        <source>Update just one time</source>
-        <translation type="vanished">Uppdatera bara en gång</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="192"/>
@@ -244,6 +222,32 @@
         <translation>Flash är installerad på annat sätt, kan inte uppdateras med detta program.</translation>
     </message>
     <message>
+        <location filename="../mxflash.cpp" line="267"/>
+        <source>Downloading Flash..</source>
+        <translation>Laddar ner Flash..</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="287"/>
+        <location filename="../mxflash.cpp" line="328"/>
+        <source>Running apt-get update...</source>
+        <translation>Kör apt-get update...</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="295"/>
+        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
+        <translation>PepperFlash kan inte installeras för din processor stöder inte SSE2.</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="334"/>
+        <source>Installing PepperFlash...</source>
+        <translation>Installerar PepperFlash...</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="343"/>
+        <source>Removing PepperFlash...</source>
+        <translation>Tar bort PepperFlash...</translation>
+    </message>
+    <message>
         <location filename="../mxflash.cpp" line="375"/>
         <location filename="../mxflash.cpp" line="405"/>
         <source>Success</source>
@@ -253,32 +257,6 @@
         <location filename="../mxflash.cpp" line="376"/>
         <source>An automatic daily update was scheduled. You can close the program now.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
         <translation>En daglig automatisk uppdatering blev schemalagd. Du kan stänga programmet nu.&lt;p&gt;&lt;b&gt;Vill du stänga Flash Manager?&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="287"/>
-        <location filename="../mxflash.cpp" line="328"/>
-        <source>Running apt-get update...</source>
-        <translation>Kör apt-get update...</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="334"/>
-        <source>Installing PepperFlash...</source>
-        <translation>Installerar PepperFlash...</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="267"/>
-        <source>Downloading Flash..</source>
-        <translation>Laddar ner Flash..</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="295"/>
-        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation>PepperFlash kan inte installeras för din processor stöder inte SSE2.</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="343"/>
-        <source>Removing PepperFlash...</source>
-        <translation>Tar bort PepperFlash...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="406"/>

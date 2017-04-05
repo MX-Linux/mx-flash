@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ja" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
@@ -64,32 +62,12 @@
     <message>
         <location filename="../mxflash.ui" line="149"/>
         <source>Set Automatic Updates for Flash/PepperFlash</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mxflash.ui" line="166"/>
         <source>Removing Flash...</source>
         <translation>Flash を削除中...</translation>
-    </message>
-    <message>
-        <source>What kind of update do you prefer?</source>
-        <translation type="vanished">どの最新版を使用しますか？</translation>
-    </message>
-    <message>
-        <source>Select to set a daily scheduled update</source>
-        <translation type="vanished">定期的な自動更新を選択</translation>
-    </message>
-    <message>
-        <source>Update on an automatic schedule</source>
-        <translation type="vanished">定期的に自動更新する</translation>
-    </message>
-    <message>
-        <source>Select to update manually</source>
-        <translation type="vanished">手動更新を選択</translation>
-    </message>
-    <message>
-        <source>Update just one time</source>
-        <translation type="vanished">手動更新する</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="192"/>
@@ -244,6 +222,32 @@
         <translation>Flash は他の処理でインストールされています。このプログラムで更新する事ができません。</translation>
     </message>
     <message>
+        <location filename="../mxflash.cpp" line="267"/>
+        <source>Downloading Flash..</source>
+        <translation>Flash ダウンロード中..</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="287"/>
+        <location filename="../mxflash.cpp" line="328"/>
+        <source>Running apt-get update...</source>
+        <translation>apt-get update を実行中...</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="295"/>
+        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
+        <translation>CPU が SSE2 をサポートしないため PepperFlash はインストールする事ができません。</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="334"/>
+        <source>Installing PepperFlash...</source>
+        <translation>PepperFlash インストール中...</translation>
+    </message>
+    <message>
+        <location filename="../mxflash.cpp" line="343"/>
+        <source>Removing PepperFlash...</source>
+        <translationPepperFlash 削除中...</translation>
+    </message>
+    <message>
         <location filename="../mxflash.cpp" line="375"/>
         <location filename="../mxflash.cpp" line="405"/>
         <source>Success</source>
@@ -253,32 +257,6 @@
         <location filename="../mxflash.cpp" line="376"/>
         <source>An automatic daily update was scheduled. You can close the program now.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
         <translation>自動更新の設定を行いました。このプログラムを閉じる事ができます。&lt;p&gt;&lt;b&gt;MX Flash Manager を終了してよろしいですか？&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="287"/>
-        <location filename="../mxflash.cpp" line="328"/>
-        <source>Running apt-get update...</source>
-        <translation>apt-get update を実行中...</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="334"/>
-        <source>Installing PepperFlash...</source>
-        <translation>PepperFlash インストール中...</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="267"/>
-        <source>Downloading Flash..</source>
-        <translation>Flash ダウンロード中..</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="295"/>
-        <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation>CPU が SSE2 をサポートしないため PepperFlash はインストールする事ができません。</translation>
-    </message>
-    <message>
-        <location filename="../mxflash.cpp" line="343"/>
-        <source>Removing PepperFlash...</source>
-        <translation>PepperFlash 削除中...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="406"/>
