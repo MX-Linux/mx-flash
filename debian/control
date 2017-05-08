@@ -1,7 +1,7 @@
 Source: mx-flash
 Section: system
 Priority: optional
-Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Maintainer: Adrian <adrian@mxlinux.org>
 Build-Depends: debhelper (>=7.0.50~),
 	qt5-default,
 	qttools5-dev-tools,
