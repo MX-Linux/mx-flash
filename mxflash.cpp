@@ -507,7 +507,7 @@ void mxflash::on_buttonAbout_clicked() {
                        tr("Simple Flash manager for MX Linux") + "</h3></p><p align=\"center\"><a href=\"https://mxlinux.org\">http://mxlinux.org</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
-    msgBox.addButton(tr("Cancel"), QMessageBox::RejectRole);
+    msgBox.addButton(tr("Cancel"), QMessageBox::NoRole);
     if (msgBox.exec() == QMessageBox::AcceptRole) {
         system("mx-viewer file:///usr/share/doc/mx-flash/license.html " + tr("'MX Flash License'").toUtf8());
     }
