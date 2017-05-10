@@ -53,3 +53,6 @@ TRANSLATIONS += translations/mx-flash_ca.ts \
                 translations/mx-flash_ru.ts \
                 translations/mx-flash_sv.ts \
                 translations/mx-flash_tr.ts
+
+RESOURCES += \
+    images.qrc

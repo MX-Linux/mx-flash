@@ -2,5 +2,4 @@ mx-flash 		 usr/sbin
 mx-flash.desktop	 usr/share/applications
 translations/*.qm 	 usr/share/mx-flash/locale
 mx-flash.png 		 usr/share/pixmaps
-icons/*			 usr/share/mx-flash/icons
 license.html		 usr/share/doc/mx-flash

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>540</width>
-    <height>363</height>
+    <height>368</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -242,8 +242,7 @@
         <string>About...</string>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../../../../../../../../usr/share/mx-flash/icons/accessories-text-editor.png</normaloff>../../../../../../../../usr/share/mx-flash/icons/accessories-text-editor.png</iconset>
+        <iconset theme="help-about"/>
        </property>
        <property name="shortcut">
         <string>Alt+B</string>
@@ -281,8 +280,7 @@
         <string>Help</string>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../../../../../../../../usr/share/mx-flash/icons/gnome-help.png</normaloff>../../../../../../../../usr/share/mx-flash/icons/gnome-help.png</iconset>
+        <iconset theme="help-contents"/>
        </property>
        <property name="shortcut">
         <string>Alt+H</string>
@@ -298,8 +296,7 @@
         <string>OK</string>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../../../../../../../../usr/share/mx-flash/icons/dialog-ok.png</normaloff>../../../../../../../../usr/share/mx-flash/icons/dialog-ok.png</iconset>
+        <iconset theme="dialog-ok"/>
        </property>
        <property name="shortcut">
         <string/>
@@ -327,7 +324,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../../../../usr/share/mx-flash/icons/mxfcelogo.png</pixmap>
+        <pixmap resource="images.qrc">:/icons/logo.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -356,8 +353,7 @@
         <string>Cancel</string>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../../../../../../../../usr/share/mx-flash/icons/gtk-cancel.png</normaloff>../../../../../../../../usr/share/mx-flash/icons/gtk-cancel.png</iconset>
+        <iconset theme="window-close"/>
        </property>
        <property name="shortcut">
         <string>Alt+N</string>
@@ -372,7 +368,9 @@
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonCancel</sender>

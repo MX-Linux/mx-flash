@@ -82,6 +82,9 @@ bool mxflash::checkDebInstalled() {
 
 void mxflash::refresh() {
     this->show();
+    if (ui->buttonOk->icon().isNull()) {
+        ui->buttonOk->setIcon(QIcon(":/icons/dialog-ok.svg"));
+    }
     ui->stackedWidget->setCurrentIndex(0);
     ui->progressBar->hide();
     ui->progressBar->setValue(0);
