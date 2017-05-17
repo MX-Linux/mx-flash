@@ -11,7 +11,7 @@ Homepage: https://github.com/AdrianTM/mx-flash
 
 Package: mx-flash
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, cron, mx-viewer, menu, wget
+Depends: ${misc:Depends}, ${shlibs:Depends}, cron, mx-viewer, menu, wget, html2text
 Suggests: anacron
 Description: Flash plugin manager
  The MX Flash Manager provides an easy way to install and manage the the 

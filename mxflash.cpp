@@ -128,7 +128,7 @@ void mxflash::detectVersion() {
     QString out;
     // Current version on Adobe site
     // QString bit = getCmdOut("dpkg --print-architecture | sed 's/amd64/64/;s/i386/32/'");
-    QString cmd = QString("wget -qO- https://www.adobe.com/software/flash/about/ | grep Linux -A10 | grep NPAPI -A1 | grep -Eo [0-9.]+");
+    QString cmd = QString("wget -qO- https://www.adobe.com/software/flash/about/ | html2text | grep ^Linux -B1 -A2 | grep Firefox.*NPAPI -m1 | grep -Eo [0-9.]+");
     QString current_version = getCmdOut(cmd);
     out = tr("Adobe Flash most recent version: ") + current_version + "\n";
     // Adobe Flash version
@@ -143,7 +143,7 @@ void mxflash::detectVersion() {
     }
     //// PepperFlash
     // Current version
-    cmd = "wget -qO- https://www.adobe.com/software/flash/about/ | grep Linux -A10 | grep Chrome -A1 | grep -Eo [0-9.]+";
+    cmd = "wget -qO- https://www.adobe.com/software/flash/about/ | html2text | grep ^Linux -B1 -A2 | grep Chrome.*PPAPI -m1 | grep -Eo [0-9.]+";
     QString pepper_current = getCmdOut(cmd);
     out += "\n\n" + tr("PepperFlash most recent version: ") + pepper_current;
 

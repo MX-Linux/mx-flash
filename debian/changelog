@@ -1,3 +1,9 @@
+mx-flash (17.5mx16+1) mx; urgency=medium
+
+  * fix for latest Adobe changes
+
+ -- Adrian <adrian@mxlinux.org>  Tue, 16 May 2017 23:23:26 -0400
+
 mx-flash (17.5mx16) mx; urgency=medium
 
   * update icons
