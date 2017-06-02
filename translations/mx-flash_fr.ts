@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="fr" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
@@ -15,7 +13,7 @@
         <location filename="../mxflash.ui" line="20"/>
         <location filename="../mxflash.cpp" line="508"/>
         <source>MX Flash Manager</source>
-        <translation>MX Gestionnaire Flash</translation>
+        <translation>MX Gestionnaire de Flash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="33"/>
@@ -25,7 +23,7 @@
     <message>
         <location filename="../mxflash.ui" line="71"/>
         <source>What would you like MX Flash Manager to do?</source>
-        <translation>Que souhaitez-vous que MX Gestionnaire Flash fasse ?</translation>
+        <translation>Que souhaitez-vous que MX Gestionnaire de Flash fasse ?</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="92"/>
@@ -258,12 +256,12 @@
     <message>
         <location filename="../mxflash.cpp" line="379"/>
         <source>An automatic daily update was scheduled. You can close the program now.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
-        <translation>Une mise à jour automatique a été programmée. Vous pouvez maintenant fermer le programme.&lt;p&gt;&lt;b&gt;Voulez-vous quitter MX Gestionnaire Flash?&lt;/b&gt;</translation>
+        <translation>Une mise à jour automatique a été programmée. Vous pouvez maintenant fermer le programme.&lt;p&gt;&lt;b&gt;Voulez-vous quitter MX Gestionnaire de Flash?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="409"/>
         <source>Process finished with success.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
-        <translation>Processus terminé avec succès. &lt;p&gt;&lt;b&gt; Voulez-vous quitter MX Gestionnaire Flash?&lt;/b&gt;</translation>
+        <translation>Processus terminé avec succès. &lt;p&gt;&lt;b&gt; Voulez-vous quitter MX Gestionnaire de Flash?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="417"/>
@@ -289,7 +287,7 @@
     <message>
         <location filename="../mxflash.cpp" line="507"/>
         <source>About MX Flash Manager</source>
-        <translation>À propos de MX Gestionnaire Flash</translation>
+        <translation>À propos de MX Gestionnaire de Flash</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="508"/>

@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pt">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="pt" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
@@ -64,7 +62,7 @@
     <message>
         <location filename="../mxflash.ui" line="149"/>
         <source>Set Automatic Updates for Flash/PepperFlash</source>
-        <translation type="unfinished"></translation>
+        <translation>Definir Actualizações Automáticas para Flash/PepperFlash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="166"/>

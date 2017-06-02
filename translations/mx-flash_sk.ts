@@ -1,10 +1,10 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="de" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="sk" version="2.1">
 <context>
     <name>QApplication</name>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>You must run this program as root.</source>
-        <translation>Diese Anwendung muss als Benutzer &quot;root&quot; ausgeführt werden</translation>
+        <translation>Tento program musíte spustiť ako root užívateľ.</translation>
     </message>
 </context>
 <context>
@@ -13,28 +13,28 @@
         <location filename="../mxflash.ui" line="20"/>
         <location filename="../mxflash.cpp" line="508"/>
         <source>MX Flash Manager</source>
-        <translation>Flash-Manager für MX</translation>
+        <translation>MX Flash Manager</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="33"/>
         <source>Current configuration:</source>
-        <translation>Derzeitige Konfiguration:</translation>
+        <translation>Aktuálne nastavenie:</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="71"/>
         <source>What would you like MX Flash Manager to do?</source>
-        <translation>Was wollen Sie mit dem MX Flash Manager tun?</translation>
+        <translation>Čo si prajete urobiť?</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="92"/>
         <source>This option (re)installs Flash, if needed will install non-sse2 Flash</source>
-        <translation>Diese Option installiert oder re-installiert Flash.  Fals nötig wird das non-sse2 Flash installiert.</translation>
+        <translation>Táto voľba (pre)inštaluje Flash, ak bude potreba non-sse2 Flash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="95"/>
         <location filename="../mxflash.cpp" line="114"/>
         <source>Reinstall Flash</source>
-        <translation>Flash neu installieren</translation>
+        <translation>Preinštalovať Flash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="102"/>
@@ -42,47 +42,47 @@
         <location filename="../mxflash.cpp" line="167"/>
         <location filename="../mxflash.cpp" line="296"/>
         <source>Install PepperFlash</source>
-        <translation>PepperFlash installieren</translation>
+        <translation>Inštalovať PepperFlash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="109"/>
         <source>Update Flash</source>
-        <translation>Flash aktualisieren</translation>
+        <translation>Aktualizovať Flash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="116"/>
         <source>Remove Flash</source>
-        <translation>Flash löschen</translation>
+        <translation>Vymazať Flash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="142"/>
         <source>Update PepperFlash</source>
-        <translation>PepperFlash aktualisieren</translation>
+        <translation>Aktualizovať PepperFlash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="149"/>
         <source>Set Automatic Updates for Flash/PepperFlash</source>
-        <translation>Automatische Updates für Flash/PepperFlash einrichten</translation>
+        <translation>Nastaviť automatické aktualizácie Flash/PepperFlash</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="166"/>
         <source>Removing Flash...</source>
-        <translation>Flash wird gelöscht</translation>
+        <translation>Odstraňovanie Flash...</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="192"/>
         <source>Installing Flash...</source>
-        <translation>Flash wird aktualisiert</translation>
+        <translation>Inštalovanie Flash...</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="239"/>
         <source>About this application</source>
-        <translation>Über diese Anwendung</translation>
+        <translation>O tejto aplikácii</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="242"/>
         <source>About...</source>
-        <translation>Über...</translation>
+        <translation>O Programe</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="248"/>
@@ -92,12 +92,12 @@
     <message>
         <location filename="../mxflash.ui" line="277"/>
         <source>Display help </source>
-        <translation>Hilfe anzeigen</translation>
+        <translation>Zobraziť nápovedu</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="280"/>
         <source>Help</source>
-        <translation>Hilfe</translation>
+        <translation>Pomocník</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="286"/>
@@ -107,7 +107,7 @@
     <message>
         <location filename="../mxflash.ui" line="293"/>
         <source>Apply any changes then quit</source>
-        <translation>Änderungen anwenden und weiter</translation>
+        <translation>Použiť všetky zmeny a ukončiť</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="296"/>
@@ -117,13 +117,13 @@
     <message>
         <location filename="../mxflash.ui" line="350"/>
         <source>Cancel any changes then quit</source>
-        <translation>Änderungen verwerfen und abbrechen</translation>
+        <translation>Zrušit všetky zmeny a ukončiť</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="353"/>
         <location filename="../mxflash.cpp" line="513"/>
         <source>Cancel</source>
-        <translation>Abbrechen</translation>
+        <translation>Zrušiť</translation>
     </message>
     <message>
         <location filename="../mxflash.ui" line="359"/>
@@ -133,47 +133,47 @@
     <message>
         <location filename="../mxflash.cpp" line="96"/>
         <source>Please wait, loading...</source>
-        <translation>Bitte warten, es wird geladen...</translation>
+        <translation>Čakajte prosím, načítavam...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="104"/>
         <source>Remove PepperFlash</source>
-        <translation>Lösche PepperFlash</translation>
+        <translation>Vymazať PepperFlash</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="119"/>
         <source>Install Flash</source>
-        <translation>Installiere Flash</translation>
+        <translation>Inštalovať Flash</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="133"/>
         <source>Adobe Flash most recent version: </source>
-        <translation>Neueste Version von Adobe Flash:</translation>
+        <translation>Najnovšia verzia Adobe Flash:</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="137"/>
         <source>Adobe Flash installed version: </source>
-        <translation>Adobe Flash installierte Version:</translation>
+        <translation>Nainštalovaná verzia Adobe Flash:</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="142"/>
         <source>Adobe Flash is not installed.</source>
-        <translation>Adobe Flash ist nicht installiert.</translation>
+        <translation>Adobe Flash nie je nainštalovaný.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="148"/>
         <source>PepperFlash most recent version: </source>
-        <translation>Neueste Version von PepperFlash:</translation>
+        <translation>Najnovšia verzia PepperFlash:</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="161"/>
         <source>PepperFlash installed version: </source>
-        <translation>Installierte Version von PepperFlash:</translation>
+        <translation>Nainštalovaná verzia PepperFlash:</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="166"/>
         <source>PepperFlash is not installed.</source>
-        <translation>PepperFlash ist nicht installiert.</translation>
+        <translation>PepperFlash nie je nainštalovaný.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="194"/>
@@ -185,119 +185,119 @@
         <location filename="../mxflash.cpp" line="440"/>
         <location filename="../mxflash.cpp" line="462"/>
         <source>Error</source>
-        <translation>Fehler</translation>
+        <translation>Chyba</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="195"/>
         <source>Could not remove </source>
-        <translation>Konnte nicht gelöscht werden</translation>
+        <translation>Nejde zmazať</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="202"/>
         <source>Flash is not installed</source>
-        <translation>Flash ist nicht installiert</translation>
+        <translation>Flash nie je nainštalovaný</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="213"/>
         <source>&lt;b&gt;Flash is not installed. Would you like to install it?&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Flash ist nicht installiert.  Wollen sie es installieren?&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Flash nie je nainštalovaný. Chcete ho nainštalovať?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="214"/>
         <location filename="../mxflash.cpp" line="380"/>
         <location filename="../mxflash.cpp" line="410"/>
         <source>Yes</source>
-        <translation>Ja</translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="214"/>
         <location filename="../mxflash.cpp" line="380"/>
         <location filename="../mxflash.cpp" line="410"/>
         <source>No</source>
-        <translation>Nein</translation>
+        <translation>Nie</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="227"/>
         <source>Flash is installed through other means, cannot update with this program.</source>
-        <translation>Flash ist auf eine andere Weise installiert worden, diese Anwendung kann nicht aktualisiert werden.</translation>
+        <translation>Flash bol nainštalovaný iným spôsobom, nedá sa aktualizovať týmto programom.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="270"/>
         <source>Downloading Flash..</source>
-        <translation>Lade Flash herunter..</translation>
+        <translation>Sťahovanie Flash...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="290"/>
         <location filename="../mxflash.cpp" line="331"/>
         <source>Running apt-get update...</source>
-        <translation>&quot;apt-get update&quot; läuft..</translation>
+        <translation>Spúšťam apt-get update...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="298"/>
         <source>PepperFlash cannot be installed because your CPU does not support SSE2.</source>
-        <translation>PepperFlash kann nicht installiert werden, weil Ihre CPU SSE2 nicht unterstützt.</translation>
+        <translation>PepperFlash sa nedá nainštalovať pretože Váš procesor nepodporuje SSE2.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="337"/>
         <source>Installing PepperFlash...</source>
-        <translation>Installiere PepperFlash...</translation>
+        <translation>Inštalovanie PepperFlash...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="346"/>
         <source>Removing PepperFlash...</source>
-        <translation>Lösche PepperFlash...</translation>
+        <translation>Odstraňovanie PepperFlash...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="378"/>
         <location filename="../mxflash.cpp" line="408"/>
         <source>Success</source>
-        <translation>Erfolg</translation>
+        <translation>Úspech</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="379"/>
         <source>An automatic daily update was scheduled. You can close the program now.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
-        <translation>Planmässig wird täglich auf Updates geprüft. Sie können das Programm nun schliessen.</translation>
+        <translation>Automatické denné aktualizácie boli nastavené. Už môžete program zavrieť.&lt;p&gt;&lt;b&gt;Ukončiť MX Flash Manager?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="409"/>
         <source>Process finished with success.&lt;p&gt;&lt;b&gt;Do you want to exit MX Flash Manager?&lt;/b&gt;</source>
-        <translation>Prozess erfolgreich beendet. &lt;p&gt;&lt;b&gt;Wollen Sie MX Flash Manager schliessen?&lt;/b&gt;</translation>
+        <translation>Proces bol úspešne dokončený.&lt;p&gt;&lt;b&gt;Ukončiť MX Flash Manager?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="417"/>
         <source>Process finished. Errors have occurred.</source>
-        <translation>Prozess beendet. Dabei traten Fehler auf.</translation>
+        <translation>Proces dokončený. Objavili sa chyby.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="434"/>
         <location filename="../mxflash.cpp" line="459"/>
         <source>Installing...</source>
-        <translation>Installieren...</translation>
+        <translation>Inštalácia...</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="441"/>
         <source>&quot;apt-get update&quot; command did not run successfully.</source>
-        <translation>Der Befehl &quot;apt-get update&quot; ist nicht erfolgreich gelaufen.</translation>
+        <translation>Príkaz &quot;apt-get update&quot; neprebehol úspešne.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="463"/>
         <source>Could not download Flash for non-SSE2 CPUs.</source>
-        <translation>Das Flash kann nur für SSE2-CPUs heruntergeladen werden.</translation>
+        <translation>Flash sa nedá sa stiahnuť, nemáte SSE2 procesor.</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="507"/>
         <source>About MX Flash Manager</source>
-        <translation>Über MX Flash Manager</translation>
+        <translation>O programe MX Flash Manager</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="508"/>
         <source>Version: </source>
-        <translation>Version:</translation>
+        <translation>Verzia:</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="510"/>
         <source>Simple Flash manager for MX Linux</source>
-        <translation>Einfacher PepperFlash-Manager für MX</translation>
+        <translation>Jednoduchý Flash manager pre MX linux</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="511"/>
@@ -307,18 +307,18 @@
     <message>
         <location filename="../mxflash.cpp" line="512"/>
         <source>License</source>
-        <translation>Lizenz</translation>
+        <translation>Licencia</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="515"/>
         <source>&apos;MX Flash License&apos;</source>
-        <translation>&apos;MX Flash Lizenz&apos;</translation>
+        <translation>&apos;Licencia MX Flash&apos;</translation>
     </message>
     <message>
         <location filename="../mxflash.cpp" line="525"/>
         <location filename="../mxflash.cpp" line="527"/>
         <source>&apos;MX Flash Help&apos;</source>
-        <translation>&apos;MX Flash Hilfe&apos;</translation>
+        <translation>&apos;Pomocník MX Flash&apos;</translation>
     </message>
 </context>
 </TS>
